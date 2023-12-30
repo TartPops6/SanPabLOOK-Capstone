@@ -1,0 +1,28 @@
+
+E
+java:S1604A"(Make this anonymous inner class a lambda(†øŸô8Ÿº’ÉË1
+K
+java:S1604"(Make this anonymous inner class a lambda(èÑ×ûÿÿÿÿ8 º’ÉË1
+ƒ	java:S116"bRename this field "editText_SignUpPassword" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÜÔƒûÿÿÿÿ8š»’ÉË1
+v
+java:S1659"TDeclare "editText_SignUpPassword" and all following declarations on a separate line.(òÜÔƒûÿÿÿÿ8¥»’ÉË1
+K
+java:S1659".Declare "datePickerButton" on a separate line.(‘Ö˜Ô8¥»’ÉË1
+t
+java:S37763"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¨Œşÿÿÿÿ8Á»’ÉË1
+9
+java:S3626"Remove this redundant jump.(ûÁİ…8Â»’ÉË1
+a
+java:S1854Q"?Remove this useless assignment to local variable "dateOfBirth".(ÃŞè£ûÿÿÿÿ8ªÅ“ÉË1
+j
+java:S1172m"MRemove these unused method parameters "firstName", "lastName", "dateOfBirth".(İ±ÿÛ8×»’ÉË1
+W
+java:S2209"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8ß»’ÉË1
+W
+java:S2209"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8ß»’ÉË1
+[
+java:S1874¬"8Remove this use of "THEME_HOLO_LIGHT"; it is deprecated.(¥î×Şøÿÿÿÿ8ç»’ÉË1
+I
+java:S1172Ó"+Remove this unused method parameter "view".(òŸ¾¤8ì»’ÉË1
+?
+java:S1116×"Remove this empty statement.(ôŸìúÿÿÿÿ8í»’ÉË1

@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.study.sanpablook.databinding.ActivityBottomNavBinding;
-import com.study.sanpablook.databinding.ActivityBottomNavBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.study.sanpablook.R;
 

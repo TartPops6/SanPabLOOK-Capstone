@@ -1,21 +1,23 @@
 package sanpablook.study.sanpablook;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
-import com.google.android.gms.maps.CameraUpdate;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.study.sanpablook.R;
 
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel;
@@ -24,16 +26,38 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomepageActivity extends AppCompatActivity implements OnMapReadyCallback{
+public class HomeActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    GoogleMap map;
+    private FirebaseAuth auth;
+    private View myActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.activity_home);
 
-        //carousel
+        String fragmentName = getIntent().getStringExtra("fragment");
+        if ("HomeFragment".equals(fragmentName)) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container, new HomeFragment())
+                    .commit();
+        }
+
+        setupNatureButton();
+        setupCarousel();
+        setupMap();
+    }
+
+    private void setupNatureButton() {
+        ImageButton natureBtn = findViewById(R.id.natureBtn);
+        natureBtn.setOnClickListener(v -> {
+            auth.signOut();
+            startActivity(new Intent(this, SignInActivity.class));
+            finish();
+        });
+    }
+
+    private void setupCarousel() {
         ImageCarousel imageCarousel = findViewById(R.id.carousel);
         imageCarousel.registerLifecycle(getLifecycle());
 
@@ -43,43 +67,23 @@ public class HomepageActivity extends AppCompatActivity implements OnMapReadyCal
         list.add(new CarouselItem("https://files01.pna.gov.ph/ograph/2018/08/01/san-pablo-city-marker.png", "Tara!"));
 
         imageCarousel.setData(list);
-
-
-        //Maps
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
-
-        if(mapFragment !=null){
-            mapFragment.getMapAsync(this);
-        }
-
-
-        //button redirect to nature page
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) View button = findViewById(R.id.natureBtn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomepageActivity.this, NatureActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        return;
     }
 
+    private void setupMap() {
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(this);
+        }
+    }
 
-    //google Maps location
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-        map = googleMap;
-
         LatLng latlng = new LatLng(14.0642, 121.3233);
-        map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
-        CameraUpdate location = CameraUpdateFactory.newLatLngZoom(latlng, 13);
-        map.animateCamera(location);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng, 13));
 
-        //map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         MarkerOptions options = new MarkerOptions().position(latlng).title("San Pablo City");
         options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
-        map.addMarker(options);
+        googleMap.addMarker(options);
     }
 }

@@ -58,9 +58,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/roundedRight" />
 
-            <!--already sign txt-->
+            <!--already signed in txt-->
             <TextView
-                android:id="@+id/alreadyBtn"
+                android:id="@+id/signInRedirect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -83,53 +83,53 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/alreadyBtn">
+                app:layout_constraintTop_toBottomOf="@+id/signInRedirect">
 
-                <!--first name-->
-                <TextView
-                    android:id="@+id/textViewFirstName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/firstName"
-                    android:textColor="@color/gray"
-                    android:textSize="12sp" />
+                                <!--first name-->
+                                <TextView
+                                    android:id="@+id/textViewFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/firstName"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
 
-                <EditText
-                    android:id="@+id/editTextFirstName"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/log_background"
-                    android:ems="10"
-                    android:hint="@string/enterFirstName"
-                    android:inputType="text"
-                    android:padding="16dp"
-                    android:textColor="@color/onyx"
-                    android:textSize="14sp" />
+                                <EditText
+                                    android:id="@+id/editTextFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/log_background"
+                                    android:ems="10"
+                                    android:hint="@string/enterFirstName"
+                                    android:inputType="text"
+                                    android:padding="16dp"
+                                    android:textColor="@color/onyx"
+                                    android:textSize="14sp" />
 
-                <!--last name-->
-                <TextView
-                    android:id="@+id/textViewLastName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/lastName"
-                    android:textColor="@color/gray"
-                    android:textSize="12sp" />
+                                <!--last name-->
+                                <TextView
+                                    android:id="@+id/textViewLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/lastName"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
 
-                <EditText
-                    android:id="@+id/editTextLastName"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/log_background"
-                    android:ems="10"
-                    android:hint="@string/enterLastName"
-                    android:padding="14dp"
-                    android:textColor="@color/onyx"
-                    android:textSize="14sp" />
+                                <EditText
+                                    android:id="@+id/editTextLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/log_background"
+                                    android:ems="10"
+                                    android:hint="@string/enterLastName"
+                                    android:padding="14dp"
+                                    android:textColor="@color/onyx"
+                                    android:textSize="14sp" />
+                <!-- email -->
 
-                <!--email-->
                 <TextView
                     android:id="@+id/textViewEmail"
                     android:layout_width="match_parent"
@@ -175,6 +175,7 @@
                     android:textSize="14sp" />
 
                 <!--date of birth-->
+
                 <TextView
                     android:id="@+id/textViewBirthdate"
                     android:layout_width="match_parent"

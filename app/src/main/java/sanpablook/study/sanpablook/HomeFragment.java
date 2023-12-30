@@ -30,9 +30,6 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
-import sanpablook.study.sanpablook.NatureActivity;
 
 
 public class HomeFragment extends Fragment implements OnMapReadyCallback{

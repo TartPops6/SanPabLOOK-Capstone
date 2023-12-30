@@ -1,0 +1,77 @@
+
+C
+java:S1604H"(Make this anonymous inner class a lambda(ãÈöÎşÿÿÿÿ
+>
+java:S1604N"(Make this anonymous inner class a lambda(†Ôú
+>
+java:S1604T"(Make this anonymous inner class a lambda(´çù
+>
+java:S1604Z"(Make this anonymous inner class a lambda(…·õÕ
+C
+java:S1604`"(Make this anonymous inner class a lambda(œÃßçøÿÿÿÿ
+C
+java:S1604f"(Make this anonymous inner class a lambda(Õ–ôËúÿÿÿÿ
+>
+java:S1604l"(Make this anonymous inner class a lambda(ûÀêò
+C
+java:S1604r"(Make this anonymous inner class a lambda(úˆüËüÿÿÿÿ
+?
+java:S1604£"(Make this anonymous inner class a lambda(¡‡·¬
+>
+java:S1604ª"(Make this anonymous inner class a lambda(µ¶é)
+?
+java:S1604Ì"(Make this anonymous inner class a lambda(¡‡·¬
+>
+java:S1604Ó"(Make this anonymous inner class a lambda(µ¶é)
+?
+java:S1604•"(Make this anonymous inner class a lambda(¡‡·¬
+>
+java:S1604œ"(Make this anonymous inner class a lambda(µ¶é)
+?
+java:S1604Î"(Make this anonymous inner class a lambda(¡‡·¬
+>
+java:S1604Õ"(Make this anonymous inner class a lambda(µ¶é)
+?
+java:S1604"(Make this anonymous inner class a lambda(¡‡·¬
+>
+java:S1604ˆ"(Make this anonymous inner class a lambda(µ¶é)
+D
+java:S1604¸"(Make this anonymous inner class a lambda(¶àË²úÿÿÿÿ
+E
+java:S1604¿"(Make this anonymous inner class a lambda(µ¶é)8šà±ÕÊ1
+^
+java:S2259"BA "NullPointerException" could be thrown; "data" is nullable here.(Ÿ®ù“ûÿÿÿÿ
+b
+java:S1659%"LDeclare "txtEditPassword" and all following declarations on a separate line.(ğÜÆ¸
+I
+java:S1659&".Declare "btnDeleteAccount" on a separate line.(¿¶¯Âúÿÿÿÿ
+G
+java:S1602?",Remove useless curly braces around statement(¿»ÉÓşÿÿÿÿ
+_
+java:S1874~"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
+G
+java:S1172…"+Remove this unused method parameter "view".(ø÷ÔÁÿÿÿÿÿ
+R
+java:S1117Š"<Rename "btnSave" which hides the field declared at line 187.(ÕÈÙ^
+B
+java:S1172½"+Remove this unused method parameter "view".(¹ë…Û
+G
+java:S1172÷"+Remove this unused method parameter "view".(û¾ŸÈûÿÿÿÿ
+R
+java:S1117ü"<Rename "btnSave" which hides the field declared at line 187.(ÕÈÙ^
+G
+java:S1172ª"+Remove this unused method parameter "view".(Ÿ§§¶úÿÿÿÿ
+X
+java:S1117¯"<Rename "btnSave" which hides the field declared at line 187.(Éó‹Òûÿÿÿÿ
+A
+java:S1172ã"+Remove this unused method parameter "view".(¡ØÉ9
+R
+java:S1117è"<Rename "btnSave" which hides the field declared at line 187.(ÕÈÙ^
+G
+java:S1172–"+Remove this unused method parameter "view".(¹­È³ıÿÿÿÿ
+Q
+java:S6397Î"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ
+Q
+java:S6397Î"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ
+X
+java:S6353Î"<Use concise character class syntax '\\d' instead of '[0-9]'.(õ†¿Ïøÿÿÿÿ

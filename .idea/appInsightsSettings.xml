@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="sanpablook.study.sanpablook" />
+                  <option name="mobileSdkAppId" value="1:121974656262:android:df9b1513a34ea1d9b42287" />
+                  <option name="projectId" value="sanpablook-project" />
+                  <option name="projectNumber" value="121974656262" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.study.sanpablook.R;
 
 import java.util.regex.Matcher;
@@ -108,6 +109,15 @@ public class UserSettings extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showDialogDeleteAccount(view);
+            }
+        });
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(UserSettings.this, SignInActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

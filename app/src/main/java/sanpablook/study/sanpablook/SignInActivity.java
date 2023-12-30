@@ -1,48 +1,47 @@
 package sanpablook.study.sanpablook;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
+import android.widget.EditText;
+import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
 import com.study.sanpablook.R;
 
 public class SignInActivity extends AppCompatActivity {
-
-    private Button button;
-
-    TextView textView;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        //log in page to homepage
-        button =findViewById(R.id.loginBtn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(SignInActivity.this, HomeFragment.class);
-                startActivity(intent);
-                finish();
+        mAuth = FirebaseAuth.getInstance();
+
+        findViewById(R.id.signUpRedirect).setOnClickListener(v ->
+                startActivity(new Intent(SignInActivity.this, SignUpActivity.class)));
+
+        findViewById(R.id.loginBtn).setOnClickListener(v -> {
+            String email = String.valueOf(((EditText) findViewById(R.id.editTextEmail)).getText());
+            String password = String.valueOf(((EditText) findViewById(R.id.editTextPassword)).getText());
+
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(SignInActivity.this, "Email and Password are required", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, task -> {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(SignInActivity.this, testMain.class);
+                            intent.putExtra("BottomNavBar", "BottomNavBar");
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(SignInActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
         });
-
-
-        //logIn to Sign Up
-        textView=(TextView) findViewById(R.id.signInBtn);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
-
     }
 }
-
