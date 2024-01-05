@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -46,6 +47,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.study.sanpablook.R;
 
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -59,6 +61,8 @@ public class UserSettings extends AppCompatActivity {
     Button btnLogout, btnDeleteAccount;
 
     //Firebase
+    FirebaseStorage storage;
+    StorageReference storageRef;
     FirebaseUser user;
     FirebaseAuth auth;
     FirebaseFirestore fStore;
@@ -95,9 +99,12 @@ public class UserSettings extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         userID = auth.getCurrentUser().getUid();
 
-        // Get user's first name
-        DocumentReference documentReference = fStore.collection("users").document(userID);
+        FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        DocumentReference documentReference = fireStore.collection("users").document(userID);
+        StorageReference profilePicRef = storage.getReference().child("profilePictures/" + userID + ".jpg");
 
+        // Get user's first name
         documentReference.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
@@ -139,6 +146,21 @@ public class UserSettings extends AppCompatActivity {
                 }
             } else {
                 Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
+        //Get users profile picture
+        profilePicRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Glide.with(UserSettings.this)
+                        .load(uri)
+                        .into(profilePicture);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.d(TAG, "Failed to load profile picture");
             }
         });
 
@@ -214,9 +236,53 @@ public class UserSettings extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        Uri uri = data.getData();
-        profilePicture.setImageURI(uri);
+        // Get the image URI
+        if (resultCode == RESULT_OK) {
+            Uri imageUri = data.getData();
+            profilePicture.setImageURI(imageUri);
+
+            uploadProfilePicture(imageUri);
+        }
     }
+
+    private void uploadProfilePicture(Uri imageUri) {
+    // Firebase Storage
+    storage = FirebaseStorage.getInstance();
+    storageRef = storage.getReference();
+
+    // Create a reference to the location where you want to upload the image
+    StorageReference profilePicRef = storageRef.child("profilePictures/" + userID + ".jpg");
+
+    // Log the URI
+    Log.d(TAG, "Uploading file from URI: " + imageUri.toString());
+
+    // Upload the image file to Firebase Storage
+    profilePicRef.putFile(imageUri)
+        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                // The image upload was successful
+                Log.d(TAG, "Profile picture uploaded successfully");
+                Toast.makeText(UserSettings.this, "Profile picture uploaded", Toast.LENGTH_SHORT).show();
+
+                // Refresh the activity
+                UserSettings.this.recreate();
+            }
+        })
+        .addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // The image upload failed
+                if (exception instanceof FileNotFoundException) {
+                    Log.e(TAG, "File not found", exception);
+                    Toast.makeText(UserSettings.this, "File not found", Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.e(TAG, "Failed to upload profile picture", exception);
+                    Toast.makeText(UserSettings.this, "Failed to upload profile picture", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+}
 
     private void showDialogEditUsername (View view) {
         final Dialog dialog = new Dialog(this);

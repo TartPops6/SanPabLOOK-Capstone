@@ -1,27 +1,33 @@
 
 n
-java:S1192:"QDefine a constant instead of duplicating this literal "No such document" 4 times.(Ñ…¨¢8¿š­ÆÍ1
+java:S1192D"QDefine a constant instead of duplicating this literal "No such document" 4 times.(Ñ…¨¢8‹Ä©ÏÍ1
 n
-java:S1192="QDefine a constant instead of duplicating this literal "get failed with " 4 times.(Ö‹›§8Áš­ÆÍ1
+java:S1192G"QDefine a constant instead of duplicating this literal "get failed with " 4 times.(Ö‹›§8‹Ä©ÏÍ1
 F
-java:S1604•"(Make this anonymous inner class a lambda(Ø¯Ã®8Ü¬ÆÍ1
+java:S1604¢"(Make this anonymous inner class a lambda(‘øâ¨8ŒÄ©ÏÍ1
 K
-java:S1604"(Make this anonymous inner class a lambda(°«ƒøÿÿÿÿ8Ü¬ÆÍ1
+java:S1604©"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8ŒÄ©ÏÍ1
+F
+java:S1604²"(Make this anonymous inner class a lambda(Ø¯Ã®8ÍıªÏÍ1
 K
-java:S1604¥"(Make this anonymous inner class a lambda(õ‹Ÿùÿÿÿÿ8Ü¬ÆÍ1
+java:S1604º"(Make this anonymous inner class a lambda(°«ƒøÿÿÿÿ8ÍıªÏÍ1
+K
+java:S1604Â"(Make this anonymous inner class a lambda(õ‹Ÿùÿÿÿÿ8ÍıªÏÍ1
 E
-java:S1604«"(Make this anonymous inner class a lambda(ôŸœ8Ü¬ÆÍ1
+java:S1604È"(Make this anonymous inner class a lambda(ôŸœ8ÍıªÏÍ1
 K
-java:S1604±"(Make this anonymous inner class a lambda(²®İ‹ûÿÿÿÿ8Ü¬ÆÍ1
+java:S1604Î"(Make this anonymous inner class a lambda(²®İ‹ûÿÿÿÿ8ÍıªÏÍ1
 c
-java:S1659"FDeclare "btnImage2" and all following declarations on a separate line.(ÌĞÏ 8›¡¬ÆÍ1
+java:S1659%"FDeclare "btnImage2" and all following declarations on a separate line.(ÌĞÏ 8ÂÄ©ÏÍ1
 M
-java:S1659"+Declare "userFirstName" on a separate line.(õâªûÿÿÿÿ8›¡¬ÆÍ1
+java:S1659&"+Declare "userFirstName" on a separate line.(õâªûÿÿÿÿ8ÂÄ©ÏÍ1
 D
-java:S1185&"(Remove this method to simply inherit it.(¥Ë©8¡¡¬ÆÍ1
+java:S11850"(Remove this method to simply inherit it.(¥Ë©8ÈÄ©ÏÍ1
 t
-java:S3776R"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ËÄ•åûÿÿÿÿ8ÁÜ¬ÆÍ1
+java:S3776\"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ËÄ•åûÿÿÿÿ8ÏÄ©ÏÍ1
+W
+java:S1117";Rename "storage" which hides the field declared at line 45.(ÌÔ©8ÛÄ©ÏÍ1
 N
-java:S1172½"+Remove this unused method parameter "view".(ø×·Úùÿÿÿÿ8ÛÜ¬ÆÍ1
+java:S1172Ú"+Remove this unused method parameter "view".(ø×·Úùÿÿÿÿ8•ÿªÏÍ1
 I
-java:S1172Â"+Remove this unused method parameter "view".(‘ğê8ÜÜ¬ÆÍ1
+java:S1172ß"+Remove this unused method parameter "view".(‘ğê8˜ÿªÏÍ1
