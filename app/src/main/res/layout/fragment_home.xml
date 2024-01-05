@@ -9,47 +9,65 @@
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/homeContainer">
+        android:layout_height="wrap_content">
 
-        <!--tara phil-->
+        <!--tara text-->
+
+
+        <!--Name of User-->
         <TextView
-            android:id="@+id/userNameHomepage"
-            android:layout_width="253dp"
+            android:id="@+id/taraText"
+            android:layout_width="91dp"
             android:layout_height="56dp"
-            android:layout_marginTop="36dp"
-            android:text="@string/taraPhil"
+            android:layout_marginTop="44dp"
+            android:text="Tara,"
             android:textColor="@color/selectedText"
-            android:textSize="35sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <!--notif-->
-        <ImageView
-            android:id="@+id/notifButton"
-            android:layout_width="40dp"
-            android:layout_height="38dp"
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="216dp"
+            android:layout_height="60dp"
             android:layout_marginTop="44dp"
+            android:text="Phil"
+            android:textColor="@color/selectedText"
+            android:textSize="40sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.647"
-            app:layout_constraintStart_toEndOf="@+id/userNameHomepage"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/notif_btn" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/taraText"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!--carousel-->
+
+        <ImageView
+            android:id="@+id/notifButton"
+            android:layout_width="55dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintStart_toEndOf="@+id/userName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notif_btn" />
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
             android:id="@+id/carousel"
             android:layout_width="377dp"
             android:layout_height="160dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userNameHomepage" />
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
 
         <EditText
             android:id="@+id/searchBar"
@@ -100,7 +118,6 @@
 
 
         <!--products-->
-
         <ImageButton
             android:id="@+id/productsBtn"
             android:layout_width="90dp"

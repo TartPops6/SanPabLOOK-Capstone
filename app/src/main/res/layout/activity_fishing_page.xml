@@ -14,9 +14,8 @@
         android:layout_height="wrap_content"
         android:paddingBottom="20dp">
 
-
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/sampalocView"
+            android:id="@+id/FishingView"
             android:layout_width="match_parent"
             android:layout_height="378sp"
             android:scaleType="fitXY"
@@ -25,11 +24,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/round_corners"
-            app:srcCompat="@drawable/sampaloc_view" />
+            app:srcCompat="@drawable/camping" />
 
         <!--back button-->
         <ImageButton
-            android:id="@+id/btnBackNature"
+            android:id="@+id/btnBackFishing"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:layout_marginStart="16dp"
@@ -41,7 +40,7 @@
             app:srcCompat="@drawable/ic_btn_back" />
         <!--share button-->
         <ImageButton
-            android:id="@+id/btnShareNature"
+            android:id="@+id/btnShareFishing"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:layout_marginTop="16dp"
@@ -55,21 +54,21 @@
 
 
         <TextView
-            android:id="@+id/sampalocLakeTitle"
+            android:id="@+id/fishingTitle"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/sampalocLake"
+            android:text= "Fishing"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.144"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocView" />
+            app:layout_constraintTop_toBottomOf="@+id/FishingView" />
 
         <TextView
-            android:id="@+id/rateSampaloc"
+            android:id="@+id/rateFishing"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_marginTop="12dp"
@@ -79,22 +78,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/fishingTitle" />
 
         <LinearLayout
-            android:id="@+id/linearLayoutSampaloc"
+            android:id="@+id/linearLayoutFishing"
             android:layout_width="120dp"
             android:layout_height="26dp"
             android:layout_marginTop="16dp"
             android:background="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/rateSampaloc"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle"
+            app:layout_constraintStart_toEndOf="@+id/rateFishing"
+            app:layout_constraintTop_toBottomOf="@+id/fishingTitle"
             tools:ignore="MissingConstraints">
 
             <ImageView
-                android:id="@+id/starRateSampaloc1"
+                android:id="@+id/starRateFishing1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -102,7 +101,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc2"
+                android:id="@+id/starRateFishing2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -110,7 +109,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc3"
+                android:id="@+id/starRateFishing3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -118,7 +117,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc4"
+                android:id="@+id/starRateFishing4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -126,7 +125,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc5"
+                android:id="@+id/starRateFishing5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star_half"
@@ -136,7 +135,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/reviewsSampaloc"
+            android:id="@+id/reviewsFishing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -144,8 +143,8 @@
             android:textColor="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayoutSampaloc"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutFishing"
+            app:layout_constraintTop_toBottomOf="@+id/fishingTitle" />
 
         <TextView
             android:id="@+id/location"
@@ -158,7 +157,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutFishing" />
 
         <ImageView
             android:id="@+id/locationIcon"
@@ -172,7 +171,7 @@
             app:srcCompat="@drawable/baseline_location" />
 
         <TextView
-            android:id="@+id/PostalAddress"
+            android:id="@+id/PostalAddressFishing"
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
@@ -200,7 +199,7 @@
             app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
 
         <TextView
-            android:id="@+id/descriptionSampaloc"
+            android:id="@+id/descriptionFishing"
             android:layout_width="363dp"
             android:layout_height="77dp"
             android:layout_marginTop="8dp"
@@ -223,10 +222,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/descriptionFishing" />
 
         <TextView
-            android:id="@+id/quickTutorialDescriptionSampaloc"
+            android:id="@+id/quickTutorialDescriptionFishing"
             android:layout_width="363dp"
             android:layout_height="77dp"
             android:layout_marginTop="4dp"
@@ -239,7 +238,7 @@
             app:layout_constraintTop_toBottomOf="@+id/quickTutorial" />
 
         <Button
-            android:id="@+id/buttonSampalocYt"
+            android:id="@+id/buttonFishingYt"
             android:layout_width="359dp"
             android:layout_height="53dp"
             android:layout_marginTop="12dp"
@@ -247,7 +246,7 @@
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quickTutorialDescriptionSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/quickTutorialDescriptionFishing" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
