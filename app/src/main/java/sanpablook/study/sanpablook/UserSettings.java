@@ -1,5 +1,8 @@
 package sanpablook.study.sanpablook;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +26,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.study.sanpablook.R;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,6 +57,15 @@ public class UserSettings extends AppCompatActivity {
     ImageButton btnBackUS;
     TextView txtEditUsername, txtEditPassword, txtEditBio, txtEditPhoneNumber, txtEditEmail;
     Button btnLogout, btnDeleteAccount;
+
+    //Firebase
+    FirebaseUser user;
+    FirebaseAuth auth;
+    FirebaseFirestore fStore;
+    String userID;
+
+    //User profiles
+    TextView valueOfUsername, valueOfBio, valueOfEmail;
 
     //profilepic
     FloatingActionButton fabEditProfile;
@@ -55,6 +85,62 @@ public class UserSettings extends AppCompatActivity {
         txtEditEmail = findViewById(R.id.editTheEmail);
         btnLogout = findViewById(R.id.buttonLogout);
         btnDeleteAccount = findViewById(R.id.buttonDeleteAccount);
+        valueOfUsername = findViewById(R.id.valueOfUsername);
+        valueOfBio = findViewById(R.id.valueOfBio);
+        valueOfEmail = findViewById(R.id.valueOfEmail);
+
+        //Firebase Auth
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        fStore = FirebaseFirestore.getInstance();
+        userID = auth.getCurrentUser().getUid();
+
+        // Get user's first name
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String firstName = document.getString("firstName");
+                    valueOfUsername.setText(firstName);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
+        // Get user's bio
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String bio = document.getString("bio");
+                    valueOfBio.setText(bio);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
+        // Get user's email
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String email = document.getString("email");
+                    valueOfEmail.setText(email);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
 
         //profilepic
         fabEditProfile = findViewById(R.id.fabEditProfilePicture);
@@ -81,12 +167,14 @@ public class UserSettings extends AppCompatActivity {
                 showDialogEditUsername(view);
             }
         });
+
         txtEditPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showDialogEditPassword(view);
             }
         });
+
         txtEditBio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,13 +227,36 @@ public class UserSettings extends AppCompatActivity {
         Button btnCancel = dialog.findViewById(R.id.buttonCancel);
         EditText editTextUsername = dialog.findViewById(R.id.editTextUsername);
 
+        // Firebase Auth
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        fStore = FirebaseFirestore.getInstance();
+        userID = auth.getCurrentUser().getUid();
+
+        // Get user's first name
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String firstName = document.getString("firstName");
+                    editTextUsername.setText(firstName);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
         btnSave.setEnabled(false);
         btnSave.setAlpha(0.5f);
 
         editTextUsername.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // Not needed for this case
+
             }
 
             @Override
@@ -163,7 +274,31 @@ public class UserSettings extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(UserSettings.this , "Your username has been updated", Toast.LENGTH_SHORT);
+                String newFirstName = editTextUsername.getText().toString();
+
+                // Mapping
+                Map<String, Object> user = new HashMap<>();
+                user.put("firstName", newFirstName);
+
+                // Update the first name
+                documentReference.set(user, SetOptions.merge())
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully updated!");
+                                Toast.makeText(UserSettings.this, "Username updated", Toast.LENGTH_SHORT).show();
+                                UserSettings.this.recreate();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error updating document", e);
+                                Toast.makeText(UserSettings.this, "Error updating username", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                dialog.dismiss();
             }
         });
 
@@ -204,23 +339,45 @@ public class UserSettings extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(UserSettings.this , "Your password has been updated", Toast.LENGTH_SHORT);
-            }
-        });
+                String newPassword = editTextNew.getText().toString();
 
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                // Firebase Auth
+                auth = FirebaseAuth.getInstance();
+                user = auth.getCurrentUser();
+
+                // Update the password
+                user.updatePassword(newPassword)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.d(TAG, "User password updated.");
+                                Toast.makeText(UserSettings.this, "Password updated", Toast.LENGTH_SHORT).show();
+                                UserSettings.this.recreate();
+                            } else {
+                                Log.d(TAG, "Error password not updated");
+                                Toast.makeText(UserSettings.this, "Error updating password", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
                 dialog.dismiss();
             }
-        });
+     });
 
-        dialog.show();
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-        dialog.getWindow().setGravity(Gravity.BOTTOM);
-    }
+    btnCancel.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            dialog.dismiss();
+        }
+    });
+
+    dialog.show();
+    dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+    dialog.getWindow().setGravity(Gravity.BOTTOM);
+}
 
     private TextWatcher passwordTextWatcher = new TextWatcher() {
         @Override
@@ -253,6 +410,29 @@ public class UserSettings extends AppCompatActivity {
         Button btnCancel = dialog.findViewById(R.id.buttonCancel);
         EditText editTextBio = dialog.findViewById(R.id.editTextBio);
 
+        // Firebase Auth
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        fStore = FirebaseFirestore.getInstance();
+        userID = auth.getCurrentUser().getUid();
+
+        // Get user's Bio
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String bio = document.getString("bio");
+                    editTextBio.setText(bio);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
         btnSave.setEnabled(false);
         btnSave.setAlpha(0.5f);
 
@@ -277,7 +457,31 @@ public class UserSettings extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(UserSettings.this , "Your bio has been updated", Toast.LENGTH_SHORT);
+                String newBio = editTextBio.getText().toString();
+
+                // Mapping
+                Map<String, Object> user = new HashMap<>();
+                user.put("bio", newBio);
+
+                // Update the first name
+                documentReference.set(user, SetOptions.merge())
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully updated!");
+                                Toast.makeText(UserSettings.this, "Bio updated", Toast.LENGTH_SHORT).show();
+                                UserSettings.this.recreate();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error updating document", e);
+                                Toast.makeText(UserSettings.this, "Error updating Bio", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                dialog.dismiss();
             }
         });
 
@@ -352,56 +556,190 @@ public class UserSettings extends AppCompatActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
-    private void showDialogEditEmail (View view) {
-        final Dialog dialog = new Dialog(this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_edit_email);
+   private void showDialogEditEmail (View view) {
+    final Dialog dialog = new Dialog(this);
+    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    dialog.setContentView(R.layout.dialog_edit_email);
 
-        Button btnSave = dialog.findViewById(R.id.buttonSave);
-        Button btnCancel = dialog.findViewById(R.id.buttonCancel);
-        EditText editTextEmail = dialog.findViewById(R.id.editTextEmail);
+    Button btnSave = dialog.findViewById(R.id.buttonSave);
+    Button btnCancel = dialog.findViewById(R.id.buttonCancel);
+    EditText editTextEmail = dialog.findViewById(R.id.editTextEmail);
+    EditText editTextCurrentPassword = dialog.findViewById(R.id.editTextCurrentPassword); // Add this line
 
-        btnSave.setEnabled(false);
-        btnSave.setAlpha(0.5f);
+    // Firebase Auth
+    auth = FirebaseAuth.getInstance();
+    user = auth.getCurrentUser();
+    fStore = FirebaseFirestore.getInstance();
+    userID = auth.getCurrentUser().getUid();
 
-        editTextEmail.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // Not needed for this case
+    // Get user's Bio
+    DocumentReference documentReference = fStore.collection("users").document(userID);
+
+    documentReference.get().addOnCompleteListener(task -> {
+        if (task.isSuccessful()) {
+            DocumentSnapshot document = task.getResult();
+            if (document.exists()) {
+                String email = document.getString("email");
+                editTextEmail.setText(email);
+            } else {
+                Log.d(TAG, "No such document");
             }
+        } else {
+            Log.d(TAG, "get failed with ", task.getException());
+        }
+    });
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                btnSave.setEnabled(true);
-                btnSave.setAlpha(1.0f);
-            }
+    btnSave.setEnabled(false);
+    btnSave.setAlpha(0.5f);
 
-            @Override
-            public void afterTextChanged(Editable editable) {
-                // Not needed for this case
-            }
-        });
+    editTextEmail.addTextChangedListener(new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            // Not needed for this case
+        }
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(UserSettings.this , "Your email has been updated", Toast.LENGTH_SHORT);
-            }
-        });
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            btnSave.setEnabled(true);
+            btnSave.setAlpha(1.0f);
+        }
 
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
+        @Override
+        public void afterTextChanged(Editable editable) {
+            // Not needed for this case
+        }
+    });
 
-        dialog.show();
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-        dialog.getWindow().setGravity(Gravity.BOTTOM);
-    }
+
+       btnSave.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               String newEmail = editTextEmail.getText().toString();
+               String currentPassword = editTextCurrentPassword.getText().toString();
+
+               // Re-authenticate the user
+               AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), currentPassword);
+               user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                   @Override
+                   public void onComplete(@NonNull Task<Void> task) {
+                       if (task.isSuccessful()) {
+                           // Update the email in Firebase Auth
+                           user.verifyBeforeUpdateEmail(newEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                               @Override
+                               public void onComplete(@NonNull Task<Void> task) {
+                                   if (task.isSuccessful()) {
+                                       Log.d(TAG, "User email address updated.");
+
+                                       // Update the email in Firestore
+                                       Map<String, Object> updates = new HashMap<>();
+                                       updates.put("email", newEmail);
+                                       documentReference.set(updates, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                           @Override
+                                           public void onComplete(@NonNull Task<Void> task) {
+                                               if (task.isSuccessful()) {
+                                                   Toast.makeText(UserSettings.this, "Email updated", Toast.LENGTH_SHORT).show();
+                                                   UserSettings.this.recreate();
+                                               } else {
+                                                   Log.d(TAG, "Error updating email in Firestore");
+                                                   Toast.makeText(UserSettings.this, "Error updating email in Firestore", Toast.LENGTH_SHORT).show();
+                                               }
+                                           }
+                                       });
+                                   } else {
+                                       Log.d(TAG, "Error email not updated");
+                                       Toast.makeText(UserSettings.this, "Error updating email", Toast.LENGTH_SHORT).show();
+                                   }
+                               }
+                           });
+                       } else {
+                           // Handle exceptions
+                           try {
+                               throw task.getException();
+                           } catch(FirebaseAuthInvalidCredentialsException e) {
+                               editTextCurrentPassword.setError("Invalid password");
+                               editTextCurrentPassword.requestFocus();
+                           } catch(Exception e) {
+                               Log.e(TAG, e.getMessage());
+                           }
+                       }
+                   }
+               });
+
+               btnSave.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View view) {
+                       String newEmail = editTextEmail.getText().toString();
+                       String currentPassword = editTextCurrentPassword.getText().toString();
+
+                       // Re-authenticate the user
+                       AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), currentPassword);
+                       user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                           @Override
+                           public void onComplete(@NonNull Task<Void> task) {
+                               if (task.isSuccessful()) {
+                                   // Update the email in Firebase Auth
+                                   user.verifyBeforeUpdateEmail(newEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                       @Override
+                                       public void onComplete(@NonNull Task<Void> task) {
+                                           if (task.isSuccessful()) {
+                                               Log.d(TAG, "User email address updated.");
+
+                                               // Update the email in Firestore
+                                               Map<String, Object> updates = new HashMap<>();
+                                               updates.put("email", newEmail);
+                                               documentReference.set(updates, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                   @Override
+                                                   public void onComplete(@NonNull Task<Void> task) {
+                                                       if (task.isSuccessful()) {
+                                                           Toast.makeText(UserSettings.this, "Email updated", Toast.LENGTH_SHORT).show();
+                                                           UserSettings.this.recreate();
+                                                       } else {
+                                                           Log.d(TAG, "Error updating email in Firestore");
+                                                           Toast.makeText(UserSettings.this, "Error updating email in Firestore", Toast.LENGTH_SHORT).show();
+                                                       }
+                                                   }
+                                               });
+                                           } else {
+                                               Log.d(TAG, "Error email not updated");
+                                               Toast.makeText(UserSettings.this, "Error updating email", Toast.LENGTH_SHORT).show();
+                                           }
+                                       }
+                                   });
+                               } else {
+                                   // Handle exceptions
+                                   try {
+                                       throw task.getException();
+                                   } catch(FirebaseAuthInvalidCredentialsException e) {
+                                       editTextCurrentPassword.setError("Invalid password");
+                                       editTextCurrentPassword.requestFocus();
+                                   } catch(Exception e) {
+                                       Log.e(TAG, e.getMessage());
+                                   }
+                               }
+                           }
+                       });
+                       // Do not dismiss the dialog if the password is invalid
+                       if (editTextCurrentPassword.getError() == null) {
+                           dialog.dismiss();
+                       }
+                   }
+               });
+           }
+       });
+
+    btnCancel.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            dialog.dismiss();
+        }
+    });
+
+    dialog.show();
+    dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+    dialog.getWindow().setGravity(Gravity.BOTTOM);
+}
 
     private void showDialogDeleteAccount (View view) {
         final Dialog dialog = new Dialog(this);

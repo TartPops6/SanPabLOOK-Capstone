@@ -1,77 +1,125 @@
 
-C
-java:S1604H"(Make this anonymous inner class a lambda(ãÈöÎşÿÿÿÿ
->
-java:S1604N"(Make this anonymous inner class a lambda(†Ôú
->
-java:S1604T"(Make this anonymous inner class a lambda(´çù
->
-java:S1604Z"(Make this anonymous inner class a lambda(…·õÕ
-C
-java:S1604`"(Make this anonymous inner class a lambda(œÃßçøÿÿÿÿ
-C
-java:S1604f"(Make this anonymous inner class a lambda(Õ–ôËúÿÿÿÿ
->
-java:S1604l"(Make this anonymous inner class a lambda(ûÀêò
-C
-java:S1604r"(Make this anonymous inner class a lambda(úˆüËüÿÿÿÿ
-?
-java:S1604£"(Make this anonymous inner class a lambda(¡‡·¬
->
-java:S1604ª"(Make this anonymous inner class a lambda(µ¶é)
-?
-java:S1604Ì"(Make this anonymous inner class a lambda(¡‡·¬
->
-java:S1604Ó"(Make this anonymous inner class a lambda(µ¶é)
-?
-java:S1604•"(Make this anonymous inner class a lambda(¡‡·¬
->
-java:S1604œ"(Make this anonymous inner class a lambda(µ¶é)
-?
-java:S1604Î"(Make this anonymous inner class a lambda(¡‡·¬
->
-java:S1604Õ"(Make this anonymous inner class a lambda(µ¶é)
-?
-java:S1604"(Make this anonymous inner class a lambda(¡‡·¬
->
-java:S1604ˆ"(Make this anonymous inner class a lambda(µ¶é)
-D
-java:S1604¸"(Make this anonymous inner class a lambda(¶àË²úÿÿÿÿ
+n
+java:S1192l"QDefine a constant instead of duplicating this literal "No such document" 6 times.(Ñ…¨¢8é¿‹ÌÍ1
+d
+java:S1192‡"FDefine a constant instead of duplicating this literal "email" 4 times.(–¢¥É8é¿‹ÌÍ1
+c
+java:S1192c"FDefine a constant instead of duplicating this literal "users" 4 times.(ßÆØÊ8é¿‹ÌÍ1
+n
+java:S1192o"QDefine a constant instead of duplicating this literal "get failed with " 6 times.(Ö‹›§8é¿‹ÌÍ1
+l
+java:S1192i"JDefine a constant instead of duplicating this literal "firstName" 3 times.(½¦Ûíûÿÿÿÿ8é¿‹ÌÍ1
+€
+java:S1192ƒ"bDefine a constant instead of duplicating this literal "Error updating email in Firestore" 4 times.(Ì±‡·8—¢’ÌÍ1
+K
+java:S1604"(Make this anonymous inner class a lambda(ãÈöÎşÿÿÿÿ8ë¿‹ÌÍ1
+F
+java:S1604¤"(Make this anonymous inner class a lambda(†Ôú8ì¿‹ÌÍ1
+F
+java:S1604«"(Make this anonymous inner class a lambda(´çù8ì¿‹ÌÍ1
+F
+java:S1604²"(Make this anonymous inner class a lambda(…·õÕ8ì¿‹ÌÍ1
+K
+java:S1604¸"(Make this anonymous inner class a lambda(œÃßçøÿÿÿÿ8ì¿‹ÌÍ1
+K
+java:S1604¾"(Make this anonymous inner class a lambda(Õ–ôËúÿÿÿÿ8ì¿‹ÌÍ1
+F
+java:S1604Ä"(Make this anonymous inner class a lambda(ûÀêò8ì¿‹ÌÍ1
+K
+java:S1604Ê"(Make this anonymous inner class a lambda(úˆüËüÿÿÿÿ8ì¿‹ÌÍ1
+K
+java:S1604"(Make this anonymous inner class a lambda(Ïë£ùÿÿÿÿ8ì¿‹ÌÍ1
+K
+java:S1604¥"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8ì¿‹ÌÍ1
+F
+java:S1604’"(Make this anonymous inner class a lambda(¡‡·¬8ì¿‹ÌÍ1
 E
-java:S1604¿"(Make this anonymous inner class a lambda(µ¶é)8šà±ÕÊ1
-^
-java:S2259"BA "NullPointerException" could be thrown; "data" is nullable here.(Ÿ®ù“ûÿÿÿÿ
-b
-java:S1659%"LDeclare "txtEditPassword" and all following declarations on a separate line.(ğÜÆ¸
+java:S1604±"(Make this anonymous inner class a lambda(µ¶é)8ì¿‹ÌÍ1
+K
+java:S1604Ş"(Make this anonymous inner class a lambda(„¬é¿øÿÿÿÿ8ì¿‹ÌÍ1
+F
+java:S1604Ó"(Make this anonymous inner class a lambda(¡‡·¬8ì¿‹ÌÍ1
+E
+java:S1604ğ"(Make this anonymous inner class a lambda(µ¶é)8ì¿‹ÌÍ1
+K
+java:S1604Ô"(Make this anonymous inner class a lambda(Ïë£ùÿÿÿÿ8ì¿‹ÌÍ1
+K
+java:S1604Ü"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8ì¿‹ÌÍ1
+F
+java:S1604É"(Make this anonymous inner class a lambda(¡‡·¬8ì¿‹ÌÍ1
+E
+java:S1604è"(Make this anonymous inner class a lambda(µ¶é)8ì¿‹ÌÍ1
+F
+java:S1604š"(Make this anonymous inner class a lambda(¡‡·¬8í¿‹ÌÍ1
+E
+java:S1604¡"(Make this anonymous inner class a lambda(µ¶é)8í¿‹ÌÍ1
+K
+java:S1604ü"(Make this anonymous inner class a lambda(İÜ½ìûÿÿÿÿ8—šÌÍ1
+F
+java:S1604ó"(Make this anonymous inner class a lambda(Û»¸˜8˜šÌÍ1
+K
+java:S1604î"(Make this anonymous inner class a lambda(ó¨±Äúÿÿÿÿ8˜šÌÍ1
+K
+java:S1604²"(Make this anonymous inner class a lambda(İÜ½ìûÿÿÿÿ8¢’ÌÍ1
+F
+java:S1604©"(Make this anonymous inner class a lambda(Û»¸˜8¢’ÌÍ1
+K
+java:S1604¤"(Make this anonymous inner class a lambda(ó¨±Äúÿÿÿÿ8¢’ÌÍ1
+F
+java:S1604œ"(Make this anonymous inner class a lambda(¡‡·¬8í¿‹ÌÍ1
+F
+java:S1604æ"(Make this anonymous inner class a lambda(¡‡·¬8í¿‹ÌÍ1
+E
+java:S1604Ú"(Make this anonymous inner class a lambda(µ¶é)8éóŒÌÍ1
+K
+java:S1604Š"(Make this anonymous inner class a lambda(¶àË²úÿÿÿÿ8ššÌÍ1
+E
+java:S1604‘"(Make this anonymous inner class a lambda(µ¶é)8Ÿ¢’ÌÍ1
+e
+java:S2259Ù"BA "NullPointerException" could be thrown; "data" is nullable here.(Ÿ®ù“ûÿÿÿÿ8ÄÀ‹ÌÍ1
+i
+java:S1659:"LDeclare "txtEditPassword" and all following declarations on a separate line.(ğÜÆ¸8ĞÀ‹ÌÍ1
+P
+java:S1659;".Declare "btnDeleteAccount" on a separate line.(¿¶¯Âúÿÿÿÿ8ĞÀ‹ÌÍ1
+i
+java:S1659D"GDeclare "valueOfBio" and all following declarations on a separate line.(é¸Áœûÿÿÿÿ8ĞÀ‹ÌÍ1
+t
+java:S3776K"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¨Œşÿÿÿÿ8ƒÁ‹ÌÍ1
+O
+java:S1602•",Remove useless curly braces around statement(¿»ÉÓşÿÿÿÿ8Á‹ÌÍ1
+g
+java:S1874Ö"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8›Á‹ÌÍ1
+N
+java:S1172İ"+Remove this unused method parameter "view".(ø÷ÔÁÿÿÿÿÿ8Á‹ÌÍ1
+Y
+java:S1117â"<Rename "btnSave" which hides the field declared at line 322.(ÕÈÙ^8Á‹ÌÍ1
+Ÿ
+java:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á¬‡İ8¡Á‹ÌÍ1
+[
+java:S1117˜"8Rename "user" which hides the field declared at line 62.(èÅ·×øÿÿÿÿ8¤Á‹ÌÍ1
 I
-java:S1659&".Declare "btnDeleteAccount" on a separate line.(¿¶¯Âúÿÿÿÿ
-G
-java:S1602?",Remove useless curly braces around statement(¿»ÉÓşÿÿÿÿ
+java:S1172Ä"+Remove this unused method parameter "view".(¹ë…Û8ªÁ‹ÌÍ1
+N
+java:S1172”"+Remove this unused method parameter "view".(û¾ŸÈûÿÿÿÿ8²Á‹ÌÍ1
+Y
+java:S1117™"<Rename "btnSave" which hides the field declared at line 322.(ÕÈÙ^8³Á‹ÌÍ1
+[
+java:S1117Ï"8Rename "user" which hides the field declared at line 62.(èÅ·×øÿÿÿÿ8¸Á‹ÌÍ1
+N
+java:S1172ö"+Remove this unused method parameter "view".(Ÿ§§¶úÿÿÿÿ8¼Á‹ÌÍ1
 _
-java:S1874~"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
-G
-java:S1172…"+Remove this unused method parameter "view".(ø÷ÔÁÿÿÿÿÿ
-R
-java:S1117Š"<Rename "btnSave" which hides the field declared at line 187.(ÕÈÙ^
-B
-java:S1172½"+Remove this unused method parameter "view".(¹ë…Û
-G
-java:S1172÷"+Remove this unused method parameter "view".(û¾ŸÈûÿÿÿÿ
-R
-java:S1117ü"<Rename "btnSave" which hides the field declared at line 187.(ÕÈÙ^
-G
-java:S1172ª"+Remove this unused method parameter "view".(Ÿ§§¶úÿÿÿÿ
+java:S1117û"<Rename "btnSave" which hides the field declared at line 322.(Éó‹Òûÿÿÿÿ8½Á‹ÌÍ1
+o
+java:S3776¯"RRefactor this method to reduce its Cognitive Complexity from 67 to the 15 allowed.(¡ØÉ98ÃÁ‹ÌÍ1
+H
+java:S1172¯"+Remove this unused method parameter "view".(¡ØÉ98ÆÁ‹ÌÍ1
+Y
+java:S1117´"<Rename "btnSave" which hides the field declared at line 322.(ÕÈÙ^8ÊÁ‹ÌÍ1
+N
+java:S1172è"+Remove this unused method parameter "view".(¹­È³ıÿÿÿÿ8çÁ‹ÌÍ1
 X
-java:S1117¯"<Rename "btnSave" which hides the field declared at line 187.(Éó‹Òûÿÿÿÿ
-A
-java:S1172ã"+Remove this unused method parameter "view".(¡ØÉ9
-R
-java:S1117è"<Rename "btnSave" which hides the field declared at line 187.(ÕÈÙ^
-G
-java:S1172–"+Remove this unused method parameter "view".(¹­È³ıÿÿÿÿ
-Q
-java:S6397Î"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ
-Q
-java:S6397Î"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ
+java:S6397 "5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8íÁ‹ÌÍ1
 X
-java:S6353Î"<Use concise character class syntax '\\d' instead of '[0-9]'.(õ†¿Ïøÿÿÿÿ
+java:S6397 "5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8íÁ‹ÌÍ1
+_
+java:S6353 "<Use concise character class syntax '\\d' instead of '[0-9]'.(õ†¿Ïøÿÿÿÿ8íÁ‹ÌÍ1

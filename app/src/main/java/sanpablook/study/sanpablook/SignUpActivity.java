@@ -1,5 +1,7 @@
 package sanpablook.study.sanpablook;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -7,6 +9,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -15,20 +18,26 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.study.sanpablook.R;
 
 import java.util.Calendar;
+import java.util.Map;
+import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity {
-
 
     //Var
     TextView signInRedirect;
     EditText editTextEmail, editText_SignUpPassword, editTextFirstName, editTextLastName;
     FirebaseAuth mAuth;
+    FirebaseFirestore fStore;
     Button signBtn, datePickerButton;
+    String userID; //For Firebase
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
@@ -54,6 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         //Objects
         mAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editText_SignUpPassword = (EditText) findViewById(R.id.editTextSign_Password);
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
@@ -113,9 +123,30 @@ public class SignUpActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(SignUpActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
 
+                                //Firebase Firestore
+                                fStore = FirebaseFirestore.getInstance();
+                                userID = auth.getCurrentUser().getUid();
+                                DocumentReference documentReference = fStore.collection("users").document(userID);
+
+                                //Map for Firebase Firestore
+                                Map<String, Object> user = new HashMap<>();
+                                user.put("firstName", firstName);
+                                user.put("lastName", lastName);
+                                user.put("dateOfBirth", dateOfBirth);
+                                user.put("email", email);
+                                user.put("password", password);
+                                user.put("dateOfBirth", dateOfBirth);
+                                user.put("bio", "Hello! I am a new tourist here!");
+                                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "onSuccess: user profile is created for " + userID);
+                                    }
+                                });
+
                                 //Email Verification
-                                FirebaseUser user = auth.getCurrentUser();
-                                user.sendEmailVerification().addOnCompleteListener(task1 -> {
+                                FirebaseUser firebaseUser = auth.getCurrentUser();
+                                firebaseUser.sendEmailVerification().addOnCompleteListener(task1 -> {
                                     if (task1.isSuccessful()) {
                                         Toast.makeText(SignUpActivity.this, "Check your email for verification", Toast.LENGTH_SHORT).show();
                                     }
@@ -213,8 +244,3 @@ public class SignUpActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 };
-
-
-
-
-

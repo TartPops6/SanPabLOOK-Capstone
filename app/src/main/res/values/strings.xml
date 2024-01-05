@@ -129,8 +129,8 @@
     <string name="profile">Profile</string>
 
     <!--DASHBOARD TOURIST-->
-    <string name="username">Phil Nguyen</string>
-    <string name="bio">Hi I’m Phil, I’m an aspiring professional photographer!</string>
+    <string name="username">. . .</string>
+    <string name="bio">. . .</string>
     <string name="viewAll">View all >>></string>
 
     <!--SETTINGS / TOURIST INFO-->
@@ -150,6 +150,7 @@
     <string name="labelCancel">Cancel</string>
     <string name="labelCurrentPassword">Current Password</string>
     <string name="labelNewPassword">New Password</string>
+    <string name="labelTypeCurrentPassword">Type your Current Password</string>
     <string name="labelTypeNewPassword">Type your New Password</string>
     <string name="labelRetypePassword">Re-type New Password</string>
     <string name="labelRetypeYourPassword">Re-type your New Password</string>
