@@ -1,16 +1,17 @@
 <resources>
     <string name="app_name">SanPabLOOK</string>
 
-    //homepage
-    <string name="taraPhil">Tara, Phil!</string>
-    <string name="sampalocLake">Sampaloc Lake</string>
-    <string name="taraSantayo">Tara na! San Tayo?</string>
-    <string name="rate">4.8</string>
-    <string name="sampalokLakeSanPabloLaguna">Sampalok Lake, San Pablo, Laguna</string>
-    <string name="reviews">(12,345 reviews)</string>
-    <string name="quickTutorial">Quick Tutorial</string>
-    <string name="mohicap">Mohicap</string>
-    <string name="yamboPandinLake">Yambo-Pandin Lake</string>
+    //Sign In
+    <string name="logIn">Login</string>
+    <string name="signContinue">Sign in to continue</string>
+    <string name="enterEmail">Enter your email</string>
+    <string name="enterPassword">Enter your password</string>
+
+    //Forgot Password
+    <string name="forgotPassword">FORGOT PASSWORD</string>
+    <string name="provideEmail">Provide your account\'s email for which you want to reset your password</string>
+
+    //Sign Up
     <string name="createNewAccount">Create new Account</string>
     <string name="alreadyRegister">Already Registered? Log in here.</string>
     <string name="firstName">FIRST NAME</string>
@@ -18,18 +19,30 @@
     <string name="lastName">LAST NAME</string>
     <string name="enterLastName">Enter Last Name</string>
     <string name="emailCaps">EMAIL</string>
-    <string name="enterEmail">Enter Email</string>
     <string name="passwordCaps">PASSWORD</string>
-    <string name="enterPassword">Enter Password</string>
     <string name="dateOfBirth">DATE OF BIRTH</string>
     <string name="selectDate">Select Date</string>
     <string name="makeSureValid">Make sure that your first name and last name reflect on your Valid ID.</string>
     <string name="signUp">Sign Up</string>
+
+    //homepage
+    <string name="taraPhil">Tara, Phil!</string>
+    <string name="sampalocLake">Sampaloc Lake</string>
+    <string name="taraSantayo">Tara na! San Tayo?</string>
+    <string name="nature">Nature</string>
+
+    //Nature
+    <string name="rate">4.8</string>
+    <string name="sampalokLakeSanPabloLaguna">Sampalok Lake, San Pablo, Laguna</string>
+    <string name="reviews">(12,345 reviews)</string>
+    <string name="quickTutorial">Quick Tutorial</string>
+    <string name="mohicap">Mohicap</string>
+    <string name="yamboPandinLake">Yambo-Pandin Lake</string>
     <string name="sanPabloCityLaguna">San Pablo City, Laguna</string>
     <string name="mohicapLake">Mohicap Lake</string>
     <string name="calibatoLake">Calibato Lake</string>
     <string name="palakpakinLake">Palakpakin Lake</string>
-    <string name="nature">Nature</string>
+
 
     <!-- Hotel Selects -->
     <string name="hotelSelects">HOTEL</string>
