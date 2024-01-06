@@ -12,6 +12,7 @@ import com.study.sanpablook.R;
 
 public class SignInActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private EditText emailField, passwordField;
 
     TextView forgotPassword;
 
@@ -21,42 +22,40 @@ public class SignInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         mAuth = FirebaseAuth.getInstance();
+        emailField = findViewById(R.id.editTextEmail);
+        passwordField = findViewById(R.id.editTextPassword);
 
-        findViewById(R.id.signUpRedirect).setOnClickListener(v ->
-                startActivity(new Intent(SignInActivity.this, SignUpActivity.class)));
+        if (mAuth.getCurrentUser() != null) {
+            redirectToMain();
+            return;
+        }
 
-        findViewById(R.id.loginBtn).setOnClickListener(v -> {
-            String email = String.valueOf(((EditText) findViewById(R.id.editTextEmail)).getText());
-            String password = String.valueOf(((EditText) findViewById(R.id.editTextPassword)).getText());
+        findViewById(R.id.signUpRedirect).setOnClickListener(v -> startActivity(new Intent(this, SignUpActivity.class)));
+        findViewById(R.id.loginBtn).setOnClickListener(v -> login());
+    }
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(SignInActivity.this, "Email and Password are required", Toast.LENGTH_SHORT).show();
-                return;
-            }
+    private void login() {
+        String email = String.valueOf(emailField.getText());
+        String password = String.valueOf(passwordField.getText());
 
-            mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, task -> {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(SignInActivity.this, testMain.class);
-                            intent.putExtra("BottomNavBar", "BottomNavBar");
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            Toast.makeText(SignInActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        });
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Email and Password are required", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-        //Text Forgot Password
-        forgotPassword = findViewById(R.id.forgotPassword);
-        forgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignInActivity.this, ForgotPassword.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        redirectToMain();
+                    } else {
+                        Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void redirectToMain() {
+        startActivity(new Intent(this, BottomNavBar.class));
+        finish();
     }
 }
