@@ -16,7 +16,7 @@
 
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/sampalocView"
+            android:id="@+id/yamboPandinLakeView"
             android:layout_width="match_parent"
             android:layout_height="378sp"
             android:scaleType="fitXY"
@@ -25,11 +25,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/round_corners"
-            app:srcCompat="@drawable/sampaloc_view" />
+            app:srcCompat="@drawable/yambo_pandin" />
 
         <!--back button-->
         <ImageButton
-            android:id="@+id/btnBackNature"
+            android:id="@+id/btnBackYamboPandin"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
             app:srcCompat="@drawable/ic_btn_back" />
         <!--share button-->
         <ImageButton
-            android:id="@+id/btnShareNature"
+            android:id="@+id/btnShareYamboPandin"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:layout_marginTop="16dp"
@@ -55,21 +55,21 @@
 
 
         <TextView
-            android:id="@+id/sampalocLakeTitle"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/sampalocLake"
+            android:id="@+id/yamboPandinLakeTitle"
+            android:layout_width="375dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="24dp"
+            android:text="Yambo-Pandin Lake"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintHorizontal_bias="0.315"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocView" />
+            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeView" />
 
         <TextView
-            android:id="@+id/rateSampaloc"
+            android:id="@+id/rateYamboPandin"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_marginTop="12dp"
@@ -79,22 +79,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.072"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeTitle" />
 
         <LinearLayout
-            android:id="@+id/linearLayoutSampaloc"
+            android:id="@+id/linearLayout2"
             android:layout_width="120dp"
             android:layout_height="26dp"
             android:layout_marginTop="16dp"
             android:background="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/rateSampaloc"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle"
+            app:layout_constraintStart_toEndOf="@+id/rateYamboPandin"
+            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeTitle"
             tools:ignore="MissingConstraints">
 
             <ImageView
-                android:id="@+id/starRateSampaloc1"
+                android:id="@+id/starRateYambo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -102,7 +102,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc2"
+                android:id="@+id/starRateYambo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -110,7 +110,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc3"
+                android:id="@+id/starRateYambo3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -118,7 +118,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc4"
+                android:id="@+id/starRateYambo4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star"
@@ -126,7 +126,7 @@
                 tools:layout_editor_absoluteY="463dp" />
 
             <ImageView
-                android:id="@+id/starRateSampaloc5"
+                android:id="@+id/starRateYambo5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/rate_star_half"
@@ -136,7 +136,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/reviewsSampaloc"
+            android:id="@+id/reviewsYamboPandin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -144,8 +144,8 @@
             android:textColor="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayoutSampaloc"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeTitle" />
 
         <TextView
             android:id="@+id/location"
@@ -158,7 +158,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
         <ImageView
             android:id="@+id/locationIcon"
@@ -172,7 +172,7 @@
             app:srcCompat="@drawable/baseline_location" />
 
         <TextView
-            android:id="@+id/PostalAddress"
+            android:id="@+id/PostalAddressYamboPandin"
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
@@ -200,7 +200,7 @@
             app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
 
         <TextView
-            android:id="@+id/descriptionSampaloc"
+            android:id="@+id/descriptionYambo"
             android:layout_width="363dp"
             android:layout_height="77dp"
             android:layout_marginTop="8dp"
@@ -223,10 +223,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descriptionSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/descriptionYambo" />
 
         <TextView
-            android:id="@+id/quickTutorialDescriptionSampaloc"
+            android:id="@+id/quickTutorialDescriptionYambo"
             android:layout_width="363dp"
             android:layout_height="77dp"
             android:layout_marginTop="4dp"
@@ -239,7 +239,7 @@
             app:layout_constraintTop_toBottomOf="@+id/quickTutorial" />
 
         <Button
-            android:id="@+id/buttonSampalocYt"
+            android:id="@+id/buttonYamboYt"
             android:layout_width="359dp"
             android:layout_height="53dp"
             android:layout_marginTop="12dp"
@@ -247,7 +247,7 @@
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quickTutorialDescriptionSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/quickTutorialDescriptionYambo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

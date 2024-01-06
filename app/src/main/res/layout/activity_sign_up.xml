@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/alreadyRegister"
+                android:text="Already Registered? Log in here."
                 android:textAlignment="center"
                 android:textColor="@color/selectedText"
                 android:textSize="13sp"
@@ -85,51 +85,73 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/signInRedirect">
 
-                                <!--first name-->
-                                <TextView
-                                    android:id="@+id/textViewFirstName"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/firstName"
-                                    android:textColor="@color/gray"
-                                    android:textSize="12sp" />
+                <!--first name-->
+                <TextView
+                    android:id="@+id/textViewFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/firstName"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
 
-                                <EditText
-                                    android:id="@+id/editTextFirstName"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp"
-                                    android:layout_marginTop="5dp"
-                                    android:background="@drawable/log_background"
-                                    android:ems="10"
-                                    android:hint="@string/enterFirstName"
-                                    android:inputType="text"
-                                    android:padding="16dp"
-                                    android:textColor="@color/onyx"
-                                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/log_background"
+                    android:ems="10"
+                    android:hint="@string/enterFirstName"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textColor="@color/onyx"
+                    android:textSize="14sp" />
 
-                                <!--last name-->
-                                <TextView
-                                    android:id="@+id/textViewLastName"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="@string/lastName"
-                                    android:textColor="@color/gray"
-                                    android:textSize="12sp" />
+                <!--last name-->
+                <TextView
+                    android:id="@+id/textViewLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/lastName"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
 
-                                <EditText
-                                    android:id="@+id/editTextLastName"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp"
-                                    android:layout_marginTop="5dp"
-                                    android:background="@drawable/log_background"
-                                    android:ems="10"
-                                    android:hint="@string/enterLastName"
-                                    android:padding="14dp"
-                                    android:textColor="@color/onyx"
-                                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/log_background"
+                    android:ems="10"
+                    android:hint="@string/enterLastName"
+                    android:padding="14dp"
+                    android:textColor="@color/onyx"
+                    android:textSize="14sp" />
+
+                <!--Phone number-->
+                <TextView
+                    android:id="@+id/textViewPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="PHONE NUMBER"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editTextPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/log_background"
+                    android:ems="10"
+                    android:hint="XXXX-XXX-XXXX"
+                    android:padding="14dp"
+                    android:textColor="@color/onyx"
+                    android:textSize="14sp" />
+
                 <!-- email -->
-
                 <TextView
                     android:id="@+id/textViewEmail"
                     android:layout_width="match_parent"
@@ -161,18 +183,30 @@
                     android:textColor="@color/gray"
                     android:textSize="12sp" />
 
-                <EditText
-                    android:id="@+id/editTextSign_Password"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutPasswordSignUp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/log_background"
-                    android:ems="10"
-                    android:hint="@string/enterPassword"
-                    android:inputType="textPassword"
-                    android:padding="14dp"
-                    android:textColor="@color/onyx"
-                    android:textSize="14sp" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/blue"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false"
+                    app:boxStrokeColor="@color/lightBlue"
+                    app:boxStrokeWidth="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextSign_Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_background"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:hint="Enter Password"
+                        android:padding="16dp"
+                        android:textColor="@color/onyx"
+                        android:textSize="14sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <!--date of birth-->
 

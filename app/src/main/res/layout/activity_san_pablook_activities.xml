@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="sanpablook.study.sanpablook.NatureActivity">
+    tools:context="sanpablook.study.sanpablook.SanPablookActivities">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/searchBar"
+            android:id="@+id/searchBarActivities"
             android:layout_width="374dp"
             android:layout_height="48dp"
             android:layout_marginTop="52dp"
@@ -42,7 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchBar"
+            app:layout_constraintTop_toBottomOf="@+id/searchBarActivities"
             tools:ignore="HardcodedText" />
 
         <ImageView
@@ -59,7 +59,7 @@
         <!--bg corner right rounded-->
 
         <TextView
-            android:id="@+id/PostalAddress"
+            android:id="@+id/PostalAddressActivities"
             android:layout_width="301dp"
             android:layout_height="31dp"
             android:layout_marginTop="16dp"
@@ -77,7 +77,7 @@
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PostalAddress">
+            app:layout_constraintTop_toBottomOf="@+id/PostalAddressActivities">
 
             <ImageView
                 android:id="@+id/backgroundRight"
@@ -88,7 +88,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PostalAddress"
+                app:layout_constraintTop_toBottomOf="@+id/PostalAddressActivities"
                 app:srcCompat="@drawable/nature_rightcorner_background"
                 tools:ignore="NotSibling" />
 
@@ -104,16 +104,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PostalAddress"
+                app:layout_constraintTop_toBottomOf="@+id/PostalAddressActivities"
                 app:srcCompat="@drawable/wave"
                 tools:ignore="NotSibling" />
 
             <TextView
-                android:id="@+id/textNature"
+                android:id="@+id/textActivities"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="@string/nature"
+                android:text="Activities"
                 android:textColor="@color/darkBlue"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -123,14 +123,14 @@
                 app:layout_constraintTop_toTopOf="@+id/backgroundRight" />
 
             <ScrollView
-                android:id="@+id/scrollViewNature"
+                android:id="@+id/scrollViewActivities"
                 android:layout_width="354dp"
                 android:layout_height="421dp"
                 android:layout_marginTop="10dp"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textNature">
+                app:layout_constraintTop_toBottomOf="@+id/textActivities">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardViewSampalok"
+                        android:id="@+id/cardViewBikeRental"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -148,31 +148,31 @@
                         app:cardUseCompatPadding="true">
 
                         <ImageButton
-                            android:id="@+id/sampaloclakePic"
+                            android:id="@+id/bikeRentalPic"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corners_50"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/sampaloc_view" />
+                            app:srcCompat="@drawable/bike" />
 
                         <TextView
-                            android:id="@+id/sampaloc"
+                            android:id="@+id/bikeRentaltxt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="160dp"
                             android:layout_weight="1"
                             android:shadowColor="@color/black"
-                            android:text="@string/sampalocLake"
+                            android:text="Bike Rental"
                             android:textColor="@color/white"
-                            android:textSize="25sp"
+                            android:textSize="30sp"
                             android:textStyle="bold" />
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardViewMohicap"
+                        android:id="@+id/cardViewCamping"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -181,32 +181,31 @@
                         app:cardUseCompatPadding="true">
 
                         <ImageButton
-                            android:id="@+id/mohicapLakePic"
+                            android:id="@+id/CampingPic"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corners_50"
-                            android:contentDescription="@string/mohicap"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/mohicap" />
+                            app:srcCompat="@drawable/camping" />
 
                         <TextView
-                            android:id="@+id/mohicaptext"
+                            android:id="@+id/campingtext"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="160dp"
                             android:layout_weight="1"
                             android:shadowColor="@color/black"
-                            android:text="@string/mohicapLake"
+                            android:text= "Camping"
                             android:textColor="@color/white"
-                            android:textSize="25sp"
+                            android:textSize="30sp"
                             android:textStyle="bold" />
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardViewCalibato"
+                        android:id="@+id/cardViewFishing"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -215,92 +214,25 @@
                         app:cardUseCompatPadding="true">
 
                         <ImageButton
-                            android:id="@+id/calibatoLakePic"
+                            android:id="@+id/fishingPic"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corners_50"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/calibato" />
+                            app:srcCompat="@drawable/fishing" />
 
                         <TextView
-                            android:id="@+id/calibato"
+                            android:id="@+id/fishingText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="160dp"
                             android:layout_weight="1"
                             android:shadowColor="@color/black"
-                            android:text="Calibato Lake"
+                            android:text="Fishing"
                             android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardViewPalakpakin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="0dp"
-                        app:cardUseCompatPadding="true">
-
-
-                        <ImageButton
-                            android:id="@+id/palakpakinLakePic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="200dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_corners_50"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/palakpakin" />
-
-                        <TextView
-                            android:id="@+id/palakpakin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="160dp"
-                            android:layout_weight="1"
-                            android:shadowColor="@color/black"
-                            android:text="@string/palakpakinLake"
-                            android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardViewYamboPandin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="15dp"
-                        app:cardElevation="0dp"
-                        app:cardUseCompatPadding="true">
-
-                        <ImageButton
-                            android:id="@+id/yamboPandinPic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="200dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_corners_50"
-                            android:scaleType="fitXY"
-                            app:srcCompat="@drawable/yambo_pandin" />
-
-                        <TextView
-                            android:id="@+id/yambo_pandin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="160dp"
-                            android:layout_weight="1"
-                            android:shadowColor="@color/black"
-                            android:text="@string/yamboPandinLake"
-                            android:textColor="@color/white"
-                            android:textSize="25sp"
+                            android:textSize="30sp"
                             android:textStyle="bold" />
 
                     </androidx.cardview.widget.CardView>

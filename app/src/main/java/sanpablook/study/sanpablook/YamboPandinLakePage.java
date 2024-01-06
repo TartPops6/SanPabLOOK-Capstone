@@ -2,7 +2,6 @@ package sanpablook.study.sanpablook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,24 +11,24 @@ import android.widget.ImageButton;
 
 import com.study.sanpablook.R;
 
-public class NatureSampalocLakeActivity extends AppCompatActivity {
+public class YamboPandinLakePage extends AppCompatActivity {
 
-    ImageButton btnShare, btnBack;
+    ImageButton btnShareYamboPandin, btnBackYamboPandin;
 
-    Button sampalocYt;
+    Button YamboPandinYt;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sampaloc_lake);
+        setContentView(R.layout.activity_yambo_pandin_lake_page);
 
         //buttons
-        btnBack = findViewById(R.id.btnBackNature);
-        btnShare = findViewById(R.id.btnShareNature);
+        btnShareYamboPandin = findViewById(R.id.btnShareYamboPandin);
+        btnBackYamboPandin = findViewById(R.id.btnBackYamboPandin);
 
         //back button
-        btnBack.setOnClickListener(new View.OnClickListener() {
+        btnBackYamboPandin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
@@ -37,7 +36,7 @@ public class NatureSampalocLakeActivity extends AppCompatActivity {
         });
 
         //share button
-        btnShare.setOnClickListener(new View.OnClickListener() {
+        btnShareYamboPandin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
@@ -50,22 +49,20 @@ public class NatureSampalocLakeActivity extends AppCompatActivity {
             }
         });
 
+        //YamboPandin Lake Image redirect to youtube
+        YamboPandinYt = findViewById(R.id.buttonYamboYt);
 
-        //Sampaloc Lake Image redirect to youtube
-        sampalocYt = findViewById(R.id.buttonYt);
-
-        sampalocYt.setOnClickListener(new View.OnClickListener() {
+        YamboPandinYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/eoGznaa70XI?si=xc1Ep_egopABws2r");
+                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
             }
         });
     }
-
-
-    //Sampaloc Lake Image redirect to youtube
+    //Yambo Pandin Lake Image redirect to youtube
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
+
     }
 }

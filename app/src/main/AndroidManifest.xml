@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Android Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera.any" />
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -20,12 +21,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
+        <activity
+            android:name="sanpablook.study.sanpablook.FishingPage"
+            android:exported="false" />
+        <activity
+            android:name="sanpablook.study.sanpablook.CampingPage"
+            android:exported="false" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi4Y0iwY7WoSsDXb8BMfioHIjzZSqtPy8" />
 
+        <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
+        <activity
+            android:name="sanpablook.study.sanpablook.SanPablookActivities"
+            android:exported="true" />
+        <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
+        <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
         <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
+        <activity android:name="sanpablook.study.sanpablook.YamboPandinLakePage" />
         <activity android:name="sanpablook.study.sanpablook.HotelCasa" />
+        <activity android:name="sanpablook.study.sanpablook.CalibatoLakePage" />
+        <activity android:name="sanpablook.study.sanpablook.PalakpakinLakePage" />
         <activity android:name="sanpablook.study.sanpablook.HotelMeding" />
         <activity android:name="sanpablook.study.sanpablook.ViewNotification" />
         <activity android:name="sanpablook.study.sanpablook.AdminBookingDetails" />
@@ -38,17 +55,26 @@
         <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
         <activity android:name="sanpablook.study.sanpablook.ActivityHistory" />
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
-        <activity android:name="sanpablook.study.sanpablook.NatureActivity" />
-        <activity android:name="sanpablook.study.sanpablook.NatureSampalocLakeActivity" android:exported="true" />
+        <activity
+            android:name="sanpablook.study.sanpablook.NatureActivity"
+            android:exported="true" />
+        <activity android:name="sanpablook.study.sanpablook.NatureSampalocLakeActivity" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
         <activity android:name="sanpablook.study.sanpablook.HomeActivity" />
         <activity android:name="sanpablook.study.sanpablook.testMain" />
-        <activity android:name="sanpablook.study.sanpablook.SignInActivity" android:exported="true">
+        <activity
+            android:name="sanpablook.study.sanpablook.SignInActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="sanpablook.study.sanpablook.BottomNavBar" android:exported="true" android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.BottomNavBar"
+            android:exported="true"
+            android:screenOrientation="portrait" />
     </application>
+
 </manifest>
