@@ -93,6 +93,7 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/profilePicture"
                     android:background="@color/transparent"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/profile_icon"
                     app:fabCradleMargin="0dp"
                     app:fabCradleVerticalOffset="0dp"
