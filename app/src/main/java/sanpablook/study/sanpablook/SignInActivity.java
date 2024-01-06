@@ -24,12 +24,14 @@ public class SignInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         emailField = findViewById(R.id.editTextEmail);
         passwordField = findViewById(R.id.editTextPassword);
+        forgotPassword = findViewById(R.id.forgotPassword);
 
         if (mAuth.getCurrentUser() != null) {
             redirectToMain();
             return;
         }
 
+        findViewById(R.id.forgotPassword).setOnClickListener(v -> startActivity(new Intent(this, ForgotPassword.class)));
         findViewById(R.id.signUpRedirect).setOnClickListener(v -> startActivity(new Intent(this, SignUpActivity.class)));
         findViewById(R.id.loginBtn).setOnClickListener(v -> login());
     }

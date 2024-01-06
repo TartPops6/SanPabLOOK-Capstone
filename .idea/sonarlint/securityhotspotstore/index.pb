@@ -34,3 +34,7 @@ s
 Capp/src/main/java/sanpablook/study/sanpablook/ViewNotification.java,6\f\6f17248f2c60fc2d4eb79a3e39a5b49b0d44ce0c
 t
 Dapp/src/main/java/sanpablook/study/sanpablook/UserNotifications.java,9\1\91a23888f688b9821ab64659aad9dcb511fcd1f9
+q
+Aapp/src/main/java/sanpablook/study/sanpablook/ForgotPassword.java,2\8\28299b25c1c7a6e965d42650e48149921d40f354
+w
+Gapp/src/main/java/sanpablook/study/sanpablook/SanPablookActivities.java,8\5\85b81e4f57ab405db7398b69c1f52c3037c79121

@@ -22,7 +22,7 @@
             android:layout_width="91dp"
             android:layout_height="56dp"
             android:layout_marginTop="44dp"
-            android:text="Tara,"
+            android:text="Tara, "
             android:textColor="@color/selectedText"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -32,13 +32,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!--notif-->
-
         <TextView
             android:id="@+id/userName"
             android:layout_width="216dp"
             android:layout_height="60dp"
             android:layout_marginTop="44dp"
-            android:text="Phil"
+            android:text=". . ."
             android:textColor="@color/selectedText"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -48,7 +47,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!--carousel-->
-
         <ImageView
             android:id="@+id/notifButton"
             android:layout_width="55dp"
