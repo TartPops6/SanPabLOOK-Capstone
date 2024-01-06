@@ -54,11 +54,8 @@
         <activity android:name="sanpablook.study.sanpablook.DinePalmerasActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
         <activity android:name="sanpablook.study.sanpablook.ActivityHistory" />
+        <activity android:name="sanpablook.study.sanpablook.NatureActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
-        <activity
-            android:name="sanpablook.study.sanpablook.NatureActivity"
-            android:exported="true" />
-        <activity android:name="sanpablook.study.sanpablook.NatureSampalocLakeActivity" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
         <activity android:name="sanpablook.study.sanpablook.HomeActivity" />
         <activity android:name="sanpablook.study.sanpablook.testMain" />
