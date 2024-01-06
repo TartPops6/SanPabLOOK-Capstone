@@ -33,7 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     //Var
     TextView signInRedirect;
-    EditText editTextEmail, editText_SignUpPassword, editTextFirstName, editTextLastName;
+    EditText editTextEmail, editText_SignUpPassword, editTextFirstName, editTextLastName, editTextPhoneNumber;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     Button signBtn, datePickerButton;
@@ -68,6 +68,7 @@ public class SignUpActivity extends AppCompatActivity {
         editText_SignUpPassword = (EditText) findViewById(R.id.editTextSign_Password);
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
+        editTextPhoneNumber = (EditText) findViewById(R.id.editTextPhoneNumber);
         datePickerButton = (Button) findViewById(R.id.datePickerButton);
 
         signBtn = (Button) findViewById(R.id.signBtn);
@@ -88,6 +89,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String lastName = String.valueOf(editTextLastName.getText());
                 String email = String.valueOf(editTextEmail.getText());
                 String password = String.valueOf(editText_SignUpPassword.getText());
+                String phoneNumber = String.valueOf(editTextPhoneNumber.getText());
                 String dateOfBirth = datePickerButton.getText().toString();
 
                 if(TextUtils.isEmpty(firstName)){
@@ -110,13 +112,22 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Password should be more than 6 characters and contain at least 1 number", Toast.LENGTH_SHORT).show();
                     editText_SignUpPassword.setError("Password should be more than 6 characters and contain at least 1 number");
                     editText_SignUpPassword.requestFocus();
-                } else {
+                } else if (TextUtils.isEmpty(phoneNumber)){
+                    Toast.makeText(SignUpActivity.this, "Please enter phone number", Toast.LENGTH_SHORT).show();
+                    editTextPhoneNumber.setError("Please enter phone number");
+                    editTextPhoneNumber.requestFocus();
+                } else if (phoneNumber.length() != 11){
+                    Toast.makeText(SignUpActivity.this, "Phone number should be 11 digits", Toast.LENGTH_SHORT).show();
+                    editTextPhoneNumber.setError("Phone number should be 11 digits");
+                    editTextPhoneNumber.requestFocus();
+                }
+                else {
                     dateOfBirth = datePickerButton.getText().toString();
-                    registerUser(firstName, lastName, dateOfBirth, email, password);
+                    registerUser(firstName, lastName, dateOfBirth, email, password, phoneNumber);
                 }
             }
 
-            private void registerUser(String firstName, String lastName, String dateOfBirth, String email, String password) {
+            private void registerUser(String firstName, String lastName, String dateOfBirth, String email, String password, String phoneNumber) {
                 FirebaseAuth auth = FirebaseAuth.getInstance();
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignUpActivity.this, task -> {
@@ -135,6 +146,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 user.put("dateOfBirth", dateOfBirth);
                                 user.put("email", email);
                                 user.put("password", password);
+                                user.put("phoneNumber", phoneNumber);
                                 user.put("dateOfBirth", dateOfBirth);
                                 user.put("bio", "Hello! I am a new tourist here!");
                                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {

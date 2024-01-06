@@ -38,3 +38,15 @@ q
 Aapp/src/main/java/sanpablook/study/sanpablook/ForgotPassword.java,2\8\28299b25c1c7a6e965d42650e48149921d40f354
 w
 Gapp/src/main/java/sanpablook/study/sanpablook/SanPablookActivities.java,8\5\85b81e4f57ab405db7398b69c1f52c3037c79121
+o
+?app/src/main/java/sanpablook/study/sanpablook/MainActivity.java,8\6\8687b8d7a1cde8b4e369b75880d5d19049be7d0d
+q
+Aapp/src/main/java/sanpablook/study/sanpablook/TanimAgriCacao.java,e\7\e7d6b5dfffebd7d6a5a260f1f9f03c8967aef09b
+r
+Bapp/src/main/java/sanpablook/study/sanpablook/SPCCacaoGrowers.java,a\7\a7c383e22ef76e1e99ffddf3403581d1996b6f18
+n
+>app/src/main/java/sanpablook/study/sanpablook/ProductMenu.java,c\1\c1a7abefc343f0e71dae0a597de053e88076d3ed
+v
+Fapp/src/main/java/sanpablook/study/sanpablook/ProductMenuFragment.java,b\2\b27b78453f620a4bf4a67a58d7f0416818cf7e82
+s
+Capp/src/main/java/sanpablook/study/sanpablook/ProductsFragment.java,7\c\7ca426ea94f37ddad7ef0b1f892b496d074cb447
