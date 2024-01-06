@@ -28,9 +28,9 @@ o
 ?app/src/main/java/sanpablook/study/sanpablook/HomeActivity.java,2\8\289f0e822ade999efc9d968c24c2320c88956aa8
 k
 ;app/src/main/java/sanpablook/study/sanpablook/testMain.java,4\e\4e0494933d91f8db93a002008b5c76ebdceb662c
-q
-Aapp/src/main/java/sanpablook/study/sanpablook/RegisteredUser.java,6\c\6cafa31827ea3d4e6fa4b2a7c8aa5e1f2da9075a
 r
 Bapp/src/main/java/sanpablook/study/sanpablook/ProfileFragment.java,4\5\453bfd77e9ecf710a5c384d394410881b2e926c5
 s
 Capp/src/main/java/sanpablook/study/sanpablook/ViewNotification.java,6\f\6f17248f2c60fc2d4eb79a3e39a5b49b0d44ce0c
+t
+Dapp/src/main/java/sanpablook/study/sanpablook/UserNotifications.java,9\1\91a23888f688b9821ab64659aad9dcb511fcd1f9
