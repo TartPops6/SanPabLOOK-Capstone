@@ -59,7 +59,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
     public void onResume() {
         super.onResume();
 
-        logout();
         checkUserStatus();
 
         // Get user's first name

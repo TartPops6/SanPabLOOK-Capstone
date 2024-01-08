@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wave" />
+        app:srcCompat="@drawable/wave_product" />
 
     <TextView
         android:id="@+id/Location"

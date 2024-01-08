@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:scrollbarThumbVertical="@null">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="sanpablook.study.sanpablook.DinePalmerasReservationActivity"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scrollY="@null">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/titleConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintVertical_bias="0.0">
+                <!--return button-->
+                <ImageButton
+                    android:id="@+id/btnReturn"
+                    android:layout_width="48sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_btn_arrow_back"
+                    app:layout_constraintBottom_toTopOf="@+id/spacer1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--title-->
+                <TextView
+                    android:id="@+id/txtReviewReserve"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/reviewReserve"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toEndOf="@+id/btnReturn"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--spacer-->
+                <View
+                    android:id="@+id/spacer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtReviewReserve" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/reservationScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+                        <!--imgPalmeras-->
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgPalmerasReservation"
+                            android:layout_width="150sp"
+                            android:layout_height="150sp"
+                            android:layout_marginStart="20sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            app:layout_constraintBottom_toTopOf="@+id/spacer2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/rounded"
+                            app:srcCompat="@drawable/img_palmeras" />
+
+                        <TextView
+                            android:id="@+id/txtDineIn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dine-in Reservation"
+                            android:textColor="@color/lighterBlack"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <!--txtPalmeras-->
+                        <TextView
+                            android:id="@+id/txtPalmerasReservation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/palmeras"
+                            android:textColor="@color/lighterBlack"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDineIn" />
+                        <!--icon star-->
+                        <ImageView
+                            android:id="@+id/ic_star"
+                            android:layout_width="16sp"
+                            android:layout_height="16sp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation"
+                            app:srcCompat="@drawable/ic_star" />
+                        <!--rating-->
+                        <TextView
+                            android:id="@+id/txtRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/noOfRatingsPalmeras"
+                            android:textColor="@color/lighterBlack"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/ic_star"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation" />
+                        <!--icon medal-->
+                        <ImageView
+                            android:id="@+id/ic_accredited"
+                            android:layout_width="16sp"
+                            android:layout_height="16sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintStart_toEndOf="@+id/txtRating"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation"
+                            app:srcCompat="@drawable/ic_medal" />
+                        <!--txtAccredited-->
+                        <TextView
+                            android:id="@+id/txt_accredited"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="@string/accredited"
+                            android:textColor="@color/lighterBlack"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ic_accredited"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation" />
+                        <!--spacer-->
+                        <View
+                            android:id="@+id/spacer2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="24dp"
+                            android:background="@color/gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgPalmerasReservation" />
+                        <!--yourReservation-->
+                        <TextView
+                            android:id="@+id/txtYourReservation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/yourReservation"
+                            android:textColor="@color/lighterBlack"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spacer2" />
+                        <!--txtDate-->
+                        <TextView
+                            android:id="@+id/txtDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/labelDate"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtYourReservation" />
+                        <!--date calendar-->
+                        <Button
+                            android:id="@+id/editTxtDate"
+                            style="?android:spinnerStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="openDatePicker"
+                            android:text="@string/labelDate"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtYourReservation" />
+                        <!--time-->
+                        <TextView
+                            android:id="@+id/txtTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/time"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editTxtDate" />
+                        <!--timeDetails-->
+                        <Button
+                            android:id="@+id/editTxtTime"
+                            style="?android:spinnerStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="popTimePicker"
+                            android:text="@string/time"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editTxtDate" />
+                        <!--guest-->
+                        <TextView
+                            android:id="@+id/txtGuest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/guests"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editTxtTime" />
+
+                        <Spinner
+                            android:id="@+id/editTxtGuest"
+                            style="?android:spinnerStyle"
+                            android:layout_width="200sp"
+                            android:layout_height="48sp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/guests"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editTxtTime" />
+                        <!--spacer-->
+                        <TextView
+                            android:id="@+id/spacer3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="24dp"
+                            android:background="@color/gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editTxtGuest" />
+                        <!--requirements-->
+                        <TextView
+                            android:id="@+id/txtRequirements"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/requirements"
+                            android:textColor="@color/lighterBlack"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spacer3" />
+                        <!--message place-->
+                        <TextView
+                            android:id="@+id/txtMessagePlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/messagePlace"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtRequirements" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="@string/messagePlaceDetails"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/btnMessagePlace"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtMessagePlace" />
+
+                        <Button
+                            android:id="@+id/btnMessagePlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:backgroundTint="@color/white"
+                            android:onClick="btnMessage"
+                            android:text="@string/go"
+                            android:textColor="@color/darkBlue"
+                            app:cornerRadius="50dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView7"
+                            app:layout_constraintTop_toBottomOf="@+id/txtMessagePlace"
+                            app:strokeColor="@color/skyBlue"
+                            app:strokeWidth="1dp"
+                            app:rippleColor="@color/blue"/>
+                        <!--phoneNumber-->
+                        <TextView
+                            android:id="@+id/txtPhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/reservePhoneNumber"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                        <TextView
+                            android:id="@+id/txtPhoneNumberDetails"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:justificationMode="inter_word"
+                            android:text="@string/phoneNumberDetails"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@+id/btnPhoneNumber"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber" />
+
+                        <Button
+                            android:id="@+id/btnPhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:backgroundTint="@color/white"
+                            android:text="@string/add"
+                            android:textColor="@color/darkBlue"
+                            app:cornerRadius="50dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtPhoneNumberDetails"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber"
+                            app:strokeColor="@color/skyBlue"
+                            app:strokeWidth="1dp"
+                            app:rippleColor="@color/blue"/>
+
+                        <Button
+                            android:id="@+id/btnConfirm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="32dp"
+                            android:backgroundTint="@color/blue"
+                            android:fontFamily="@font/poppins_extra_bold"
+                            android:padding="20dp"
+                            android:text="@string/confirm"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumberDetails"
+                            app:rippleColor="@color/light"
+                            app:cornerRadius="50dp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </ScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
