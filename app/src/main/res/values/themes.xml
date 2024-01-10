@@ -14,5 +14,9 @@
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
     </style>
 
->>>>>>> a6d646b59fe995455a4c3941f87394ba10dc3a58
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/darkGray</item>
+        <item name="colorControlActivated">@color/blue</item>
+    </style>
+
 </resources>
