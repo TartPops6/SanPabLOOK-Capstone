@@ -28,6 +28,7 @@ import android.widget.Toast;
 import android.view.ViewGroup;
 import android.view.Gravity;
 
+import com.study.sanpablook.DineMessageActivity;
 import com.study.sanpablook.R;
 
 import java.util.Calendar;
@@ -39,7 +40,7 @@ public class DinePalmerasReservationActivity extends AppCompatActivity implement
     ImageButton btnReturn;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
-    Button timeButton, phoneNumber, btnConfirm;
+    Button timeButton, phoneNumber, btnConfirm, btnMessagePlace;
     int hour, minute;
 
     @Override
@@ -87,6 +88,15 @@ public class DinePalmerasReservationActivity extends AppCompatActivity implement
             @Override
             public void onClick(View v) {
                 Toast.makeText(DinePalmerasReservationActivity.this, "You confirmed your reservation.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnMessagePlace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(DinePalmerasReservationActivity.this, DineMessageActivity.class);
+                startActivity(intent);
+
             }
         });
     }
@@ -232,10 +242,11 @@ public class DinePalmerasReservationActivity extends AppCompatActivity implement
 
     }
 
-    public void btnMessage(View v) {
-        String number = "09283395502";
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
-    }
+    //OLD MESSAGE BUTTON
+//    public void btnMessage(View v) {
+//        String number = "09283395502";
+//        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+//    }
 
     boolean validateMobile(String input) {
         Pattern p = Pattern.compile("[0][9][0-9]{9}");

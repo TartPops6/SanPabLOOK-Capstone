@@ -369,4 +369,10 @@
         <item>10</item>
     </string-array>
 
+    <!--REPLIES-->
+    <string name="replyActive">Active Now</string>
+    <string name="replyHour">Typically replies in an hour</string>
+    <string name="replyOffline">Offline</string>
+    <string name="typeMessage">Type a message\.\.\.</string>
+
 </resources>
