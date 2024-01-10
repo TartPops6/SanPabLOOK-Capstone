@@ -186,6 +186,54 @@
     <string name="hintDeleteAccount">Type here</string>
     <string name="labelConfirm">Confirm</string>
 
+    <!--PROFILE | BOOKINGS = Pending, Completed, Cancelled, Ratings-->
+    <string name="labelBookingsPending">Pending</string>
+    <string name="labelBookingsConfirmed">Confirmed</string>
+    <string name="labelBookingsCancelled">Cancelled</string>
+    <string name="labelBookingsRatings">Ratings</string>
+    <string name="badgeCounterPending">0</string>
+    <string name="badgeCounterConfirmed">0</string>
+    <string name="badgeCounterCancelled">0</string>
+    <string name="badgeCounterRatings">0</string>
+    <string name="labelBookingNumber">Booking No.</string>
+    <string name="labelCustomerName">Customer Name</string>
+    <string name="labelBookingDate">Booking Date</string>
+    <string name="labelBookingTime">Booking Time</string>
+    <string name="labelNoOfGuests">No. of Guests</string>
+    <string name="labelNoOfPets">No. of Pets</string>
+    <string name="labelToRate">To Rate</string>
+    <string name="labelYourRatings">Ratings</string>
+    <!--Pending Page-->
+    <string name="pendingEstablishment">Casa San Pablo</string>
+    <string name="pendingBookingNumber">12-005</string>
+    <string name="pendingCustomerName">Phil Nguyen</string>
+    <string name="pendingBookingDate">01-15-24</string>
+    <string name="pendingBookingTime">2:00 PM</string>
+    <string name="pendingNumberOfGuests">5</string>
+    <string name="pendingNumberOfPets">2</string>
+    <!--Confirmed Page-->
+    <string name="confirmedEstablishment">Hotel Palmeras</string>
+    <string name="confirmedBookingNumber">12-022</string>
+    <string name="confirmedCustomerName">Phil Nguyen</string>
+    <string name="confirmedBookingDate">01-12-24</string>
+    <string name="confirmedBookingTime">8:00 AM</string>
+    <string name="confirmedNumberOfGuests">5</string>
+    <string name="confirmedNumberOfPets">2</string>
+    <!--Cancelled Page-->
+    <string name="cancelledEstablishment">Hotel Meding</string>
+    <string name="cancelledBookingNumber">12-022</string>
+    <string name="cancelledCustomerName">Phil Nguyen</string>
+    <string name="cancelledBookingDate">01-12-24</string>
+    <string name="cancelledBookingTime">8:00 AM</string>
+    <string name="cancelledNumberOfGuests">5</string>
+    <string name="cancelledNumberOfPets">2</string>
+    <!--Ratings Page-->
+    <string name="ratingsEstablishment">Palmeras Hotel</string>
+    <string name="ratingsAutofill">Share your thoughts.</string>
+    <string name="ratingsContent"></string>
+    <string name="labelShare">Share</string>
+    <string name="labelUploadImage">Upload image here</string>
+
     <!--NOTIFICATIONS-->
     <string name="labelNotifications">Notifications</string>
     <string name="today">Today</string>
@@ -238,10 +286,6 @@
     <string name="labelPending">Pending</string>
     <string name="labelReceived">Received</string>
     <string name="labelCancelled">Cancelled</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     <!--DINE SEARCH BAR-->
     <string name="location">Location</string>

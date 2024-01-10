@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sanpablook.study.sanpablook.BookingsRatingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ratingsGreenBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_bottom_right">
+
+        <ImageButton
+            android:id="@+id/buttonBackRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:contentDescription="@string/backButton"
+            android:padding="15dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/labelBookingsRatings"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:padding="10dp"
+            android:text="@string/labelBookingsRatings"
+            android:textAlignment="textStart"
+            android:textColor="@color/light"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@id/buttonBackRatings"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ratingsGreenBackground"
+        android:fillViewport="true"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelToRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingTop="10dp"
+                android:text="@string/labelToRate"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/userReview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/establishmentNameToRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_w_fill"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/confirmedEstablishment"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingStars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/establishmentNameToRate"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX=".7"
+                    android:scaleY=".7"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+
+                <TextView
+                    android:id="@+id/labelAddImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingStars"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/labelUploadImage"
+                    android:textColor="@color/darkGray"
+                    android:textSize="15sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewAddImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/labelAddImage"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/transparent"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/addImageRatings"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/rounded_corners_20"
+                        android:contentDescription="@string/destinationName1"
+                        android:padding="80dp"
+                        android:scaleType="center"
+                        android:clickable="true"
+                        android:src="@drawable/camera_icon" />
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/editTextRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardviewAddImage"
+                    android:ems="15"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/ratingsAutofill"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:maxLines="5"
+                    android:paddingTop="20dp"
+                    android:text="@string/ratingsContent"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTextRatings"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:letterSpacing="0"
+                    android:padding="10dp"
+                    android:text="@string/labelShare"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light"
+                    android:textSize="15sp"
+                    app:cornerRadius="50dp"
+                    app:rippleColor="@color/light" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+<!--RATINGS-->
+            <TextView
+                android:id="@+id/labelYourRatings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingTop="10dp"
+                android:text="@string/labelYourRatings"
+                android:textAlignment="center"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/constraintRatings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/establishmentNameRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_w_fill"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/pendingEstablishment"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewImageRatings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/establishmentNameRatings"
+                    android:layout_margin="15dp"
+                    android:backgroundTint="@color/transparent"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/imageRatings"
+                        android:layout_width="130dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/rounded_corners_20"
+                        android:contentDescription="@null"
+                        android:padding="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sampaloc_lake" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/establishmentNameRatings"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@id/cardviewImageRatings"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:justificationMode="inter_word"
+                    android:maxLines="9"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/review1"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
