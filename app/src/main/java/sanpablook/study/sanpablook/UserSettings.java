@@ -69,7 +69,7 @@ public class UserSettings extends AppCompatActivity {
     String userID;
 
     //User profiles
-    TextView valueOfUsername, valueOfBio, valueOfEmail;
+    TextView valueOfUsername, valueOfBio, valueOfEmail, valueofPhoneNumber;
 
     //profilepic
     FloatingActionButton fabEditProfile;
@@ -92,6 +92,8 @@ public class UserSettings extends AppCompatActivity {
         valueOfUsername = findViewById(R.id.valueOfUsername);
         valueOfBio = findViewById(R.id.valueOfBio);
         valueOfEmail = findViewById(R.id.valueOfEmail);
+        valueofPhoneNumber = findViewById(R.id.valueOfPhoneNumber);
+
 
         //Firebase Auth
         auth = FirebaseAuth.getInstance();
@@ -161,6 +163,21 @@ public class UserSettings extends AppCompatActivity {
             @Override
             public void onFailure(Exception e) {
                 Log.d(TAG, "Failed to load profile picture");
+            }
+        });
+
+        //Get user's phone number
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String phoneNumber = document.getString("phoneNumber");
+                    valueofPhoneNumber.setText(phoneNumber);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
             }
         });
 
@@ -574,6 +591,29 @@ public class UserSettings extends AppCompatActivity {
         Button btnCancel = dialog.findViewById(R.id.buttonCancel);
         final EditText editTextPhoneNumber = dialog.findViewById(R.id.editTextPhoneNumber);
 
+        // Firebase Auth
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        fStore = FirebaseFirestore.getInstance();
+        userID = auth.getCurrentUser().getUid();
+
+        //Get user's phone number
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String phoneNumber = document.getString("phoneNumber");
+                    editTextPhoneNumber.setText(phoneNumber);
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
         btnSave.setEnabled(false);
         btnSave.setAlpha(0.5f);
 
@@ -604,7 +644,38 @@ public class UserSettings extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(UserSettings.this , "Your phone number has been updated", Toast.LENGTH_SHORT);
+                String newPhoneNumber = editTextPhoneNumber.getText().toString();
+
+                //Check if the phone number is empty or invalid
+                if (newPhoneNumber.isEmpty() || !validateMobile(newPhoneNumber)) {
+                    editTextPhoneNumber.setError("Invalid phone number");
+                    editTextPhoneNumber.requestFocus();
+                    return;
+                }
+
+                // Mapping
+                Map<String, Object> user = new HashMap<>();
+                user.put("phoneNumber", newPhoneNumber);
+
+                // Update the phone number
+                documentReference.set(user, SetOptions.merge())
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully updated!");
+                                Toast.makeText(UserSettings.this, "Phone number updated", Toast.LENGTH_SHORT).show();
+                                UserSettings.this.recreate();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error updating document", e);
+                                Toast.makeText(UserSettings.this, "Error updating phone number", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                dialog.dismiss();
             }
         });
 

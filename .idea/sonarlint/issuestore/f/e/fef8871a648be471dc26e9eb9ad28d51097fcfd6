@@ -1,30 +1,30 @@
 
 E
-java:S1604K"(Make this anonymous inner class a lambda(†øŸô8Ü¬šÄÍ1
+java:S1604L"(Make this anonymous inner class a lambda(†øŸô8¡ËòïÍ1
 F
-java:S1604Œ"(Make this anonymous inner class a lambda(¸„¦Á8Ü¬šÄÍ1
+java:S1604˜"(Make this anonymous inner class a lambda(¸„¦Á8¢ËòïÍ1
 K
-java:S1604¼"(Make this anonymous inner class a lambda(èÑ×ûÿÿÿÿ8İ¬šÄÍ1
-ƒ	java:S116$"bRename this field "editText_SignUpPassword" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÜÔƒûÿÿÿÿ8×­šÄÍ1
-v
-java:S1659$"TDeclare "editText_SignUpPassword" and all following declarations on a separate line.(òÜÔƒûÿÿÿÿ8â­šÄÍ1
+java:S1604È"(Make this anonymous inner class a lambda(èÑ×ûÿÿÿÿ8¢ËòïÍ1
+~	java:S116$"bRename this field "editText_SignUpPassword" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÇ®ã8şËòïÍ1
+q
+java:S1659$"TDeclare "editText_SignUpPassword" and all following declarations on a separate line.(ÊÇ®ã8ŒÌòïÍ1
 K
-java:S1659'".Declare "datePickerButton" on a separate line.(‘Ö˜Ô8â­šÄÍ1
+java:S1659'".Declare "datePickerButton" on a separate line.(‘Ö˜Ô8ŒÌòïÍ1
 t
-java:S3776<"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¨Œşÿÿÿÿ8û­šÄÍ1
+java:S3776<"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¨Œşÿÿÿÿ8¥ÌòïÍ1
 9
-java:S3626®"Remove this redundant jump.(ûÁİ…8ü­šÄÍ1
+java:S3626º"Remove this redundant jump.(ûÁİ…8¦ÌòïÍ1
 a
-java:S1854["?Remove this useless assignment to local variable "dateOfBirth".(ÃŞè£ûÿÿÿÿ8…®šÄÍ1
+java:S1854]"?Remove this useless assignment to local variable "dateOfBirth".(ÃŞè£ûÿÿÿÿ8¯ÌòïÍ1
 b
-java:S4143Š"DVerify this is the key that was intended; it was already set before.(ôÑ“Ú8®šÄÍ1
+java:S4143–"DVerify this is the key that was intended; it was already set before.(ôÑ“Ú8¿ÌòïÍ1
 X
-java:S2209"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8¬®šÄÍ1
+java:S2209ª"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8ÈÌòïÍ1
 X
-java:S2209"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8¬®šÄÍ1
+java:S2209ª"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8ÈÌòïÍ1
 [
-java:S1874Ë"8Remove this use of "THEME_HOLO_LIGHT"; it is deprecated.(¥î×Şøÿÿÿÿ8»®šÄÍ1
+java:S1874×"8Remove this use of "THEME_HOLO_LIGHT"; it is deprecated.(¥î×Şøÿÿÿÿ8ÔÌòïÍ1
 I
-java:S1172ò"+Remove this unused method parameter "view".(òŸ¾¤8Á®šÄÍ1
+java:S1172ş"+Remove this unused method parameter "view".(òŸ¾¤8ØÌòïÍ1
 ?
-java:S1116ö"Remove this empty statement.(ôŸìúÿÿÿÿ8Á®šÄÍ1
+java:S1116‚"Remove this empty statement.(ôŸìúÿÿÿÿ8ÙÌòïÍ1

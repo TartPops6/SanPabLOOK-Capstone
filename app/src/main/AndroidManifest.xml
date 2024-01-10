@@ -44,10 +44,28 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi4Y0iwY7WoSsDXb8BMfioHIjzZSqtPy8" />
 
+        <!-- PRODUCTS -->
+        <activity android:name="sanpablook.study.sanpablook.AdaFarm"/>
+        <activity android:name="sanpablook.study.sanpablook.CarlzenFarm"/>
+        <activity android:name="sanpablook.study.sanpablook.CocoVinegar"/>
+        <activity android:name="sanpablook.study.sanpablook.ColettesBukoPie"/>
+        <activity android:name="sanpablook.study.sanpablook.EscabaSweets"/>
+        <activity android:name="sanpablook.study.sanpablook.GreenLake"/>
+        <activity android:name="sanpablook.study.sanpablook.HandicraftsAbrego"/>
+        <activity android:name="sanpablook.study.sanpablook.HandicraftsArtiaga"/>
+        <activity android:name="sanpablook.study.sanpablook.KuyaKevBY"/>
+        <activity android:name="sanpablook.study.sanpablook.LauraFarm"/>
+        <activity android:name="sanpablook.study.sanpablook.MamengKape"/>
+        <activity android:name="sanpablook.study.sanpablook.PandinFIsherFolk"/>
+        <activity android:name="sanpablook.study.sanpablook.Pinayte"/>
+        <activity android:name="sanpablook.study.sanpablook.ProductMenu"/> <!--ETO YUNG SA MAIN MENU NG PRODUCT LEONA -->
+        <activity android:name="sanpablook.study.sanpablook.RomalynUbe"/>
+        <activity android:name="sanpablook.study.sanpablook.SampalocLakeSouvenir"/>
+        <activity android:name="sanpablook.study.sanpablook.SPCCacaoGrowers"/>
+        <activity android:name="sanpablook.study.sanpablook.TanimAgriCacao"/>
+        <activity android:name="sanpablook.study.sanpablook.UbeMariaAna"/>
         <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
-        <activity
-            android:name="sanpablook.study.sanpablook.SanPablookActivities"
-            android:exported="true" />
+        <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
         <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
         <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
         <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
