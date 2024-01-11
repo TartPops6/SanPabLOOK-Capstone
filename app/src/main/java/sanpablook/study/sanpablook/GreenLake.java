@@ -34,7 +34,6 @@ public class GreenLake extends AppCompatActivity {
 
         previousButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 onBackPressed();
             }
         });

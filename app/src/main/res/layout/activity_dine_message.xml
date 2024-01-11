@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DineMessageActivity"
+    tools:context="sanpablook.study.sanpablook.DineMessageActivity"
     android:fillViewport="true"
     android:background="@color/white"
     android:scrollbarThumbVertical="@null">

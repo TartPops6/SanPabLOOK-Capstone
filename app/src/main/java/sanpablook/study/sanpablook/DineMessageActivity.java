@@ -1,8 +1,10 @@
-package com.study.sanpablook;
+package sanpablook.study.sanpablook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.study.sanpablook.R;
 
 public class DineMessageActivity extends AppCompatActivity {
 

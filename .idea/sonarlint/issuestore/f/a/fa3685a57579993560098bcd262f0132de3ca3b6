@@ -1,6 +1,6 @@
 
 f	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô
-e	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“³”S
+l	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“³”S8ãˆ”ÃÏ1
 C
 java:S1604"(Make this anonymous inner class a lambda(åüïŒùÿÿÿÿ
 C

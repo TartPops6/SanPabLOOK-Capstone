@@ -52,7 +52,6 @@ public class DineCafeFragment extends Fragment {
                 goToDineCasaActivity (view);
             }
         });
-
         return view;
     }
 

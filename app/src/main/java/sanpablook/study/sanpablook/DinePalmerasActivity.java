@@ -73,7 +73,6 @@ public class DinePalmerasActivity extends AppCompatActivity implements OnMapRead
             public void onClick(View view) {
                 Intent intent=new Intent(DinePalmerasActivity.this, DinePalmerasReservationActivity.class);
                 startActivity(intent);
-
             }
         });
     }

@@ -34,7 +34,7 @@
             android:name="sanpablook.study.sanpablook.BookingsPendingActivity"
             android:exported="false" />
         <activity
-            android:name=".DineMessageActivity"
+            android:name="sanpablook.study.sanpablook.DineMessageActivity"
             android:exported="false" />
         <activity
             android:name="sanpablook.study.sanpablook.FishingPage"

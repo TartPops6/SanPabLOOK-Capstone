@@ -1,5 +1,6 @@
 package sanpablook.study.sanpablook;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -9,7 +10,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.app.TimePickerDialog;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,11 +28,21 @@ import android.widget.Toast;
 import android.view.ViewGroup;
 import android.view.Gravity;
 
-import com.study.sanpablook.DineMessageActivity;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import com.study.sanpablook.R;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -51,16 +61,18 @@ public class DinePalmerasReservationActivity extends AppCompatActivity implement
         //date picker
         initDatePicker();
         dateButton = findViewById(R.id.editTxtDate);
-        dateButton.setText(getTodaysDate());
+        dateButton.setText("");
 
         //time picker
         timeButton = findViewById(R.id.editTxtTime);
+        timeButton.setText("");
 
         //guest picker
         Spinner guestSpinner = findViewById(R.id.editTxtGuest);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.guests, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         guestSpinner.setAdapter(adapter);
+        guestSpinner.setSelection(0);
         guestSpinner.setOnItemSelectedListener(this);
 
         //add phone number button
@@ -78,25 +90,86 @@ public class DinePalmerasReservationActivity extends AppCompatActivity implement
             @Override
             public void onClick(View view) {
                 onBackPressed();
-
             }
         });
 
         //confirm button
         btnConfirm = findViewById(R.id.btnConfirm);
-        btnConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(DinePalmerasReservationActivity.this, "You confirmed your reservation.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btnConfirm.setOnClickListener(new View.OnClickListener() {@Override
+        public void onClick(View v) {
+            //Firestore
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+            //Current user's ID
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            FirebaseUser currentUser = auth.getCurrentUser();
+            String userID = currentUser.getUid();
+
+            //Take data from editTxtDate, editTxtTime, and editTxtGuest
+            String date = ((Button) findViewById(R.id.editTxtDate)).getText().toString();
+            String time = ((Button) findViewById(R.id.editTxtTime)).getText().toString();
+            String guest = ((Spinner) findViewById(R.id.editTxtGuest)).getSelectedItem().toString();
+            final String[] bookingID = new String[1];
+            do {
+                bookingID[0] = BookingIDGenerator.generateBookingID();
+            } while (db.collection("BookingPendingDine").document(bookingID[0]).get().isSuccessful());
+
+            //Get user info from Firestore
+            DocumentReference documentReference = db.collection("users").document(userID);
+            documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    if (documentSnapshot.exists()) {
+                        String phoneNumber = documentSnapshot.getString("phoneNumber");
+                        String fullName = documentSnapshot.getString("firstName") + " " + documentSnapshot.getString("lastName");
+
+                        // Check if date, time, and guest count are selected
+                        if (date.isEmpty() || time.isEmpty() || guest.equals("0")) {
+                            Toast.makeText(DinePalmerasReservationActivity.this, "Plase fulfill the missing field", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        //Document BookingPendingDine collection for this user
+                        Map<String, Object> booking = new HashMap<>();
+
+                        booking.put("userID", userID);
+                        booking.put("place", "Palmeras Garden Restaurant");
+                        booking.put("bookingID", bookingID[0]);
+                        booking.put("fullName", fullName);
+                        booking.put("date", date);
+                        booking.put("time", time);
+                        booking.put("guest", guest);
+                        booking.put("status", "Pending");
+                        booking.put("establishmentID", "PalmerasDine");
+                        booking.put("phoneNumber", phoneNumber);
+
+                        //Save to Firestore
+                        db.collection("BookingPendingDine")
+                                .add(booking)
+                                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    @Override
+                                    public void onSuccess(DocumentReference documentReference) {
+                                        Toast.makeText(DinePalmerasReservationActivity.this, "Booking Successful", Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(DinePalmerasReservationActivity.this, "Booking Failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                }
+            });
+        }
+    });
+
+        btnMessagePlace = findViewById(R.id.btnMessagePlace);
         btnMessagePlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(DinePalmerasReservationActivity.this, DineMessageActivity.class);
                 startActivity(intent);
-
             }
         });
     }
@@ -252,5 +325,22 @@ public class DinePalmerasReservationActivity extends AppCompatActivity implement
         Pattern p = Pattern.compile("[0][9][0-9]{9}");
         Matcher m = p.matcher(input);
         return m.matches();
+    }
+}
+
+class BookingIDGenerator {
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static final int ID_LENGTH = 6;
+
+    public static String generateBookingID() {
+
+        Random random = new Random();
+        StringBuilder builder = new StringBuilder(ID_LENGTH);
+
+        for (int i = 0; i < ID_LENGTH; i++) {
+            int index = random.nextInt(CHARACTERS.length());
+            builder.append(CHARACTERS.charAt(index));
+        }
+        return builder.toString();
     }
 }

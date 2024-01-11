@@ -13,18 +13,18 @@ java:S1659'".Declare "datePickerButton" on a separate line.(‘Ö˜Ô8ŒÌòïÍ1
 t
 java:S3776<"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¨Œşÿÿÿÿ8¥ÌòïÍ1
 9
-java:S3626º"Remove this redundant jump.(ûÁİ…8¦ÌòïÍ1
+java:S3626º"Remove this redundant jump.(ûÁİ…8ÅÖ°ÃÏ1
 a
-java:S1854]"?Remove this useless assignment to local variable "dateOfBirth".(ÃŞè£ûÿÿÿÿ8¯ÌòïÍ1
+java:S1854]"?Remove this useless assignment to local variable "dateOfBirth".(ÃŞè£ûÿÿÿÿ8ËÖ°ÃÏ1
 b
-java:S4143–"DVerify this is the key that was intended; it was already set before.(ôÑ“Ú8¿ÌòïÍ1
+java:S4143–"DVerify this is the key that was intended; it was already set before.(ôÑ“Ú8åï°ÃÏ1
 X
-java:S2209ª"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8ÈÌòïÍ1
+java:S2209ª"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8êï°ÃÏ1
 X
-java:S2209ª"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8ÈÌòïÍ1
+java:S2209ª"5Change this instance-reference to a static reference.(Æ¹×ıÿÿÿÿ8êï°ÃÏ1
 [
-java:S1874×"8Remove this use of "THEME_HOLO_LIGHT"; it is deprecated.(¥î×Şøÿÿÿÿ8ÔÌòïÍ1
+java:S1874×"8Remove this use of "THEME_HOLO_LIGHT"; it is deprecated.(¥î×Şøÿÿÿÿ8òï°ÃÏ1
 I
-java:S1172ş"+Remove this unused method parameter "view".(òŸ¾¤8ØÌòïÍ1
+java:S1172ş"+Remove this unused method parameter "view".(òŸ¾¤8õï°ÃÏ1
 ?
-java:S1116‚"Remove this empty statement.(ôŸìúÿÿÿÿ8ÙÌòïÍ1
+java:S1116‚"Remove this empty statement.(ôŸìúÿÿÿÿ8õï°ÃÏ1

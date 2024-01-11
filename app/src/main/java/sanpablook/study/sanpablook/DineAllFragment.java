@@ -96,9 +96,6 @@ public class DineAllFragment extends Fragment {
                 goToDineCasaActivity(view);
             }
         });
-
-
-
         return view;
     }
 

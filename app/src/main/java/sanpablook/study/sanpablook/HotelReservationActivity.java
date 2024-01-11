@@ -77,7 +77,6 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
             @Override
             public void onClick(View view) {
                 onBackPressed();
-
             }
         });
 

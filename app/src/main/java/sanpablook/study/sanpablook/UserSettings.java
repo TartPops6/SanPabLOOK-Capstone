@@ -380,7 +380,6 @@ public class UserSettings extends AppCompatActivity {
                                 Toast.makeText(UserSettings.this, "Error updating username", Toast.LENGTH_SHORT).show();
                             }
                         });
-
                 dialog.dismiss();
             }
         });
@@ -443,7 +442,6 @@ public class UserSettings extends AppCompatActivity {
                             }
                         }
                     });
-
                 dialog.dismiss();
             }
      });
@@ -650,7 +648,6 @@ public class UserSettings extends AppCompatActivity {
                 if (newPhoneNumber.isEmpty() || !validateMobile(newPhoneNumber)) {
                     editTextPhoneNumber.setError("Invalid phone number");
                     editTextPhoneNumber.requestFocus();
-                    return;
                 }
 
                 // Mapping
@@ -916,6 +913,7 @@ public class UserSettings extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(UserSettings.this , "Your account has been deleted", Toast.LENGTH_SHORT);
+
             }
         });
 
@@ -923,6 +921,7 @@ public class UserSettings extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
+
             }
         });
 
