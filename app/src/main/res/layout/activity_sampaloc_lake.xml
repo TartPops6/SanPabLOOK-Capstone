@@ -172,7 +172,7 @@
             app:srcCompat="@drawable/baseline_location" />
 
         <TextView
-            android:id="@+id/PostalAddress"
+            android:id="@+id/PostalAddressSampaloc"
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
@@ -201,11 +201,11 @@
 
         <TextView
             android:id="@+id/descriptionSampaloc"
-            android:layout_width="363dp"
-            android:layout_height="77dp"
+            android:layout_width="364dp"
+            android:layout_height="94dp"
             android:layout_marginTop="8dp"
             android:justificationMode="inter_word"
-            android:text="Lorem ipsum dolor sit amet consectetur. Ultrices placerat nec mauris felis urna adipiscing. Ridiculus rhoncus libero nibh sed sit in. "
+            android:text="Lake Sampaloc is a volcanic crater lake on the island of Luzon, Philippines. It is the largest of the Seven Lakes of San Pablo, Laguna. Nearly half of the lake's depth has a shallow depression at the bottom, indicating its volcanic origin. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.625"
@@ -216,6 +216,7 @@
             android:id="@+id/quickTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/quickTutorial"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -227,11 +228,11 @@
 
         <TextView
             android:id="@+id/quickTutorialDescriptionSampaloc"
-            android:layout_width="363dp"
-            android:layout_height="77dp"
+            android:layout_width="366dp"
+            android:layout_height="46dp"
             android:layout_marginTop="4dp"
             android:justificationMode="inter_word"
-            android:text="Lorem ipsum dolor sit amet consectetur. Ultrices placerat nec mauris felis urna adipiscing. Ridiculus rhoncus libero nibh sed sit in. "
+            android:text="The lake is behind San Pablo city hall and is dotted with fishpens and small cottages built on stilts. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.625"

@@ -22,6 +22,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,11 +76,9 @@
             <!--sign up content-->
             <LinearLayout
                 android:id="@+id/fillOutInfo"
-                android:layout_width="370dp"
-                android:layout_height="413dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginRight="10dp"
+                android:layout_width="348dp"
+                android:layout_height="496dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -188,24 +187,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    app:boxStrokeColor="@color/lightBlue"
+                    app:boxStrokeWidth="0dp"
                     app:endIconMode="password_toggle"
                     app:endIconTint="@color/blue"
                     app:hintAnimationEnabled="false"
-                    app:hintEnabled="false"
-                    app:boxStrokeColor="@color/lightBlue"
-                    app:boxStrokeWidth="0dp">
+                    app:hintEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editTextSign_Password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/log_background"
-                        android:inputType="textPassword"
                         android:ems="10"
                         android:hint="Enter Password"
+                        android:inputType="textPassword"
                         android:padding="16dp"
                         android:textColor="@color/onyx"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!--date of birth-->
@@ -238,7 +237,7 @@
 
             <!--reminder to make sure-->
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/reminderTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -257,14 +256,16 @@
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="11dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/login_btn_bg"
                 android:text="@string/signUp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/reminderTxt"
                 app:layout_constraintVertical_bias="0.0" />
 
 

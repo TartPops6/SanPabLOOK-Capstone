@@ -21,21 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
-        <activity
-            android:name="sanpablook.study.sanpablook.FishingPage"
-            android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.CampingPage"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi4Y0iwY7WoSsDXb8BMfioHIjzZSqtPy8" />
 
+        <activity android:name="sanpablook.study.sanpablook.FishingPage" />
+        <activity android:name="sanpablook.study.sanpablook.SampalocLakePage"/>
+        <activity android:name="sanpablook.study.sanpablook.CampingPage"  />
         <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
-        <activity
-            android:name="sanpablook.study.sanpablook.SanPablookActivities"
-            android:exported="true" />
+        <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
         <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
         <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
         <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
@@ -54,10 +49,10 @@
         <activity android:name="sanpablook.study.sanpablook.DinePalmerasActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
         <activity android:name="sanpablook.study.sanpablook.ActivityHistory" />
-        <activity android:name="sanpablook.study.sanpablook.NatureActivity" />
+        <activity android:name="sanpablook.study.sanpablook.NatureActivity" android:exported="true"/>
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
-        <activity android:name="sanpablook.study.sanpablook.HomeActivity" />
+        <activity android:name="sanpablook.study.sanpablook.HomeActivity" android:exported="true" />
         <activity android:name="sanpablook.study.sanpablook.testMain" />
         <activity
             android:name="sanpablook.study.sanpablook.SignInActivity"

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.study.sanpablook.R;
 
@@ -16,6 +17,8 @@ public class YamboPandinLakePage extends AppCompatActivity {
     ImageButton btnShareYamboPandin, btnBackYamboPandin;
 
     Button YamboPandinYt;
+
+    TextView yamboPandinLake;
 
 
     @Override
@@ -49,13 +52,22 @@ public class YamboPandinLakePage extends AppCompatActivity {
             }
         });
 
+        //YamboPandin Lake location redirect maps
+        yamboPandinLake = findViewById(R.id.PostalAddressYamboPandin);
+        yamboPandinLake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://maps.app.goo.gl/GthStcy52WvcF2HM8");
+            }
+        });
+
         //YamboPandin Lake Image redirect to youtube
         YamboPandinYt = findViewById(R.id.buttonYamboYt);
 
         YamboPandinYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/b5-caWYajaI?si=Ez4HgYyalUcsGbwF");
             }
         });
     }

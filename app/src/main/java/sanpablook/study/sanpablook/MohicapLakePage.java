@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.study.sanpablook.R;
 
@@ -16,6 +17,8 @@ public class MohicapLakePage extends AppCompatActivity {
     ImageButton btnShareMohicap, btnBackMohicap;
 
     Button mohicapYt;
+
+    TextView mohicapLoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +51,22 @@ public class MohicapLakePage extends AppCompatActivity {
             }
         });
 
+        //Mohicap Lake location redirect maps
+        mohicapLoc = findViewById(R.id.PostalAddressMohicap);
+        mohicapLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://maps.app.goo.gl/chbPusmqyvUbDRXP8");
+            }
+        });
+
         //Mohicap Lake Image redirect to youtube
         mohicapYt = findViewById(R.id.buttonMohicapYt);
 
         mohicapYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=ZfxuxelfBg8zz_SY");
             }
         });
 
