@@ -24,7 +24,6 @@ public class NatureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(NatureActivity.this, SampalocLakePage.class);
                 startActivity(intent);
-
             }
         });
 
@@ -34,7 +33,6 @@ public class NatureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(NatureActivity.this, MohicapLakePage.class);
                 startActivity(intent);
-
             }
         });
 
@@ -44,7 +42,6 @@ public class NatureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(NatureActivity.this, CalibatoLakePage.class);
                 startActivity(intent);
-
             }
         });
 
@@ -54,7 +51,6 @@ public class NatureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(NatureActivity.this, PalakpakinLakePage.class);
                 startActivity(intent);
-
             }
         });
 
@@ -64,7 +60,6 @@ public class NatureActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(NatureActivity.this, YamboPandinLakePage.class);
                 startActivity(intent);
-
             }
         });
         return;

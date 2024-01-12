@@ -24,10 +24,20 @@
         android:layout_margin="10dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textviewLabelEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/labelEmail"
+            android:textColor="@color/lighterBlack"
+            android:textSize="15sp"/>
+
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:layout_gravity="bottom"
             android:ems="15"
             android:maxLines="2"
@@ -40,6 +50,15 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/labelCurrentPassword"
+            android:textColor="@color/lighterBlack"
+            android:textSize="15sp"/>
 
         <EditText
             android:id="@+id/editTextCurrentPassword"

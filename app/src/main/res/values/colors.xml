@@ -2,11 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     //trisha
     <color name="onyx">#353935</color>
 
+    //grazziela
+    <color name="bg_blue">#2CA1BF</color>
+    <color name="product_name">#1A9AB7</color>
+    <color name="product_name2">#2CA1BF</color>
+    <color name="establishment_name">#0E577E</color>
+    <color name="context">#141414</color>
+    <color name="divider">#BDBDBD</color>
 
+    //Given
     <color name="background">#2CA1BF</color>
     <color name="rectangle_color">#FFFEFE</color>
     <color name="selectedText">#2CA1BF</color>

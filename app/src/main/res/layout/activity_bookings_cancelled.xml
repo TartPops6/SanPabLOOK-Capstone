@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sanpablook.study.sanpablook.BookingsCancelledActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cancelledGreenBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_bottom_right">
+
+        <ImageButton
+            android:id="@+id/buttonBackCancelled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:contentDescription="@string/backButton"
+            android:padding="15dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelConfirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/labelBookingsCancelled"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:padding="10dp"
+            android:text="@string/labelBookingsCancelled"
+            android:textAlignment="textStart"
+            android:textColor="@color/light"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@id/buttonBackCancelled"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cancelledGreenBackground"
+        android:fillViewport="true"
+        android:scrollbarThumbVertical="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintCancelledBooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/establishmentNameCancelled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_w_fill"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/cancelledEstablishment"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/labelBookingNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/labelBookingNumber"
+                    android:textColor="@color/blueText"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/establishmentNameCancelled" />
+
+                <TextView
+                    android:id="@+id/valueOfCancelledBookingNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/cancelledBookingNumber"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@id/labelBookingNumber"
+                    app:layout_constraintTop_toBottomOf="@id/establishmentNameCancelled"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/labelCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/labelCustomerName"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/blueText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/labelBookingNumber"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/valueOfCancelledCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/cancelledCustomerName"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/valueOfCancelledBookingNumber"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/labelCustomerName"/>
+
+                <TextView
+                    android:id="@+id/labelBookingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/labelBookingDate"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/blueText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/labelCustomerName"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/valueOfCancelledBookingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/cancelledBookingDate"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/valueOfCancelledCustomerName"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/labelBookingDate"/>
+
+                <TextView
+                    android:id="@+id/labelBookingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/labelBookingTime"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/blueText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/labelBookingDate"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/valueOfCancelledBookingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/cancelledBookingTime"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/valueOfCancelledBookingDate"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/labelBookingTime"/>
+
+                <TextView
+                    android:id="@+id/labelNoOfGuests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/labelNoOfGuests"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/blueText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/labelBookingTime"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/valueOfCancelledNumberOfGuests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="105dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/cancelledNumberOfGuests"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/valueOfCancelledBookingTime"
+                    app:layout_constraintLeft_toRightOf="@id/labelNoOfGuests"/>
+
+                <TextView
+                    android:id="@+id/labelNoOfPets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/labelNoOfPets"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/blueText"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/labelNoOfGuests"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/valueOfCancelledNumberOfPets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="125dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/cancelledNumberOfPets"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@id/valueOfCancelledNumberOfGuests"
+                    app:layout_constraintLeft_toRightOf="@id/labelNoOfPets"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

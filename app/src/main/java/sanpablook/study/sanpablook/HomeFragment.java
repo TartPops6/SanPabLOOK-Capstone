@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
 
     GoogleMap map;
     View myFragment;
-    TextView userNameHomepage;
+    TextView userName;
     //Firebase
     FirebaseUser user;
     FirebaseAuth auth;
@@ -59,6 +59,8 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
     public void onResume() {
         super.onResume();
 
+        checkUserStatus();
+
         // Get user's first name
         FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
         DocumentReference documentReference = fireStore.collection("users").document(userID);
@@ -68,7 +70,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
                     String firstName = document.getString("firstName");
-                    userNameHomepage.setText("Tara, " + firstName + "!");
+                    userName.setText(firstName + "!");
                 } else {
                     Log.d(TAG, "No such document");
                 }
@@ -85,7 +87,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
         myFragment = inflater.inflate(R.layout.fragment_home, container, false);
 
         //Objects
-        userNameHomepage = myFragment.findViewById(R.id.userNameHomepage);
+       userName = myFragment.findViewById(R.id.userName);
 
         // Firebase Auth
         auth = FirebaseAuth.getInstance();
@@ -111,7 +113,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
                 DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         String firstName = document.getString("firstName");
-                        userNameHomepage.setText("Tara, " + firstName + "!");
+                        userName.setText(firstName + "!");
                     } else {
                         Log.d(TAG, "No such document");
                         }
@@ -169,5 +171,18 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
         options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
         map.addMarker(options);
 
+    }
+
+    private void checkUserStatus() {
+        if (auth.getCurrentUser() == null) {
+            logout();
+        }
+    }
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(requireContext(), SignInActivity.class);
+        startActivity(intent);
+        requireActivity().finish();
     }
 }

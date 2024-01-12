@@ -21,7 +21,6 @@ public class SanPablookActivities extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(SanPablookActivities.this, BikeRentalPage.class);
                 startActivity(intent);
-
             }
         });
 
@@ -31,7 +30,6 @@ public class SanPablookActivities extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(SanPablookActivities.this, CampingPage.class);
                 startActivity(intent);
-
             }
         });
 
@@ -41,7 +39,6 @@ public class SanPablookActivities extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(SanPablookActivities.this, FishingPage.class);
                 startActivity(intent);
-
             }
         });
     }
