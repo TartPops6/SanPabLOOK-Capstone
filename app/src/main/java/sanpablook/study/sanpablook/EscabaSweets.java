@@ -26,10 +26,7 @@ public class EscabaSweets extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(EscabaSweets.this, ProductMenu.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+                onBackPressed();
             }
         });
 
@@ -50,5 +47,4 @@ public class EscabaSweets extends AppCompatActivity {
         String number = "09173262738";  // The number on which you want to send SMS
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
     }
-
 }

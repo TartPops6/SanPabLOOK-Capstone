@@ -1,6 +1,7 @@
 package sanpablook.study.sanpablook;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -25,10 +26,7 @@ public class CocoVinegar extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(CocoVinegar.this, ProductMenu.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+                onBackPressed();
             }
         });
 
@@ -57,6 +55,4 @@ public class CocoVinegar extends AppCompatActivity {
         String number = "09496808818";  // The number on which you want to send SMS
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
     }
-
-
 }

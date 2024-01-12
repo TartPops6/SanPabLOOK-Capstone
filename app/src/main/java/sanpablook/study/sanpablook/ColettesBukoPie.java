@@ -1,6 +1,9 @@
 package sanpablook.study.sanpablook;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -23,10 +26,7 @@ public class ColettesBukoPie extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(ColettesBukoPie.this, ProductMenu.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+                onBackPressed();
             }
         });
 
@@ -38,17 +38,16 @@ public class ColettesBukoPie extends AppCompatActivity {
             }
         });
 
-        }
+    }
 
-        public void sendSMS(View v) {
-            Intent smsIntent = new Intent(android.content.Intent.ACTION_VIEW);
-            smsIntent.setType("vnd.android-dir/mms-sms");
-            smsIntent.putExtra("number","09283578000");
-            smsIntent.setFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(smsIntent);
+    public void sendSMS(View v) {
+        Intent smsIntent = new Intent(android.content.Intent.ACTION_VIEW);
+        smsIntent.setType("vnd.android-dir/mms-sms");
+        smsIntent.putExtra("number", "09283578000");
+        smsIntent.setFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(smsIntent);
 
-            String number = "09283578000";  // The number on which you want to send SMS
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
-        }
-
+        String number = "09283578000";  // The number on which you want to send SMS
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+    }
 }
