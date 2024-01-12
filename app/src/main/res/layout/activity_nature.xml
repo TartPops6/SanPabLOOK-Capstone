@@ -13,8 +13,10 @@
 
         <EditText
             android:id="@+id/searchBar"
-            android:layout_width="374dp"
-            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="52dp"
             android:background="@drawable/search_bar_bg"
             android:drawableStart="@drawable/ic_search"
@@ -38,7 +40,7 @@
             android:layout_marginTop="12dp"
             android:text="Location"
             android:textColor="@color/gray"
-            android:textSize="25sp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +49,8 @@
 
         <ImageView
             android:id="@+id/locationIcon"
-            android:layout_width="42dp"
-            android:layout_height="39dp"
+            android:layout_width="32dp"
+            android:layout_height="31dp"
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
@@ -59,36 +61,37 @@
         <!--bg corner right rounded-->
 
         <TextView
-            android:id="@+id/PostalAddress"
+            android:id="@+id/PostalAddressSanPabloCity"
             android:layout_width="301dp"
             android:layout_height="31dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/sanPabloCityLaguna"
             android:textColor="@color/darkBlue"
-            android:textSize="20sp"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/locationIcon"
-            app:layout_constraintTop_toBottomOf="@+id/location"  />
+            app:layout_constraintTop_toBottomOf="@+id/location" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="654dp"
+            android:layout_height="666dp"
             android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PostalAddress">
+            app:layout_constraintTop_toBottomOf="@+id/PostalAddressSanPabloCity">
 
             <ImageView
                 android:id="@+id/backgroundRight"
-                android:layout_width="match_parent"
-                android:layout_height="648dp"
+                android:layout_width="409dp"
+                android:layout_height="668dp"
                 android:layout_marginTop="95dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PostalAddress"
+                app:layout_constraintTop_toBottomOf="@+id/PostalAddressSanPabloCity"
                 app:srcCompat="@drawable/nature_rightcorner_background"
                 tools:ignore="NotSibling" />
 
@@ -104,7 +107,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PostalAddress"
+                app:layout_constraintTop_toBottomOf="@+id/PostalAddressSanPabloCity"
                 app:srcCompat="@drawable/wave"
                 tools:ignore="NotSibling" />
 
@@ -115,7 +118,7 @@
                 android:layout_marginTop="32dp"
                 android:text="@string/nature"
                 android:textColor="@color/darkBlue"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.112"
@@ -124,8 +127,8 @@
 
             <ScrollView
                 android:id="@+id/scrollViewNature"
-                android:layout_width="354dp"
-                android:layout_height="421dp"
+                android:layout_width="332dp"
+                android:layout_height="438dp"
                 android:layout_marginTop="10dp"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -136,6 +139,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="fill"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
