@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.study.sanpablook.R;
 
@@ -17,6 +18,8 @@ public class SampalocLakePage extends AppCompatActivity {
     ImageButton btnShare, btnBack;
 
     Button sampalocYt;
+
+    TextView sampalocLoc;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -50,8 +53,18 @@ public class SampalocLakePage extends AppCompatActivity {
             }
         });
 
+        //Sampaloc Lake location redirect maps
+        sampalocLoc = findViewById(R.id.PostalAddressSampaloc);
+        sampalocLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://maps.app.goo.gl/BU6SBMKeSa9x1PfX8");
+            }
+        });
 
-        //Sampaloc Lake Image redirect to youtube
+
+
+        //Sampaloc Lake  redirect to youtube
         sampalocYt = findViewById(R.id.buttonSampalocYt);
 
         sampalocYt.setOnClickListener(new View.OnClickListener() {

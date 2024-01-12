@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.study.sanpablook.R;
 
@@ -16,6 +17,8 @@ public class CalibatoLakePage extends AppCompatActivity {
     ImageButton btnShareCalibato, btnBackCalibato;
 
     Button calibatoYt;
+
+    TextView calibatoLoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +51,22 @@ public class CalibatoLakePage extends AppCompatActivity {
             }
         });
 
+        //Calibato Lake location redirect maps
+        calibatoLoc = findViewById(R.id.PostalAddressCalibato);
+        calibatoLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://maps.app.goo.gl/MLGfhjzSbmLDCdyS8");
+            }
+        });
+
         //Calibato Lake redirect to youtube
         calibatoYt = findViewById(R.id.buttonCalibatoYt);
 
         calibatoYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/rchsMULj9yE?si=F9ir1v8wt8_6Tr0v");
             }
         });
     }

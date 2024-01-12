@@ -26,6 +26,7 @@ public class SignInActivity extends AppCompatActivity {
         passwordField = findViewById(R.id.editTextPassword);
         forgotPassword = findViewById(R.id.forgotPassword);
 
+
         if (mAuth.getCurrentUser() != null) {
             redirectToMain();
             return;
@@ -35,6 +36,7 @@ public class SignInActivity extends AppCompatActivity {
         findViewById(R.id.signUpRedirect).setOnClickListener(v -> startActivity(new Intent(this, SignUpActivity.class)));
         findViewById(R.id.loginBtn).setOnClickListener(v -> login());
     }
+
 
     private void login() {
         String email = String.valueOf(emailField.getText());
@@ -54,6 +56,7 @@ public class SignInActivity extends AppCompatActivity {
                         Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                     }
                 });
+
     }
 
     private void redirectToMain() {

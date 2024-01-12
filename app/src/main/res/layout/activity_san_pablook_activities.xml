@@ -13,8 +13,10 @@
 
         <EditText
             android:id="@+id/searchBarActivities"
-            android:layout_width="374dp"
-            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="52dp"
             android:background="@drawable/search_bar_bg"
             android:drawableStart="@drawable/ic_search"
@@ -38,7 +40,7 @@
             android:layout_marginTop="12dp"
             android:text="Location"
             android:textColor="@color/gray"
-            android:textSize="25sp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.114"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +49,8 @@
 
         <ImageView
             android:id="@+id/locationIcon"
-            android:layout_width="42dp"
-            android:layout_height="39dp"
+            android:layout_width="32dp"
+            android:layout_height="31dp"
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
@@ -62,10 +64,11 @@
             android:id="@+id/PostalAddressActivities"
             android:layout_width="301dp"
             android:layout_height="31dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/sanPabloCityLaguna"
             android:textColor="@color/darkBlue"
-            android:textSize="20sp"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toEndOf="@+id/locationIcon"
@@ -124,8 +127,8 @@
 
             <ScrollView
                 android:id="@+id/scrollViewActivities"
-                android:layout_width="354dp"
-                android:layout_height="421dp"
+                android:layout_width="332dp"
+                android:layout_height="438dp"
                 android:layout_marginTop="10dp"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"

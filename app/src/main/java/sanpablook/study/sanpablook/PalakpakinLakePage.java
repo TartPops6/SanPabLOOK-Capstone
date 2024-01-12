@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.study.sanpablook.R;
 
@@ -16,6 +17,8 @@ public class PalakpakinLakePage extends AppCompatActivity {
     ImageButton btnSharePalakpakin, btnBackPalakpakin;
 
     Button palakpakinYt;
+
+    TextView palakpakinLoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +51,22 @@ public class PalakpakinLakePage extends AppCompatActivity {
             }
         });
 
+        //Palakpakin Lake location redirect maps
+        palakpakinLoc = findViewById(R.id.PostalAddressPalakpakin);
+        palakpakinLoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://maps.app.goo.gl/rYeD8ZtaxF86M5LP8");
+            }
+        });
+
         //Palakpakin Lake redirect to youtube
         palakpakinYt = findViewById(R.id.buttonPalakpakinYt);
 
         palakpakinYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/eoGznaa70XI?si=52Plgtcl-Y105dP-");
             }
         });
     }
