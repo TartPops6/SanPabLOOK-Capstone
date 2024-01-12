@@ -1,15 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sanpablook.study.sanpablook.ProductsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="sanpablook.study.sanpablook.ProductsFragment"
+    android:fillViewport="true"
+    android:scrollbarThumbVertical="@null">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/constraintAll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="40dp"
-        android:text="PRODUCTS" />
+        android:background="@color/blue">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/wave"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="115dp"
+            android:layout_toRightOf="@id/Location"
+            app:srcCompat="@drawable/wave_product" />
+
+        <TextView
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Location"
+            android:textColor="@color/light"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="18D Werner Schetelig Ave"
+            android:textColor="@color/light"
+            android:textSize="14dp"
+            android:layout_below="@id/Location"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/roundedWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/Address"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner_top_left"
+            android:paddingStart="20dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="90dp"
+            tools:ignore="DuplicateIds">
+
+            <ImageView
+                android:id="@+id/Coconut"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:layout_constraintEnd_toStartOf="@+id/PinayteProduct"
+                app:layout_constraintHorizontal_bias="0.426"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/coconut" />
+
+            <TextView
+                android:id="@+id/coconutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/coconut"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/Coconut"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="@+id/Coconut"
+                app:layout_constraintTop_toBottomOf="@+id/Coconut" />
+
+            <ImageView
+                android:id="@+id/PinayteProduct"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pinayteproduct" />
+
+            <TextView
+                android:id="@+id/pinayteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/pinayte"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/PinayteProduct"
+                app:layout_constraintHorizontal_bias="0.567"
+                app:layout_constraintStart_toStartOf="@+id/PinayteProduct"
+                app:layout_constraintTop_toBottomOf="@+id/PinayteProduct" />
+
+            <ImageView
+                android:id="@+id/Ube"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/Cacao"
+                app:layout_constraintHorizontal_bias="0.426"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coconutText"
+                app:srcCompat="@drawable/ube" />
+
+            <TextView
+                android:id="@+id/ubeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/ube"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/Ube"
+                app:layout_constraintStart_toStartOf="@+id/Ube"
+                app:layout_constraintTop_toBottomOf="@+id/Ube" />
+
+            <ImageView
+                android:id="@+id/Cacao"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinayteText"
+                app:srcCompat="@drawable/cacao" />
+
+
+            <TextView
+                android:id="@+id/cacaoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/cacao"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/Cacao"
+                app:layout_constraintStart_toStartOf="@+id/Cacao"
+                app:layout_constraintTop_toBottomOf="@+id/Cacao" />
+
+            <ImageView
+                android:id="@+id/Kape"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/Lettuce"
+                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ubeText"
+                app:srcCompat="@drawable/kape" />
+
+            <TextView
+                android:id="@+id/kapeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/kape"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/Kape"
+                app:layout_constraintStart_toStartOf="@+id/Kape"
+                app:layout_constraintTop_toBottomOf="@+id/Kape" />
+
+
+            <ImageView
+                android:id="@+id/Lettuce"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cacaoText"
+                app:srcCompat="@drawable/lettuce" />
+
+            <TextView
+                android:id="@+id/lettuceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/lettuce"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/Lettuce"
+                app:layout_constraintStart_toStartOf="@+id/Lettuce"
+                app:layout_constraintTop_toBottomOf="@+id/Lettuce" />
+
+            <ImageView
+                android:id="@+id/handicrafts"
+                android:layout_width="105dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kapeText"
+                app:srcCompat="@drawable/handicrafts" />
+
+            <TextView
+                android:id="@+id/craftsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="HANDICRAFTS"
+                android:textColor="@color/product_name"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/handicrafts"
+                app:layout_constraintStart_toStartOf="@+id/handicrafts"
+                app:layout_constraintTop_toBottomOf="@+id/handicrafts" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</ScrollView>

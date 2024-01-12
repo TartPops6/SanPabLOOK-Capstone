@@ -73,7 +73,6 @@ public class BottomNavBar extends AppCompatActivity {
         });
     }
 
-
     //Fragments for Navigation
     private void replaceFragment(Fragment fragment) {
 
