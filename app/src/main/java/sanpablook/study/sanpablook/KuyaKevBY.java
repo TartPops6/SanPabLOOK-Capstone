@@ -25,7 +25,9 @@ public class KuyaKevBY extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(KuyaKevBY.this, BottomNavBar.class);
+                intent.putExtra("initialFragment", "ProductsFragment");
+                startActivity(intent);
             }
         });
 

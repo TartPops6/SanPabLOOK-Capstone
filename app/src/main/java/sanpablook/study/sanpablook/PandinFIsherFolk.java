@@ -25,7 +25,9 @@ public class PandinFIsherFolk extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(PandinFIsherFolk.this, BottomNavBar.class);
+                intent.putExtra("initialFragment", "ProductsFragment");
+                startActivity(intent);
             }
         });
 

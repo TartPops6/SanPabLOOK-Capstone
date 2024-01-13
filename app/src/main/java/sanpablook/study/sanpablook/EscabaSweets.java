@@ -26,7 +26,9 @@ public class EscabaSweets extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(EscabaSweets.this, BottomNavBar.class);
+                intent.putExtra("initialFragment", "ProductsFragment");
+                startActivity(intent);
             }
         });
 

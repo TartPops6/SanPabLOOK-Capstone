@@ -71,6 +71,18 @@ public class BottomNavBar extends AppCompatActivity {
                 );
             }
         });
+
+        // PRODUCTS
+        if (getIntent().hasExtra("initialFragment")) {
+            String initialFragment = getIntent().getStringExtra("initialFragment");
+            if ("ProductsFragment".equals(initialFragment)) {
+                replaceFragment(new ProductsFragment());
+                binding.bottomNavigationView.setSelectedItemId(R.id.products);
+            }
+        } else {
+            //default fragment (HomeFragment)
+            replaceFragment(new HomeFragment());
+        }
     }
 
     //Fragments for Navigation
