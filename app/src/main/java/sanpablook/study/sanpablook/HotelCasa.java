@@ -1,5 +1,6 @@
 package sanpablook.study.sanpablook;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,11 +12,21 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.study.sanpablook.R;
 
-public class HotelCasa extends AppCompatActivity {
+public class HotelCasa extends AppCompatActivity implements OnMapReadyCallback {
 
     ImageButton btnShare, backBtn;
+
+    GoogleMap hotelCasaMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +34,13 @@ public class HotelCasa extends AppCompatActivity {
         setContentView(R.layout.activity_hotel_casa);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        //Maps
+        SupportMapFragment casaMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.casaGoogleMaps);
+
+        if(casaMapFragment !=null){
+            casaMapFragment.getMapAsync(this);
+        }
 
         //buttons
         backBtn= findViewById(R.id.backBtn);
@@ -64,5 +82,21 @@ public class HotelCasa extends AppCompatActivity {
         TextView stayPrice = (TextView) findViewById(R.id.stayPrice);
         String text = "<font color=#1A9AB7>₱ 3, 864</font> <font color=#000000>/ night</font>";
         stayPrice.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_COMPACT));
+    }
+
+    //google Maps location
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        hotelCasaMap = googleMap;
+
+        LatLng latlng = new LatLng(14.072728209107744, 121.317300798703);
+        hotelCasaMap.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+        CameraUpdate location = CameraUpdateFactory.newLatLngZoom(latlng, 12);
+        hotelCasaMap.animateCamera(location);
+
+        //map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        MarkerOptions options = new MarkerOptions().position(latlng).title("Hotel Casa");
+        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+        hotelCasaMap.addMarker(options);
     }
 }

@@ -1,5 +1,6 @@
 package sanpablook.study.sanpablook;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,11 +12,21 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.study.sanpablook.R;
 
-public class HotelMeding extends AppCompatActivity {
+public class HotelMeding extends AppCompatActivity implements OnMapReadyCallback {
 
     ImageButton btnShare, backBtn;
+
+    GoogleMap hotelMedingMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +34,13 @@ public class HotelMeding extends AppCompatActivity {
         setContentView(R.layout.activity_hotel_meding);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        //Maps
+        SupportMapFragment medingMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.HotelMedingGoogleMaps);
+
+        if(medingMapFragment !=null){
+            medingMapFragment.getMapAsync(this);
+        }
 
         //buttons
         backBtn= findViewById(R.id.backBtn);
@@ -63,5 +81,21 @@ public class HotelMeding extends AppCompatActivity {
         TextView stayPrice = (TextView) findViewById(R.id.stayPrice);
         String text = "<font color=#1A9AB7>₱ 3, 864</font> <font color=#000000>/ night</font>";
         stayPrice.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_COMPACT));
+    }
+
+    //google Maps location
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        hotelMedingMap = googleMap;
+
+        LatLng latlng = new LatLng(14.077910773278965, 121.32622524727054);
+        hotelMedingMap.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+        CameraUpdate location = CameraUpdateFactory.newLatLngZoom(latlng, 12);
+        hotelMedingMap.animateCamera(location);
+
+        //map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        MarkerOptions options = new MarkerOptions().position(latlng).title("Tahanan ni Aling Meding");
+        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+        hotelMedingMap.addMarker(options);
     }
 }
