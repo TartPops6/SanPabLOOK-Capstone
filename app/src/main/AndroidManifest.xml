@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Android Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
+        <activity
+            android:name=".ConfirmedBookingActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -29,18 +32,14 @@
         <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
         <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
         <activity android:name="sanpablook.study.sanpablook.FishingPage" />
-        <activity android:name="sanpablook.study.sanpablook.SampalocLakePage"/>
-        <activity android:name="sanpablook.study.sanpablook.CampingPage"  />
-
-        <!-- BOOKING RELATED ACTIVITIES -->
+        <activity android:name="sanpablook.study.sanpablook.SampalocLakePage" />
+        <activity android:name="sanpablook.study.sanpablook.CampingPage" /> <!-- BOOKING RELATED ACTIVITIES -->
         <activity android:name="sanpablook.study.sanpablook.BookingsCompletedActivity" />
         <activity android:name="sanpablook.study.sanpablook.BookingsCancelledActivity" />
         <activity android:name="sanpablook.study.sanpablook.BookingsConfirmedActivity" />
         <activity android:name="sanpablook.study.sanpablook.BookingsPendingActivity" />
         <activity android:name="sanpablook.study.sanpablook.DineMessageActivity" />
-        <activity android:name="sanpablook.study.sanpablook.HotelReservationActivity" />
-
-        <!-- PRODUCTS -->
+        <activity android:name="sanpablook.study.sanpablook.HotelReservationActivity" /> <!-- PRODUCTS -->
         <activity android:name="sanpablook.study.sanpablook.AdaFarm" />
         <activity android:name="sanpablook.study.sanpablook.CarlzenFarm" />
         <activity android:name="sanpablook.study.sanpablook.CocoVinegar" />
@@ -54,15 +53,12 @@
         <activity android:name="sanpablook.study.sanpablook.MamengKape" />
         <activity android:name="sanpablook.study.sanpablook.PandinFIsherFolk" />
         <activity android:name="sanpablook.study.sanpablook.Pinayte" />
-        <activity android:name="sanpablook.study.sanpablook.ProductMenu" /> 
-      
-      <!-- ETO YUNG SA MAIN MENU NG PRODUCT LEONA -->
+        <activity android:name="sanpablook.study.sanpablook.ProductMenu" /> <!-- ETO YUNG SA MAIN MENU NG PRODUCT LEONA -->
         <activity android:name="sanpablook.study.sanpablook.RomalynUbe" />
         <activity android:name="sanpablook.study.sanpablook.SampalocLakeSouvenir" />
         <activity android:name="sanpablook.study.sanpablook.SPCCacaoGrowers" />
         <activity android:name="sanpablook.study.sanpablook.TanimAgriCacao" />
         <activity android:name="sanpablook.study.sanpablook.UbeMariaAna" />
-
         <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
         <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
         <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
@@ -81,14 +77,14 @@
         <activity android:name="sanpablook.study.sanpablook.DinePalmerasActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
         <activity android:name="sanpablook.study.sanpablook.ActivityRatings" />
-        <activity android:name="sanpablook.study.sanpablook.NatureActivity"/>
+        <activity android:name="sanpablook.study.sanpablook.NatureActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
-        <activity android:name="sanpablook.study.sanpablook.HomeActivity"/>
+        <activity android:name="sanpablook.study.sanpablook.HomeActivity" />
         <activity android:name="sanpablook.study.sanpablook.testMain" />
         <activity
             android:name="sanpablook.study.sanpablook.SignInActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

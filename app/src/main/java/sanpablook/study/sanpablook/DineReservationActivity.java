@@ -49,6 +49,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.study.sanpablook.ConfirmedBookingActivity;
 import com.study.sanpablook.R;
 
 import java.util.Calendar;
@@ -194,6 +195,10 @@ public class DineReservationActivity extends AppCompatActivity implements Adapte
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Open Confirm Activity
+                Intent intent = new Intent (DineReservationActivity.this, ConfirmedBookingActivity.class);
+                startActivity(intent);
+
                 //Firestore
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
 
