@@ -190,7 +190,7 @@
     <string name="labelBookingsPending">Pending</string>
     <string name="labelBookingsConfirmed">Confirmed</string>
     <string name="labelBookingsCancelled">Cancelled</string>
-    <string name="labelBookingsRatings">Ratings</string>
+    <string name="labelBookingsCompleted">Completed</string>
     <string name="badgeCounterPending">0</string>
     <string name="badgeCounterConfirmed">0</string>
     <string name="badgeCounterCancelled">0</string>
@@ -202,7 +202,6 @@
     <string name="labelNoOfGuests">No. of Guests</string>
     <string name="labelNoOfPets">No. of Pets</string>
     <string name="labelToRate">To Rate</string>
-    <string name="labelYourRatings">Ratings</string>
     <!--Pending Page-->
     <string name="pendingEstablishment">Casa San Pablo</string>
     <string name="pendingBookingNumber">12-005</string>
@@ -252,7 +251,7 @@
     <string name="labelMenu">Menu</string>
 
     <!--ACTIVITY HISTORY-->
-    <string name="activityHistory">Activity History</string>
+    <string name="labelRatings">Ratings</string>
     <string name="destinationName1">Sampaloc Lake</string>
     <string name="destinationName2">St. Ambrose Chapel</string>
     <string name="destinationName3">Paraiso de Avedad</string>

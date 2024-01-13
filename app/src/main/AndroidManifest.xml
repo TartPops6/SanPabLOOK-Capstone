@@ -33,7 +33,7 @@
         <activity android:name="sanpablook.study.sanpablook.CampingPage"  />
 
         <!-- BOOKING RELATED ACTIVITIES -->
-        <activity android:name="sanpablook.study.sanpablook.BookingsRatingsActivity" />
+        <activity android:name="sanpablook.study.sanpablook.BookingsCompletedActivity" />
         <activity android:name="sanpablook.study.sanpablook.BookingsCancelledActivity" />
         <activity android:name="sanpablook.study.sanpablook.BookingsConfirmedActivity" />
         <activity android:name="sanpablook.study.sanpablook.BookingsPendingActivity" />
@@ -80,7 +80,7 @@
         <activity android:name="sanpablook.study.sanpablook.DineReservationActivity" />
         <activity android:name="sanpablook.study.sanpablook.DinePalmerasActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
-        <activity android:name="sanpablook.study.sanpablook.ActivityHistory" />
+        <activity android:name="sanpablook.study.sanpablook.ActivityRatings" />
         <activity android:name="sanpablook.study.sanpablook.NatureActivity"/>
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />

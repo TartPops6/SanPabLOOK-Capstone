@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sanpablook.study.sanpablook.ActivityHistory">
+    tools:context="sanpablook.study.sanpablook.ActivityRatings">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/historyGreenBackground"
@@ -27,10 +27,10 @@
             android:id="@+id/labelActivityHistoryMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/activityHistory"
+            android:contentDescription="@string/labelRatings"
             android:fontFamily="@font/poppins_semi_bold"
             android:padding="10dp"
-            android:text="@string/activityHistory"
+            android:text="@string/labelRatings"
             android:textAlignment="textStart"
             android:textColor="@color/light"
             android:textSize="24sp"
@@ -50,6 +50,7 @@
             android:id="@+id/historyLinearList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="10dp"
             android:paddingBottom="15dp"
             android:orientation="vertical"
             app:layout_constraintLeft_toLeftOf="parent"

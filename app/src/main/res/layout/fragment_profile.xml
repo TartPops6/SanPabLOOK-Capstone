@@ -138,7 +138,8 @@
             <FrameLayout
                 android:id="@+id/layoutForPending"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/buttonPending"
@@ -186,7 +187,8 @@
             <FrameLayout
                 android:id="@+id/layoutForConfirmed"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/buttonConfirmed"
@@ -234,7 +236,8 @@
             <FrameLayout
                 android:id="@+id/layoutForCancelled"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/buttonCancelled"
@@ -282,7 +285,8 @@
             <FrameLayout
                 android:id="@+id/layoutForRatings"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <ImageButton
                     android:id="@+id/buttonRatings"
@@ -292,7 +296,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:background="@color/transparent"
-                    android:contentDescription="@string/labelBookingsRatings"
+                    android:contentDescription="@string/labelBookingsCompleted"
                     android:padding="10dp"
                     android:src="@drawable/rate_icon" />
 
@@ -302,7 +306,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="end|top"
                     android:layout_marginTop="3dp"
-                    android:layout_marginEnd="-12dp"
+                    android:layout_marginEnd="-7dp"
                     android:background="@drawable/badge_background"
                     android:clickable="false"
                     android:gravity="center"
@@ -321,7 +325,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="@string/labelBookingsRatings"
+                    android:text="@string/labelBookingsCompleted"
                     android:textAlignment="center"
                     android:textColor="@color/darkBlue"
                     android:textSize="13sp" />
@@ -346,7 +350,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:text="@string/activityHistory"
+                android:text="@string/labelRatings"
                 android:textAlignment="textStart"
                 android:textColor="@color/darkBlue"
                 android:textSize="20sp" />
