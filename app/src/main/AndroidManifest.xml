@@ -26,27 +26,21 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi4Y0iwY7WoSsDXb8BMfioHIjzZSqtPy8" />
 
+        <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
+        <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
         <activity android:name="sanpablook.study.sanpablook.FishingPage" />
         <activity android:name="sanpablook.study.sanpablook.SampalocLakePage"/>
         <activity android:name="sanpablook.study.sanpablook.CampingPage"  />
-      
-        <activity
-            android:name="sanpablook.study.sanpablook.BookingsRatingsActivity"
-            android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.BookingsCancelledActivity"
-            android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.BookingsConfirmedActivity"
-            android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.BookingsPendingActivity"
-            android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.DineMessageActivity"
-            android:exported="false" />
 
-    <!-- PRODUCTS -->
+        <!-- BOOKING RELATED ACTIVITIES -->
+        <activity android:name="sanpablook.study.sanpablook.BookingsRatingsActivity" />
+        <activity android:name="sanpablook.study.sanpablook.BookingsCancelledActivity" />
+        <activity android:name="sanpablook.study.sanpablook.BookingsConfirmedActivity" />
+        <activity android:name="sanpablook.study.sanpablook.BookingsPendingActivity" />
+        <activity android:name="sanpablook.study.sanpablook.DineMessageActivity" />
+        <activity android:name="sanpablook.study.sanpablook.HotelReservationActivity" />
+
+        <!-- PRODUCTS -->
         <activity android:name="sanpablook.study.sanpablook.AdaFarm" />
         <activity android:name="sanpablook.study.sanpablook.CarlzenFarm" />
         <activity android:name="sanpablook.study.sanpablook.CocoVinegar" />
@@ -70,8 +64,6 @@
         <activity android:name="sanpablook.study.sanpablook.UbeMariaAna" />
 
         <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
-        <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
-        <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
         <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
         <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
         <activity android:name="sanpablook.study.sanpablook.YamboPandinLakePage" />
@@ -85,14 +77,14 @@
         <activity android:name="sanpablook.study.sanpablook.AdminDashboard" />
         <activity android:name="sanpablook.study.sanpablook.DineCasaActivity" />
         <activity android:name="sanpablook.study.sanpablook.DineSulyapActivity" />
-        <activity android:name="sanpablook.study.sanpablook.DinePalmerasReservationActivity" />
+        <activity android:name="sanpablook.study.sanpablook.DineReservationActivity" />
         <activity android:name="sanpablook.study.sanpablook.DinePalmerasActivity" />
         <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
         <activity android:name="sanpablook.study.sanpablook.ActivityHistory" />
-        <activity android:name="sanpablook.study.sanpablook.NatureActivity" android:exported="true"/>
+        <activity android:name="sanpablook.study.sanpablook.NatureActivity"/>
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
-        <activity android:name="sanpablook.study.sanpablook.HomeActivity" android:exported="true" />
+        <activity android:name="sanpablook.study.sanpablook.HomeActivity"/>
         <activity android:name="sanpablook.study.sanpablook.testMain" />
         <activity
             android:name="sanpablook.study.sanpablook.SignInActivity"

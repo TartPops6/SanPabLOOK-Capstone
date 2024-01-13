@@ -226,7 +226,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/spacer2"
                     app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/img_palmeras"
+                    app:srcCompat="@drawable/palmeras_profile"
                     app:strokeColor="#99DDE7"
                     app:strokeWidth="10sp" />
                 <!--Palmeras Name-->

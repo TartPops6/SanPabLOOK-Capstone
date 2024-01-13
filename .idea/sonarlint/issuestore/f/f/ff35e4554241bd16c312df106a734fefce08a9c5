@@ -1,50 +1,74 @@
 
+i
+java:S1192‹"FDefine a constant instead of duplicating this literal "place" 3 times.(µğÚûÿÿÿÿ8•™•òÏ1
 E
-java:S1604C"(Make this anonymous inner class a lambda(¶ÄĞè8æ²¹ÅÎ1
-E
-java:S1604L"(Make this anonymous inner class a lambda(ÖÏèê8ç²¹ÅÎ1
-J
-java:S1604U"(Make this anonymous inner class a lambda(¶àË²úÿÿÿÿ8ç²¹ÅÎ1
-E
-java:S1604|"(Make this anonymous inner class a lambda(£¿š¬8è²¹ÅÎ1
+java:S1604Z"(Make this anonymous inner class a lambda(¦Ë8—™•òÏ1
 F
-java:S1604‚"(Make this anonymous inner class a lambda(éÙÏ–8é²¹ÅÎ1
-F
-java:S1604‘"(Make this anonymous inner class a lambda(Ç±‰Ä8é²¹ÅÎ1
+java:S1604„"(Make this anonymous inner class a lambda(ëòËØ8—™•òÏ1
 K
-java:S1604©"(Make this anonymous inner class a lambda(èÑ×ûÿÿÿÿ8ê²¹ÅÎ1
+java:S1604•"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8—™•òÏ1
+F
+java:S1604¯"(Make this anonymous inner class a lambda(¶ÄĞè8—™•òÏ1
+F
+java:S1604¸"(Make this anonymous inner class a lambda(ÖÏèê8—™•òÏ1
+K
+java:S1604õ"(Make this anonymous inner class a lambda(°˜Ğÿÿÿÿÿ8—™•òÏ1
+K
+java:S1604û"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8˜™•òÏ1
+F
+java:S1604×"(Make this anonymous inner class a lambda(Ï—§ü8˜™•òÏ1
+K
+java:S1604Á"(Make this anonymous inner class a lambda(¶àË²úÿÿÿÿ8˜™•òÏ1
+F
+java:S1604§"(Make this anonymous inner class a lambda(£¿š¬8˜™•òÏ1
+F
+java:S1604­"(Make this anonymous inner class a lambda(éÙÏ–8˜™•òÏ1
+F
+java:S1604¼"(Make this anonymous inner class a lambda(Ç±‰Ä8˜™•òÏ1
+K
+java:S1604Ô"(Make this anonymous inner class a lambda(èÑ×ûÿÿÿÿ8™™•òÏ1
+\
+java:S2259d"?A "NullPointerException" could be thrown; "e" is nullable here.(óŠ¨Ÿ8Ìš•òÏ1
 ¤
-java:S1186æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8˜´¹ÅÎ1
+java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ8Öš•òÏ1
 j
-java:S1659*"HDeclare "phoneNumber" and all following declarations on a separate line.(²—§Èùÿÿÿÿ8¦´¹ÅÎ1
+java:S1659@"HDeclare "phoneNumber" and all following declarations on a separate line.(²—§Èùÿÿÿÿ8Ùš•òÏ1
 F
-java:S1659+"$Declare "minute" on a separate line.(¾÷Ö†üÿÿÿÿ8¦´¹ÅÎ1
-g
-java:S1854a"ERemove this useless assignment to local variable "btnSetPhoneNumber".(Ûø‚şÿÿÿÿ8‰¥£ÂÏ1
-X
-java:S1481a"6Remove this unused "btnSetPhoneNumber" local variable.(Ûø‚şÿÿÿÿ8‹¥£ÂÏ1
-
-java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8Œ¥£ÂÏ1
-
-java:S1186x"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Œ¥£ÂÏ1
+java:S1659A"$Declare "minute" on a separate line.(¾÷Ö†üÿÿÿÿ8Úš•òÏ1
+O
+java:S1659C"-Declare "establishmentID" on a separate line.(…´Éûÿÿÿÿ8Úš•òÏ1
+t
+java:S3776F"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨Œşÿÿÿÿ8æš•òÏ1
+b
+java:S1117Û"?Rename "phoneNumber" which hides the field declared at line 64.(Ø‘ˆøÿÿÿÿ8Œ›•òÏ1
+h
+java:S1854Œ"ERemove this useless assignment to local variable "btnSetPhoneNumber".(Ûø‚şÿÿÿÿ8”›•òÏ1
+Y
+java:S1481Œ"6Remove this unused "btnSetPhoneNumber" local variable.(Ûø‚şÿÿÿÿ8–›•òÏ1
+Ÿ
+java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8˜›•òÏ1
+Ÿ
+java:S1186£"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8˜›•òÏ1
 I
-java:S1172"+Remove this unused method parameter "view".(š§Üá8–¥£ÂÏ1
+java:S1172»"+Remove this unused method parameter "view".(š§Üá8ª›•òÏ1
 _
-java:S1874™"ARemove this use of "THEME_DEVICE_DEFAULT_DARK"; it is deprecated.(â“£Ç8—¥£ÂÏ1
+java:S1874Ä"ARemove this use of "THEME_DEVICE_DEFAULT_DARK"; it is deprecated.(â“£Ç8­›•òÏ1
 _
-java:S1874µ"ARemove this use of "THEME_DEVICE_DEFAULT_DARK"; it is deprecated.(â“£Ç8¥£ÂÏ1
+java:S1874à"ARemove this use of "THEME_DEVICE_DEFAULT_DARK"; it is deprecated.(â“£Ç8²›•òÏ1
 I
-java:S1172Û"+Remove this unused method parameter "view".(şÏÏë8¢¥£ÂÏ1
+java:S1172†"+Remove this unused method parameter "view".(şÏÏë8¶›•òÏ1
 V
-java:S1854á"8Remove this useless assignment to local variable "text".(èß·Ô8¢¥£ÂÏ1
+java:S1854Œ"8Remove this useless assignment to local variable "text".(èß·Ô8·›•òÏ1
 G
-java:S1481á")Remove this unused "text" local variable.(èß·Ô8£¥£ÂÏ1
-Y	java:S125â"<This block of commented-out lines of code should be removed.(ñ‘ò†8£¥£ÂÏ1
+java:S1481Œ")Remove this unused "text" local variable.(èß·Ô8¹›•òÏ1
+Y	java:S125"<This block of commented-out lines of code should be removed.(ñ‘ò†8¹›•òÏ1
 F
-java:S1172ê"(Remove this unused method parameter "v".(÷»¬8¥¥£ÂÏ1
+java:S1172•"(Remove this unused method parameter "v".(÷»¬8»›•òÏ1
 X
-java:S6397ğ"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8¬¥£ÂÏ1
+java:S6397›"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8Á›•òÏ1
 X
-java:S6397ğ"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8¬¥£ÂÏ1
+java:S6397›"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8Á›•òÏ1
 _
-java:S6353ğ"<Use concise character class syntax '\\d' instead of '[0-9]'.(õ†¿Ïøÿÿÿÿ8­¥£ÂÏ1
+java:S6353›"<Use concise character class syntax '\\d' instead of '[0-9]'.(õ†¿Ïøÿÿÿÿ8Á›•òÏ1
+U
+java:S1144Ê"2Remove this unused private "getTodaysDate" method.(¾©İŞÿÿÿÿÿ8Ã›•òÏ1

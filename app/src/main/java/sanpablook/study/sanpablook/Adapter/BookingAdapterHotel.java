@@ -31,12 +31,24 @@ public class BookingAdapterHotel extends RecyclerView.Adapter<BookingAdapterHote
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
         Map<String, Object> booking = bookings.get(position);
-        holder.txtPending.setText(booking.get("place").toString());
-        holder.txtBookingID.setText(booking.get("bookingID").toString());
-        holder.txtCustomerName.setText(booking.get("fullName").toString());
-        holder.txtBookingDate.setText(booking.get("date").toString());
-        holder.txtBookingTime.setText(booking.get("time").toString());
-        holder.txtGuestCount.setText(booking.get("guest").toString());
+        if (booking.get("place") != null) {
+            holder.txtPending.setText(booking.get("place").toString());
+        }
+        if (booking.get("bookingID") != null) {
+            holder.txtBookingID.setText(booking.get("bookingID").toString());
+        }
+        if (booking.get("fullName") != null) {
+            holder.txtCustomerName.setText(booking.get("fullName").toString());
+        }
+        if (booking.get("date") != null) {
+            holder.txtBookingDate.setText(booking.get("date").toString());
+        }
+        if (booking.get("time") != null) {
+            holder.txtBookingTime.setText(booking.get("time").toString());
+        }
+        if (booking.get("guest") != null) {
+            holder.txtGuestCount.setText(booking.get("guest").toString());
+        }
     }
 
     @Override

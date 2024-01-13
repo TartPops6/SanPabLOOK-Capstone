@@ -932,24 +932,28 @@
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:padding="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/firstLayout">
+            app:layout_constraintTop_toBottomOf="@+id/firstLayout"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/stayPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="₱ 3,864 / night"
                 android:textColor="#000000"
                 android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/reserveNowBtn1"
                 app:layout_constraintHorizontal_bias="0.285"
                 app:layout_constraintStart_toStartOf="parent"
@@ -958,15 +962,16 @@
             <Button
                 android:id="@+id/reserveNowBtn1"
                 android:layout_width="177dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginRight="10sp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/btn_hotel_bg"
                 android:fontFamily="@font/poppins_bold"
                 android:text="@string/booknow"
                 app:backgroundTint="@color/stayButton"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

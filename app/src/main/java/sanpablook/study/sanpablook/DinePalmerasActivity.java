@@ -71,7 +71,9 @@ public class DinePalmerasActivity extends AppCompatActivity implements OnMapRead
         reserveNowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(DinePalmerasActivity.this, DinePalmerasReservationActivity.class);
+                Intent intent = new Intent(DinePalmerasActivity.this, DineReservationActivity.class);
+                intent.putExtra("documentId", "PalmerasGardenRestaurant");
+                intent.putExtra("imagePath", "estabProfilePictures/palmerasDineProfile.jpg");
                 startActivity(intent);
             }
         });

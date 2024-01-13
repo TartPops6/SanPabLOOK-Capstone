@@ -135,8 +135,15 @@ public class ProfileFragment extends Fragment {
 
         //Check if user is not signed in
         if (user != null) {
-            //User is signed in
-            setupPendingBadge();
+            //Check the count of pending bookings for this user
+            fStore.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    intBadgePendingCount = task.getResult().size();
+                    setupPendingBadge();
+                } else {
+                    Log.d(TAG, "Failed to fetch user data");
+                }
+            });
             setupConfirmedBadge();
             setupCancelledBadge();
             setupRatingsBadge();

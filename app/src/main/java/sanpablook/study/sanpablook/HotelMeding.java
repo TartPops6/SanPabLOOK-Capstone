@@ -7,6 +7,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -49,6 +50,16 @@ public class HotelMeding extends AppCompatActivity {
             }
         });
 
+        Button reserveNowBtn1 = findViewById(R.id.reserveNowBtn1);
+        reserveNowBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HotelMeding.this, HotelReservationActivity.class);
+                intent.putExtra("documentId", "TahananNiAlingMeding");
+                intent.putExtra("imagePath", "estabProfilePictures/medingProfile.jpg");
+                startActivity(intent);
+            }
+        });
         TextView stayPrice = (TextView) findViewById(R.id.stayPrice);
         String text = "<font color=#1A9AB7>₱ 3, 864</font> <font color=#000000>/ night</font>";
         stayPrice.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_COMPACT));
