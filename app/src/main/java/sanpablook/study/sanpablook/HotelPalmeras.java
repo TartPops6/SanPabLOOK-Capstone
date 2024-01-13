@@ -1,5 +1,6 @@
 package sanpablook.study.sanpablook;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,11 +12,21 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.study.sanpablook.R;
 
-public class HotelPalmeras extends AppCompatActivity {
+public class HotelPalmeras extends AppCompatActivity implements OnMapReadyCallback {
 
     ImageButton btnShare, backBtn;
+
+    GoogleMap hotelPalmeraMaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +34,14 @@ public class HotelPalmeras extends AppCompatActivity {
         setContentView(R.layout.activity_hotel_palmeras);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        //Maps
+        SupportMapFragment palmerasMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.palmeraGoogleMaps);
+
+        if(palmerasMapFragment !=null){
+            palmerasMapFragment.getMapAsync(this);
+        }
+
 
         //buttons
         backBtn= findViewById(R.id.backBtn);
@@ -64,5 +83,21 @@ public class HotelPalmeras extends AppCompatActivity {
         TextView stayPrice = (TextView) findViewById(R.id.stayPrice);
         String text = "<font color=#1A9AB7>₱ 3, 864</font> <font color=#000000>/ night</font>";
         stayPrice.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_COMPACT));
+    }
+
+    //google Maps location
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        hotelPalmeraMaps = googleMap;
+
+        LatLng latlng = new LatLng(14.07137668338357, 121.28608071214852);
+        hotelPalmeraMaps.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+        CameraUpdate location = CameraUpdateFactory.newLatLngZoom(latlng, 12);
+        hotelPalmeraMaps.animateCamera(location);
+
+        //map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        MarkerOptions options = new MarkerOptions().position(latlng).title("CASA PALMERA");
+        options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
+        hotelPalmeraMaps.addMarker(options);
     }
 }
