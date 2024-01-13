@@ -45,12 +45,6 @@
         <activity
             android:name="sanpablook.study.sanpablook.DineMessageActivity"
             android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.FishingPage"
-            android:exported="false" />
-        <activity
-            android:name="sanpablook.study.sanpablook.CampingPage"
-            android:exported="false" />
 
     <!-- PRODUCTS -->
         <activity android:name="sanpablook.study.sanpablook.AdaFarm" />
