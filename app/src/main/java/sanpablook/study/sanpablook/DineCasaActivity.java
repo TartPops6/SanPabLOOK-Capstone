@@ -65,6 +65,17 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
             }
         });
 
+        Button reserveNowBtn1 = findViewById(R.id.reserveNowBtn1);
+        reserveNowBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DineCasaActivity.this, DineReservationActivity.class);
+                intent.putExtra("documentId", "CasaSanPabloDine");
+                intent.putExtra("imagePath", "estabProfilePictures/casaSanPabloProfile.jpg");
+                startActivity(intent);
+            }
+        });
+
 
         //reserve now button
 //        reserveNowBtn.setOnClickListener(new View.OnClickListener() {

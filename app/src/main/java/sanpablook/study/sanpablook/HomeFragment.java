@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
                     String firstName = document.getString("firstName");
-                    userName.setText(firstName + "!");
+                    userName.setText("Tara, " + firstName + "!");
                 } else {
                     Log.d(TAG, "No such document");
                 }

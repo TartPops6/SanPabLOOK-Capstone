@@ -57,9 +57,5 @@ X
 java:S6397Å"5Replace this character class by the character itself.(õ†¿Ïøÿÿÿÿ8ÊËµÈÏ1
 _
 java:S6353Å"<Use concise character class syntax '\\d' instead of '[0-9]'.(õ†¿Ïøÿÿÿÿ8ËËµÈÏ1
-X
-java:S1118Ë":Add a private constructor to hide the implicit public one.(Ğş—8ÌËµÈÏ1
-;
-java:S2119Ñ"Save and re-use this "Random".(¼İÅf8ÑËµÈÏ1
 U
 java:S1144ó"2Remove this unused private "getTodaysDate" method.(¾©İŞÿÿÿÿÿ8ÓËµÈÏ1

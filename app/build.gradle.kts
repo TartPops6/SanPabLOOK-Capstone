@@ -58,6 +58,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation ("com.google.firebase:firebase-firestore:24.10.0")
     implementation("com.google.firebase:firebase-analytics")
+    implementation ("com.firebaseui:firebase-ui-storage:7.2.0")
 
     //camera and gallery
     implementation ("com.github.dhaval2404:imagepicker:2.1")

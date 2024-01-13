@@ -217,20 +217,22 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtAboutDetails" />
                 <!--Sulyap profile pic-->
+                <!--Sulyap Name-->
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgRestoProfile"
                     android:layout_width="200sp"
                     android:layout_height="200sp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:padding="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.53"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/spacer2"
                     app:shapeAppearanceOverlay="@style/circular"
                     app:srcCompat="@drawable/img_sulyap"
                     app:strokeColor="#99DDE7"
                     app:strokeWidth="10sp" />
-                <!--Sulyap Name-->
+
                 <TextView
                     android:id="@+id/txtSulyapName"
                     android:layout_width="match_parent"

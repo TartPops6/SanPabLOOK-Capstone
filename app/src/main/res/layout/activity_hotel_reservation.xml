@@ -12,7 +12,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="sanpablook.study.sanpablook.DinePalmerasReservationActivity"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
@@ -102,10 +101,9 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
-                        <!--imgPalmeras-->
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/imgPalmerasReservation"
+                            android:id="@+id/imgEstabProfile"
                             android:layout_width="150sp"
                             android:layout_height="150sp"
                             android:layout_marginStart="20sp"
@@ -114,11 +112,10 @@
                             app:layout_constraintBottom_toTopOf="@+id/spacer2"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:shapeAppearanceOverlay="@style/rounded"
-                            app:srcCompat="@drawable/blank_estab_profile" />
+                            app:shapeAppearanceOverlay="@style/rounded" />
 
                         <TextView
-                            android:id="@+id/txtDineIn"
+                            android:id="@+id/txtBookingType"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -129,11 +126,11 @@
                             android:textColor="@color/lighterBlack"
                             android:textSize="14sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+                            app:layout_constraintStart_toEndOf="@+id/imgEstabProfile"
                             app:layout_constraintTop_toTopOf="parent" />
-                        <!--txtPalmeras-->
+
                         <TextView
-                            android:id="@+id/txtPalmerasReservation"
+                            android:id="@+id/txtBookingPlaceName"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -144,8 +141,8 @@
                             android:textColor="@color/lighterBlack"
                             android:textSize="20sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
-                            app:layout_constraintTop_toBottomOf="@+id/txtDineIn" />
+                            app:layout_constraintStart_toEndOf="@+id/imgEstabProfile"
+                            app:layout_constraintTop_toBottomOf="@+id/txtBookingType" />
                         <!--icon star-->
                         <ImageView
                             android:id="@+id/ic_star"
@@ -153,12 +150,12 @@
                             android:layout_height="16sp"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="10dp"
-                            app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation"
+                            app:layout_constraintStart_toEndOf="@+id/imgEstabProfile"
+                            app:layout_constraintTop_toBottomOf="@+id/txtBookingPlaceName"
                             app:srcCompat="@drawable/ic_star" />
                         <!--rating-->
                         <TextView
-                            android:id="@+id/txtRating"
+                            android:id="@+id/txtEstablishmentRating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
@@ -168,7 +165,7 @@
                             android:textColor="@color/lighterBlack"
                             android:textSize="14sp"
                             app:layout_constraintStart_toEndOf="@+id/ic_star"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation" />
+                            app:layout_constraintTop_toBottomOf="@+id/txtBookingPlaceName" />
                         <!--icon medal-->
                         <ImageView
                             android:id="@+id/ic_accredited"
@@ -176,12 +173,12 @@
                             android:layout_height="16sp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="10dp"
-                            app:layout_constraintStart_toEndOf="@+id/txtRating"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation"
+                            app:layout_constraintStart_toEndOf="@+id/txtEstablishmentRating"
+                            app:layout_constraintTop_toBottomOf="@+id/txtBookingPlaceName"
                             app:srcCompat="@drawable/ic_medal" />
                         <!--txtAccredited-->
                         <TextView
-                            android:id="@+id/txt_accredited"
+                            android:id="@+id/txtBookingAccredited"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
@@ -192,7 +189,7 @@
                             android:textColor="@color/lighterBlack"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/ic_accredited"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation" />
+                            app:layout_constraintTop_toBottomOf="@+id/txtBookingPlaceName" />
                         <!--spacer-->
                         <View
                             android:id="@+id/spacer2"
@@ -204,7 +201,7 @@
                             android:background="@color/gray"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imgPalmerasReservation" />
+                            app:layout_constraintTop_toBottomOf="@+id/imgEstabProfile" />
                         <!--yourReservation-->
                         <TextView
                             android:id="@+id/txtYourReservation"

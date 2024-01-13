@@ -46,6 +46,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.study.sanpablook.R;
@@ -57,11 +58,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class HotelReservationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class DineReservationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ImageButton btnReturn;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
-    Button timeButton, phoneNumber, btnConfirm;
+    Button timeButton, phoneNumber, btnConfirm, btnMessagePlace;
     int hour, minute;
 
     private String establishmentName, establishmentID;
@@ -69,7 +70,7 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotel_reservation);
+        setContentView(R.layout.activity_dine_reservation);
 
         // Get the image path from the intent
         String imagePath = getIntent().getStringExtra("imagePath");
@@ -90,7 +91,7 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
         imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                Glide.with(HotelReservationActivity.this)
+                Glide.with(DineReservationActivity.this)
                         .load(uri)
                         .listener(new RequestListener<Drawable>() {
                             @Override
@@ -142,14 +143,14 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
                             txtHotelRating.setText(documentSnapshot.getString("rating"));
                             txtHotelAccredited.setText(documentSnapshot.getString("accredited"));
                         } else {
-                            Toast.makeText(HotelReservationActivity.this, "Document does not exist", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DineReservationActivity.this, "Document does not exist", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(HotelReservationActivity.this, "Error fetching data", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DineReservationActivity.this, "Error fetching data", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -221,7 +222,7 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
 
                             // Check if date, time, and guest count are selected
                             if (date.isEmpty() || time.isEmpty() || guest.equals("0")) {
-                                Toast.makeText(HotelReservationActivity.this, "Plase fulfill the missing field", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DineReservationActivity.this, "Plase fulfill the missing field", Toast.LENGTH_SHORT).show();
                                 return;
                             }
 
@@ -245,18 +246,28 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
                                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                         @Override
                                         public void onSuccess(DocumentReference documentReference) {
-                                            Toast.makeText(HotelReservationActivity.this, "Booking Successful", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(DineReservationActivity.this, "Booking Successful", Toast.LENGTH_SHORT).show();
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(HotelReservationActivity.this, "Booking Failed", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(DineReservationActivity.this, "Booking Failed", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                         }
                     }
                 });
+            }
+        });
+
+
+    btnMessagePlace = findViewById(R.id.btnMessagePlace);
+        btnMessagePlace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(DineReservationActivity.this, DineMessageActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -301,7 +312,7 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Toast.makeText(HotelReservationActivity.this, "Save is clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DineReservationActivity.this, "Save is clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -313,19 +324,19 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
     }
 
     public void popTimePicker (View view){
-        TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-                hour = selectedHour;
-                minute = selectedMinute;
-                timeButton.setText(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
-            }
-        };
-        int style = AlertDialog.THEME_DEVICE_DEFAULT_DARK;
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, hour, minute, false);
-        timePickerDialog.setTitle("Select Time of Reservation");
-        timePickerDialog.show();
-    }
+         TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+             @Override
+             public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
+                 hour = selectedHour;
+                 minute = selectedMinute;
+                 timeButton.setText(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
+             }
+         };
+         int style = AlertDialog.THEME_DEVICE_DEFAULT_DARK;
+         TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, hour, minute, false);
+         timePickerDialog.setTitle("Select Time of Reservation");
+         timePickerDialog.show();
+     }
 
     private String getTodaysDate() {
         Calendar cal = Calendar.getInstance();
@@ -402,10 +413,11 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
 
     }
 
-    public void btnMessage(View v) {
-        String number = "09283395502";
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
-    }
+    //OLD MESSAGE BUTTON
+//    public void btnMessage(View v) {
+//        String number = "09283395502";
+//        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+//    }
 
     boolean validateMobile(String input) {
         Pattern p = Pattern.compile("[0][9][0-9]{9}");
@@ -413,3 +425,4 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
         return m.matches();
     }
 }
+

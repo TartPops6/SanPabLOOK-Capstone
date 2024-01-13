@@ -67,14 +67,15 @@ public class DineSulyapActivity extends AppCompatActivity implements OnMapReadyC
 
 
         //reserve now button
-//        reserveNowBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(DineSulyapActivity.this, com.example.capstone.DineSulyapReservationActivity.class);
-//                startActivity(intent);
-//
-//            }
-//        });
+        reserveNowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DineSulyapActivity.this, DineReservationActivity.class);
+                intent.putExtra("documentId", "SulyapGalleryCafe");
+                intent.putExtra("imagePath", "estabProfilePictures/sulyapProfile.jpg");
+                startActivity(intent);
+            }
+        });
     }
     //message button
     public void btnMessageSulyap(View v) {

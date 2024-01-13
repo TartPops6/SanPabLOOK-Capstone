@@ -21,34 +21,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <!--tara text-->
-            <TextView
-                android:id="@+id/taraText"
-                android:layout_width="91dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="44dp"
-                android:text="Tara,"
-                android:textColor="@color/selectedText"
-                android:textSize="40sp"
-                android:textStyle="bold" />
-
             <!--Name of User-->
-            <TextView
-                android:id="@+id/userName"
-                android:layout_width="201dp"
-                android:layout_height="56dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="44dp"
-                android:layout_toEndOf="@+id/taraText"
-                android:text="Phil"
-                android:textColor="@color/selectedText"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="47dp"
+        android:text=". . ."
+        android:textColor="@color/selectedText"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
-            <!--notif-->
+    <!--notif-->
             <ImageView
                 android:id="@+id/notifButton"
                 android:layout_width="55dp"
