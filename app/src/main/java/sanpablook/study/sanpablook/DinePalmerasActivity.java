@@ -38,8 +38,6 @@ public class DinePalmerasActivity extends AppCompatActivity implements OnMapRead
             mapFragment.getMapAsync(this);
         }
 
-
-
         //buttons
         btnBack = findViewById(R.id.btnBack);
         btnShare = findViewById(R.id.btnShare);

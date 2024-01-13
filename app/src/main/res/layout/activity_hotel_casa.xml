@@ -572,16 +572,21 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/stayResting" />
 
-                <ImageView
+                <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/casaGoogleMaps"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
                     android:layout_width="match_parent"
                     android:layout_height="250sp"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/stayLocation2"
-                    app:srcCompat="@drawable/casamaplocation" />
+                    app:layout_constraintVertical_bias="0.0">
+
+                </androidx.fragment.app.FragmentContainerView>
 
                 <View
                     android:id="@+id/line5"
