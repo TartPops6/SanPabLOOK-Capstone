@@ -8,14 +8,14 @@ import android.widget.ImageButton;
 
 import com.study.sanpablook.R;
 
-public class ActivityHistory extends AppCompatActivity {
+public class ActivityRatings extends AppCompatActivity {
 
     ImageButton btnBackAH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
+        setContentView(R.layout.activity_ratings);
 
         btnBackAH = findViewById(R.id.buttonBackAH);
 

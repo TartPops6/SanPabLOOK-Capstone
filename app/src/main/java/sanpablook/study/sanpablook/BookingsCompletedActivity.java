@@ -17,9 +17,9 @@ import android.widget.Toast;
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.study.sanpablook.R;
 
-public class BookingsRatingsActivity extends AppCompatActivity {
+public class BookingsCompletedActivity extends AppCompatActivity {
 
-    ImageButton btnBackRatings;
+    ImageButton btnBackCompleted;
     AppCompatRatingBar ratingBar;
 
     //for add image
@@ -29,9 +29,9 @@ public class BookingsRatingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bookings_ratings);
+        setContentView(R.layout.activity_bookings_completed);
 
-        btnBackRatings = findViewById(R.id.buttonBackRatings);
+        btnBackCompleted = findViewById(R.id.buttonBackCompleted);
         ratingBar = findViewById(R.id.ratingStars);
 
         //image
@@ -46,7 +46,7 @@ public class BookingsRatingsActivity extends AppCompatActivity {
                     .start();
         });
 
-        btnBackRatings.setOnClickListener(new View.OnClickListener() {
+        btnBackCompleted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
@@ -59,7 +59,7 @@ public class BookingsRatingsActivity extends AppCompatActivity {
                 // Handle the rating change here
                 // You can use the 'rating' variable to get the new rating value
                 // 'fromUser' indicates whether the change was initiated by the user
-                Toast.makeText(BookingsRatingsActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BookingsCompletedActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
             }
         });
     }

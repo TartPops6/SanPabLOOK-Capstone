@@ -14,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,7 +21,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.common.net.InternetDomainName;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -217,7 +215,7 @@ public class ProfileFragment extends Fragment {
         btnViewAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToActivityHistory(view);
+                goToActivityRatings(view);
             }
         });
 
@@ -225,19 +223,19 @@ public class ProfileFragment extends Fragment {
         btnImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToActivityHistory(view);
+                goToActivityRatings(view);
             }
         });
         btnImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToActivityHistory(view);
+                goToActivityRatings(view);
             }
         });
         btnImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToActivityHistory(view);
+                goToActivityRatings(view);
             }
         });
 
@@ -272,8 +270,8 @@ public class ProfileFragment extends Fragment {
 
 
     //onclick of activity history cards
-    private void goToActivityHistory(View view) {
-        Intent intent = new Intent(getActivity(), ActivityHistory.class);
+    private void goToActivityRatings(View view) {
+        Intent intent = new Intent(getActivity(), ActivityRatings.class);
         startActivity(intent);
     }
 
@@ -298,7 +296,7 @@ public class ProfileFragment extends Fragment {
     }
 
     private void goToRatings(View view) {
-        Intent intent = new Intent(getActivity(), BookingsRatingsActivity.class);
+        Intent intent = new Intent(getActivity(), BookingsCompletedActivity.class);
         startActivity(intent);
     }
 
