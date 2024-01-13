@@ -24,7 +24,9 @@ public class Pinayte extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(Pinayte.this, BottomNavBar.class);
+                intent.putExtra("initialFragment", "ProductsFragment");
+                startActivity(intent);
             }
         });
 

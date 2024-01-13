@@ -25,7 +25,9 @@ public class GreenLake extends AppCompatActivity {
 
         ArrowBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(GreenLake.this, BottomNavBar.class);
+                intent.putExtra("initialFragment", "ProductsFragment");
+                startActivity(intent);
             }
         });
 
