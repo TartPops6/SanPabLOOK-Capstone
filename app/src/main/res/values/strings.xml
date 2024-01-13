@@ -418,4 +418,10 @@
     <string name="replyOffline">Offline</string>
     <string name="typeMessage">Type a message\.\.\.</string>
 
+    <!--CONFIRMED BOOKING ACTIVITY-->
+    <string name="confirmedBooking">You confirmed your booking!</string>
+    <string name="confirmedBookingMessage">Please wait for the establishment to process your chosen reservation. Thank you for your patience!</string>
+    <string name="btnBackHome"><u>Back to Home</u></string>
+    <string name="btnBookingPage">Check Your Booking</string>
+
 </resources>
