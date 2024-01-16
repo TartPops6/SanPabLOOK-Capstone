@@ -15,6 +15,7 @@ import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.study.sanpablook.R;
 
 public class BookingsCompletedActivity extends AppCompatActivity {
@@ -23,8 +24,9 @@ public class BookingsCompletedActivity extends AppCompatActivity {
     AppCompatRatingBar ratingBar;
 
     //for add image
-    ImageView btnAddImageRatings;
-    CardView addImage;
+    ShapeableImageView addImageRatings;
+//    ImageView btnAddImageRatings;
+//    CardView addImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +37,10 @@ public class BookingsCompletedActivity extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingStars);
 
         //image
-        btnAddImageRatings = findViewById(R.id.addImageRatings);
-        addImage = findViewById(R.id.cardviewAddImage);
+        addImageRatings = findViewById(R.id.addImageRatings);
+//        addImage = findViewById(R.id.cardviewAddImage);
 
-        btnAddImageRatings.setOnClickListener(view1 -> {
+        addImageRatings.setOnClickListener(view1 -> {
             ImagePicker.Companion.with(this)
                     .crop()                 // Crop image(Optional), Check Customization for more option
                     .compress(1024)         // Final image size will be less than 1 MB(Optional)
@@ -71,7 +73,7 @@ public class BookingsCompletedActivity extends AppCompatActivity {
         // Get the image URI
         if (resultCode == RESULT_OK) {
             Uri imageUri = data.getData();
-            btnAddImageRatings.setImageURI(imageUri);
+            addImageRatings.setImageURI(imageUri);
         }
     }
 }
