@@ -202,6 +202,7 @@
     <string name="labelNoOfGuests">No. of Guests</string>
     <string name="labelNoOfPets">No. of Pets</string>
     <string name="labelToRate">To Rate</string>
+    <string name="labelCancelBookings">Cancel Booking</string>
     <!--Pending Page-->
     <string name="pendingEstablishment">Casa San Pablo</string>
     <string name="pendingBookingNumber">12-005</string>
