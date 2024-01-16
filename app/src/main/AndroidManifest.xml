@@ -17,18 +17,18 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/appName"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_sanpablook"
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
-        <activity
-            android:name=".ConfirmedBookingActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi4Y0iwY7WoSsDXb8BMfioHIjzZSqtPy8" />
 
+        <activity android:name="sanpablook.study.sanpablook.BunotLakePage" />
+        <activity android:name="sanpablook.study.sanpablook.YamboLakePage" />
+        <activity android:name="sanpablook.study.sanpablook.ConfirmedBookingActivity" />
         <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
         <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
         <activity android:name="sanpablook.study.sanpablook.FishingPage" />
@@ -62,7 +62,7 @@
         <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
         <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
         <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
-        <activity android:name="sanpablook.study.sanpablook.YamboPandinLakePage" />
+        <activity android:name="sanpablook.study.sanpablook.PandinLakePage" />
         <activity android:name="sanpablook.study.sanpablook.HotelCasa" />
         <activity android:name="sanpablook.study.sanpablook.CalibatoLakePage" />
         <activity android:name="sanpablook.study.sanpablook.PalakpakinLakePage" />

@@ -73,7 +73,7 @@ public class HotelCasa extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HotelCasa.this, HotelReservationActivity.class);
-                intent.putExtra("documentId", "CasaSanPablo");
+                intent.putExtra("documentId", "CasaSanPabloHotel");
                 intent.putExtra("imagePath", "estabProfilePictures/casaSanPabloProfile.jpg");
                 startActivity(intent);
             }

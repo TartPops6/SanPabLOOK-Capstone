@@ -191,10 +191,12 @@ public class ProfileFragment extends Fragment {
         profilePicRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                Glide.with(ProfileFragment.this)
-                        .load(uri)
-                        .into(profilePicture);
-                                                                }
+                if (isAdded() && getActivity() != null) {
+                    Glide.with(getActivity())
+                            .load(uri)
+                            .into(profilePicture);
+                }
+            }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(Exception e) {

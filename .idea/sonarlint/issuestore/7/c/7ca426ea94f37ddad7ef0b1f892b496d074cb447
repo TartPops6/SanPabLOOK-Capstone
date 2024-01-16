@@ -1,15 +1,26 @@
 
-l
-java:S1450"VRemove the "mParam1" field and declare it as a local variable in the relevant methods.(•Íï‘
-l
-java:S1450"VRemove the "mParam2" field and declare it as a local variable in the relevant methods.(¡ˆ€ 
-M
-java:S1135"2Complete the task associated to this TODO comment.(ÜûŠ—øÿÿÿÿ
-M
-java:S1135"2Complete the task associated to this TODO comment.(ğï¢öúÿÿÿÿ
-M
-java:S1135)"2Complete the task associated to this TODO comment.(ßíŠÿÿÿÿÿ
-A
-java:S1068"+Remove this unused "mParam1" private field.(•Íï‘
-A
-java:S1068"+Remove this unused "mParam2" private field.(¡ˆ€ 
+J
+java:S1604'"(Make this anonymous inner class a lambda(½Ô™øÿÿÿÿ8¹ŞĞ1
+J
+java:S1604/"(Make this anonymous inner class a lambda(Î¸åØıÿÿÿÿ8¹ŞĞ1
+J
+java:S16047"(Make this anonymous inner class a lambda(¿ÉŒšûÿÿÿÿ8¹ŞĞ1
+E
+java:S1604?"(Make this anonymous inner class a lambda(İç«í8¹ŞĞ1
+E
+java:S1604G"(Make this anonymous inner class a lambda(ßĞ¢Ñ8¹ŞĞ1
+J
+java:S1604O"(Make this anonymous inner class a lambda(¬§»èúÿÿÿÿ8¹ŞĞ1
+E
+java:S1604W"(Make this anonymous inner class a lambda(Ãòì¿8¹ŞĞ1
+s	java:S116"RRename this field "Coconut" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+s	java:S116"RRename this field "Pinayte" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+o	java:S116"NRename this field "Ube" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+q	java:S116"PRename this field "Cacao" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+p	java:S116"ORename this field "Kape" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+s	java:S116"RRename this field "Lettuce" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+w	java:S116"VRename this field "Handicrafts" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+f
+java:S1659"DDeclare "Pinayte" and all following declarations on a separate line.(ÆöÉşÿÿÿÿ8Í¹ŞĞ1
+E
+java:S1185"(Remove this method to simply inherit it.(ßìê¯8İ¹ŞĞ1

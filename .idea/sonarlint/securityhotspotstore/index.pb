@@ -84,10 +84,6 @@ w
 Gapp/src/main/java/sanpablook/study/sanpablook/SampalocLakeSouvenir.java,3\f\3f7536f381e062b31301042984ae5c7c1b717a28
 n
 >app/src/main/java/sanpablook/study/sanpablook/UbeMariaAna.java,4\9\49db361aa039b790f6a157fb0a045dd6beb06b1e
-‚
-Rapp/src/main/java/sanpablook/study/sanpablook/DinePalmerasReservationActivity.java,5\a\5a96f08de1333e056e88f13516bcc40ace780e59
-r
-Bapp/src/main/java/sanpablook/study/sanpablook/ActivityHistory.java,1\c\1c4dbd8e4794249e0c7c6a6241009c7babad0c1e
 {
 Kapp/src/main/java/sanpablook/study/sanpablook/HotelReservationActivity.java,f\f\ff35e4554241bd16c312df106a734fefce08a9c5
 w
@@ -100,8 +96,6 @@ Aapp/src/main/java/sanpablook/study/sanpablook/BikeRentalPage.java,f\a\fa083624
 Lapp/src/main/java/sanpablook/study/sanpablook/BookingsCancelledActivity.java,1\5\15bc174e06c79f0402630a511afd668635bc4f4e
 |
 Lapp/src/main/java/sanpablook/study/sanpablook/BookingsConfirmedActivity.java,8\8\88467b9640624eb6e21e4dabc1c14748b273aaa4
-z
-Japp/src/main/java/sanpablook/study/sanpablook/BookingsRatingsActivity.java,8\5\85ec4923a8a63ac5bac02225c93a027887600194
 s
 Capp/src/main/java/sanpablook/study/sanpablook/CalibatoLakePage.java,6\1\6178318b260d64ca60e9330d03699d45c73897eb
 n
@@ -124,8 +118,6 @@ p
 @app/src/main/java/sanpablook/study/sanpablook/HotelPalmeras.java,0\9\09b889e0012758732c91dedc48e99dcf19dfbc01
 s
 Capp/src/main/java/sanpablook/study/sanpablook/SampalocLakePage.java,a\a\aaf63fe573451068e6b3fa8e3884e826600582f7
-v
-Fapp/src/main/java/sanpablook/study/sanpablook/YamboPandinLakePage.java,b\9\b92cc6c0e1af28fc1510af53fd9c9cc89faa11f9
 y
 Iapp/src/main/java/sanpablook/study/sanpablook/Adapter/BookingAdapter.java,c\8\c8c8719a3f8e727a74d779a2d042f89e14df3e7b
 ~
@@ -146,3 +138,13 @@ p
 @app/src/main/java/sanpablook/study/sanpablook/HotelFragment.java,c\3\c326228935d71187e4d8767d0926a51cf069b604
 o
 ?app/src/main/java/sanpablook/study/sanpablook/DineFragment.java,e\5\e5412a9a49da0141df8d911d31bac970016dbc26
+{
+Kapp/src/main/java/sanpablook/study/sanpablook/ConfirmedBookingActivity.java,e\4\e43c5fd6e6f8bdbe9370bc6732eb83ff1b832863
+r
+Bapp/src/main/java/sanpablook/study/sanpablook/ActivityRatings.java,2\1\2174e02a48636ee2b58a54cacfc4cb6cb62a8743
+q
+Aapp/src/main/java/sanpablook/study/sanpablook/PandinLakePage.java,e\a\eab59408e05aa9231ac298a35c990371cb253e7f
+p
+@app/src/main/java/sanpablook/study/sanpablook/YamboLakePage.java,1\a\1a074920da7bb4013ac7295a7abe400c2d233e66
+p
+@app/src/main/java/sanpablook/study/sanpablook/BunotLakePage.java,0\f\0f30a7aaf03f6657071e1f3299c4351c26e836b5

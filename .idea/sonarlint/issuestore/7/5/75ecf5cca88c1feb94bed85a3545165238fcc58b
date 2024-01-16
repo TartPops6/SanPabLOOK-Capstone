@@ -2,11 +2,11 @@
 C
 java:S1604"(Make this anonymous inner class a lambda(‹±ùËıÿÿÿÿ
 >
-java:S1604#"(Make this anonymous inner class a lambda(´ÕÁ
+java:S1604""(Make this anonymous inner class a lambda(´ÕÁ
 C
-java:S1604)"(Make this anonymous inner class a lambda(ÈŒèâüÿÿÿÿ
+java:S1604("(Make this anonymous inner class a lambda(ÈŒèâüÿÿÿÿ
 n	java:S116"TRename this field "ArrowBack" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Û¥ÿÿÿÿÿ
 f
 java:S1659"KDeclare "previousButton" and all following declarations on a separate line.(·Û¥ÿÿÿÿÿ
 C
-java:S11722"(Remove this unused method parameter "v".(™ù—Âüÿÿÿÿ
+java:S11721"(Remove this unused method parameter "v".(™ù—Âüÿÿÿÿ

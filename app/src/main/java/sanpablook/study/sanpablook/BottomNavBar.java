@@ -83,6 +83,25 @@ public class BottomNavBar extends AppCompatActivity {
             //default fragment (HomeFragment)
             replaceFragment(new HomeFragment());
         }
+
+        // PRODUCTS
+        if (getIntent().hasExtra("initialFragment")) {
+            String initialFragment = getIntent().getStringExtra("initialFragment");
+            if ("HotelFragment".equals(initialFragment)) {
+                replaceFragment(new HotelFragment());
+                binding.bottomNavigationView.setSelectedItemId(R.id.unclickableBooking);
+                // Change FAB background & icon color when clicked
+                binding.floatingBook.setBackgroundTintList(
+                        ColorStateList.valueOf(ContextCompat.getColor(BottomNavBar.this, R.color.blue))
+                );
+                binding.floatingBook.setImageTintList(
+                        ColorStateList.valueOf(ContextCompat.getColor(BottomNavBar.this, R.color.light))
+                );
+            }
+        } else {
+            //default fragment (HomeFragment)
+            replaceFragment(new HomeFragment());
+        }
     }
 
     //Fragments for Navigation

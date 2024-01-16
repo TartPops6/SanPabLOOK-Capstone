@@ -58,7 +58,7 @@
             android:id="@+id/sampalocLakeTitle"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:text="@string/sampalocLake"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -69,96 +69,17 @@
             app:layout_constraintTop_toBottomOf="@+id/sampalocView" />
 
         <TextView
-            android:id="@+id/rateSampaloc"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="12dp"
-            android:text="4.8"
-            android:textColor="@color/blueText"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutSampaloc"
-            android:layout_width="120dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="16dp"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/rateSampaloc"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:id="@+id/starRateSampaloc1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateSampaloc2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateSampaloc3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateSampaloc4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateSampaloc5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star_half"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/reviewsSampaloc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/reviews"
-            android:textColor="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayoutSampaloc"
-            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
-
-        <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/location"
-            android:textColor="@color/gray"
+            android:textColor="@color/lighterBlack"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSampaloc" />
+            app:layout_constraintTop_toBottomOf="@+id/sampalocLakeTitle" />
 
         <ImageView
             android:id="@+id/locationIcon"
@@ -176,7 +97,7 @@
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
-            android:text="Sampalok Lake, San Pablo, Laguna"
+            android:text="@string/sampalocLakeLocation"
             android:textColor="@color/darkBlue"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -195,16 +116,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
 
         <TextView
             android:id="@+id/descriptionSampaloc"
-            android:layout_width="364dp"
-            android:layout_height="94dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="Lake Sampaloc is a volcanic crater lake on the island of Luzon, Philippines. It is the largest of the Seven Lakes of San Pablo, Laguna. Nearly half of the lake's depth has a shallow depression at the bottom, indicating its volcanic origin. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -222,16 +146,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionSampaloc" />
 
         <TextView
             android:id="@+id/quickTutorialDescriptionSampaloc"
-            android:layout_width="366dp"
-            android:layout_height="46dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="The lake is behind San Pablo city hall and is dotted with fishpens and small cottages built on stilts. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -241,9 +168,11 @@
 
         <Button
             android:id="@+id/buttonSampalocYt"
-            android:layout_width="359dp"
-            android:layout_height="53dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Learn More"
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"

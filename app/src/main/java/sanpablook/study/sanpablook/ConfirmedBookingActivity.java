@@ -1,4 +1,4 @@
-package com.study.sanpablook;
+package sanpablook.study.sanpablook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,10 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.study.sanpablook.databinding.ActivityBookingsPendingBinding;
-
-import sanpablook.study.sanpablook.BookingsPendingActivity;
-import sanpablook.study.sanpablook.BottomNavBar;
+import com.study.sanpablook.R;
 
 public class ConfirmedBookingActivity extends AppCompatActivity {
 

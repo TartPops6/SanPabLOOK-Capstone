@@ -16,7 +16,7 @@
 
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/yamboPandinLakeView"
+            android:id="@+id/pandinLakeView"
             android:layout_width="match_parent"
             android:layout_height="378sp"
             android:scaleType="fitXY"
@@ -25,11 +25,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/round_corners"
-            app:srcCompat="@drawable/yambo_pandin" />
+            app:srcCompat="@drawable/pandin" />
 
         <!--back button-->
         <ImageButton
-            android:id="@+id/btnBackYamboPandin"
+            android:id="@+id/btnBackPandin"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
             app:srcCompat="@drawable/ic_btn_back" />
         <!--share button-->
         <ImageButton
-            android:id="@+id/btnShareYamboPandin"
+            android:id="@+id/btnSharePandin"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:layout_marginTop="16dp"
@@ -53,99 +53,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_btn_share" />
 
-
         <TextView
-            android:id="@+id/yamboPandinLakeTitle"
-            android:layout_width="375dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="24dp"
-            android:text="Yambo-Pandin Lake"
+            android:id="@+id/pandinLakeTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Pandin Lake"
             android:textColor="@color/black"
             android:textSize="35sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintHorizontal_bias="0.144"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeView" />
-
-        <TextView
-            android:id="@+id/rateYamboPandin"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="12dp"
-            android:text="4.8"
-            android:textColor="@color/blueText"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeTitle" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="120dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="16dp"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/rateYamboPandin"
-            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeTitle"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:id="@+id/starRateYambo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateYambo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateYambo3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateYambo4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateYambo5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star_half"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/reviewsYamboPandin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/reviews"
-            android:textColor="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/yamboPandinLakeTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/pandinLakeView" />
 
         <TextView
             android:id="@+id/location"
@@ -153,12 +73,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/location"
-            android:textColor="@color/gray"
+            android:textColor="@color/lighterBlack"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            app:layout_constraintTop_toBottomOf="@+id/pandinLakeTitle" />
 
         <ImageView
             android:id="@+id/locationIcon"
@@ -176,7 +96,7 @@
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
-            android:text="Yambo-Pandin Lake, San Pablo, Laguna"
+            android:text="@string/pandinLakeLocation"
             android:textColor="@color/darkBlue"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -195,16 +115,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
 
         <TextView
             android:id="@+id/descriptionYambo"
-            android:layout_width="363dp"
-            android:layout_height="77dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="Pandin and Yambo are twin crater lakes separated by a narrow strip of land. They are part of the Seven Lakes system in San Pablo. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -216,22 +139,26 @@
             android:id="@+id/quickTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/quickTutorial"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionYambo" />
 
         <TextView
             android:id="@+id/quickTutorialDescriptionYambo"
-            android:layout_width="364dp"
-            android:layout_height="53dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
-            android:text=" Yambo-Pandin Lake is situated at Brgy. San Lorenzo in San Pablo City of Laguna province in the Philippines."
+            android:textColor="@color/lighterBlack"
+            android:text="Yambo-Pandin Lake is situated at Brgy. San Lorenzo in San Pablo City of Laguna province in the Philippines."
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.625"
@@ -239,10 +166,12 @@
             app:layout_constraintTop_toBottomOf="@+id/quickTutorial" />
 
         <Button
-            android:id="@+id/buttonYamboYt"
-            android:layout_width="359dp"
-            android:layout_height="53dp"
+            android:id="@+id/buttonPandinYt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Learn More"
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"

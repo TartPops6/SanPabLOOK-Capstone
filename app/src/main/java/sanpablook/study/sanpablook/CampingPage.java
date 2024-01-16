@@ -53,7 +53,7 @@ public class CampingPage extends AppCompatActivity {
         campingYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/suEwrablU3k?si=AUUN9MPC0Y2LyTSH");
             }
         });
     }

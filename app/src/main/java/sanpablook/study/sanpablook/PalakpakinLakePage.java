@@ -66,7 +66,7 @@ public class PalakpakinLakePage extends AppCompatActivity {
         palakpakinYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/eoGznaa70XI?si=52Plgtcl-Y105dP-");
+                gotoUrl("https://youtu.be/otfcFTcCrZE?si=x_nUNJYf8ga26-Ro");
             }
         });
     }

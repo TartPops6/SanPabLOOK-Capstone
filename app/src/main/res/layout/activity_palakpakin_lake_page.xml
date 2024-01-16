@@ -58,7 +58,7 @@
             android:id="@+id/PalakpakinLakeTitle"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:text= "Palakpakin Lake"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -69,96 +69,17 @@
             app:layout_constraintTop_toBottomOf="@+id/PalakpakinView" />
 
         <TextView
-            android:id="@+id/ratePalakpakin"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="12dp"
-            android:text="4.8"
-            android:textColor="@color/blueText"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PalakpakinLakeTitle" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutPalakpakin"
-            android:layout_width="120dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="16dp"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/ratePalakpakin"
-            app:layout_constraintTop_toBottomOf="@+id/PalakpakinLakeTitle"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:id="@+id/starRatePalakpakin1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRatePalakpakin2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRatePalakpakin3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRatePalakpakin4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRatePalakpakin5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star_half"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/reviewsPalakpakin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/reviews"
-            android:textColor="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayoutPalakpakin"
-            app:layout_constraintTop_toBottomOf="@+id/PalakpakinLakeTitle" />
-
-        <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/location"
-            android:textColor="@color/gray"
+            android:textColor="@color/lighterBlack"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutPalakpakin" />
+            app:layout_constraintTop_toBottomOf="@+id/PalakpakinLakeTitle" />
 
         <ImageView
             android:id="@+id/locationIcon"
@@ -176,7 +97,7 @@
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
-            android:text="Palakpakin Lake, San Pablo, Laguna"
+            android:text="@string/palakpakinLakeLocation"
             android:textColor="@color/darkBlue"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -195,16 +116,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
 
         <TextView
             android:id="@+id/descriptionPalakpakin"
-            android:layout_width="354dp"
-            android:layout_height="108dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="Lake Palakpakin is one of the Seven Lakes of San Pablo in Laguna province in the Philippines. The residents of the lake depend on the income generated by fish cages and fish pens that produce cultivated tilapia, silver carp and shrimp. The lake is evident along the highway. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -222,16 +146,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionPalakpakin" />
 
         <TextView
             android:id="@+id/quickTutorialDescriptionPalakpakin"
-            android:layout_width="357dp"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="Palakpakin is located in Brgy. San Buenaventura, San Pablo City.  "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -241,9 +168,11 @@
 
         <Button
             android:id="@+id/buttonPalakpakinYt"
-            android:layout_width="359dp"
-            android:layout_height="53dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Learn More"
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"

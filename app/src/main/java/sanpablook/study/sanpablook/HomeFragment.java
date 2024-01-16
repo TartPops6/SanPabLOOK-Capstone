@@ -152,6 +152,34 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
             startActivity(intent);
             requireActivity().finish();
         });
+
+        //button redirect to products page
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        View buttonProduct = myFragment.findViewById(R.id.productsBtn);
+        buttonProduct.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), BottomNavBar.class);
+            intent.putExtra("initialFragment", "ProductsFragment");
+            startActivity(intent);
+        });
+
+        //button redirect to hotel page
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        View buttonHotel = myFragment.findViewById(R.id.hotelsBtn);
+        buttonHotel.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), BottomNavBar.class);
+            intent.putExtra("initialFragment", "HotelFragment");
+            startActivity(intent);
+        });
+
+        //button redirect to activities page
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        View buttonActivities = myFragment.findViewById(R.id.activitiesBtn);
+        buttonActivities.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), SanPablookActivities.class);
+            startActivity(intent);
+            requireActivity().finish();
+        });
+
         return myFragment;
     }
 

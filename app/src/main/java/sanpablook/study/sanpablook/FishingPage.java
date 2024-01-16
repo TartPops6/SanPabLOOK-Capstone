@@ -53,7 +53,7 @@ public class FishingPage extends AppCompatActivity {
         fishingYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/TLP36ULz06w?si=33dGBUS7WzWqolKg");
             }
         });
     }

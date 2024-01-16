@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector
     android:height="24dp"
-    android:tint="#000000"
+    android:tint="#5A5A5A"
     android:viewportHeight="24"
     android:viewportWidth="24"
     android:width="24dp"

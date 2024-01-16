@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/round_corners"
-            app:srcCompat="@drawable/camping" />
+            app:srcCompat="@drawable/fishing_activities" />
 
         <!--back button-->
         <ImageButton
@@ -67,144 +67,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/FishingView" />
 
-        <TextView
-            android:id="@+id/rateFishing"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="12dp"
-            android:text="4.8"
-            android:textColor="@color/blueText"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fishingTitle" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutFishing"
-            android:layout_width="120dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="16dp"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/rateFishing"
-            app:layout_constraintTop_toBottomOf="@+id/fishingTitle"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:id="@+id/starRateFishing1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateFishing2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateFishing3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateFishing4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateFishing5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star_half"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/reviewsFishing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/reviews"
-            android:textColor="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayoutFishing"
-            app:layout_constraintTop_toBottomOf="@+id/fishingTitle" />
-
-        <TextView
-            android:id="@+id/location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/location"
-            android:textColor="@color/gray"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.076"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutFishing" />
-
-        <ImageView
-            android:id="@+id/locationIcon"
-            android:layout_width="34dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.087"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location"
-            app:srcCompat="@drawable/baseline_location" />
-
-        <TextView
-            android:id="@+id/PostalAddressFishing"
-            android:layout_width="296dp"
-            android:layout_height="21dp"
-            android:layout_marginTop="16dp"
-            android:text="Sampalok Lake, San Pablo, Laguna"
-            android:textColor="@color/darkBlue"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.061"
-            app:layout_constraintStart_toEndOf="@+id/locationIcon"
-            app:layout_constraintTop_toBottomOf="@+id/location" />
 
         <TextView
             android:id="@+id/descriptionTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:text="Description"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
+            app:layout_constraintTop_toBottomOf="@+id/fishingTitle" />
 
         <TextView
             android:id="@+id/descriptionFishing"
-            android:layout_width="363dp"
-            android:layout_height="77dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
-            android:text="Lorem ipsum dolor sit amet consectetur. Ultrices placerat nec mauris felis urna adipiscing. Ridiculus rhoncus libero nibh sed sit in. "
+            android:textColor="@color/lighterBlack"
+            android:text="Fishing activities in San Pablo City often involve traditional methods, and you may find locals using bamboo poles or simple fishing gear. It's essential to be aware of any local regulations or guidelines related to fishing in San Pablo lakes. "
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.625"
@@ -215,22 +102,26 @@
             android:id="@+id/quickTutorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/quickTutorial"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionFishing" />
 
         <TextView
             android:id="@+id/quickTutorialDescriptionFishing"
-            android:layout_width="363dp"
-            android:layout_height="77dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
-            android:text="Lorem ipsum dolor sit amet consectetur. Ultrices placerat nec mauris felis urna adipiscing. Ridiculus rhoncus libero nibh sed sit in. "
+            android:textColor="@color/lighterBlack"
+            android:text="To fish in San Pablo City, Laguna, start by visiting the Seven Lakes, with Sampaloc Lake being a popular choice. Bring basic fishing gear such as a bamboo pole, fishing line, and bait. Head to designated fishing spots or the lakeside promenade. Be mindful of local regulations, and secure any necessary permits. Relax and enjoy the tranquil environment while waiting for bites. Pandin Lake and Yambo Lake also offer peaceful fishing settings. Engage with local residents for tips and guidance, ensuring a memorable fishing experience in the scenic Seven Lakes of San Pablo."
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.625"
@@ -239,9 +130,11 @@
 
         <Button
             android:id="@+id/buttonFishingYt"
-            android:layout_width="359dp"
-            android:layout_height="53dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Learn More"
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"

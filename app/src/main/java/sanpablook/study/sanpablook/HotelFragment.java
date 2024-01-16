@@ -50,7 +50,6 @@ public class HotelFragment extends Fragment {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
     }

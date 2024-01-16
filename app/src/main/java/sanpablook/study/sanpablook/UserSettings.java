@@ -152,20 +152,19 @@ public class UserSettings extends AppCompatActivity {
         });
 
         //Get users profile picture
-        profilePicRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                Glide.with(UserSettings.this)
-                        .load(uri)
-                        .into(profilePicture);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(Exception e) {
-                Log.d(TAG, "Failed to load profile picture");
-            }
-        });
-
+ profilePicRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+    @Override
+    public void onSuccess(Uri uri) {
+        Glide.with(UserSettings.this)
+            .load(uri)
+            .into(profilePicture);
+    }
+}).addOnFailureListener(new OnFailureListener() {
+    @Override
+    public void onFailure(Exception e) {
+        Log.d(TAG, "Failed to load profile picture");
+    }
+});
         //Get user's phone number
         documentReference.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -398,6 +397,60 @@ public class UserSettings extends AppCompatActivity {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
+    private EditText editTextCurrentPasswordChange;
+
+private void changePassword() {
+    // Get the current user
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    editTextCurrentPasswordChange = findViewById(R.id.editTextCurrentPasswordChange);
+
+    // Get the current password, new password, and retype password from the EditText fields
+    String currentPassword = editTextCurrentPasswordChange.getText().toString();
+    String newPassword = editTextNew.getText().toString();
+    String retypePassword = editTextRetype.getText().toString();
+
+    // Create an AuthCredential object
+    AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), currentPassword);
+
+    // Re-authenticate the user
+    user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+        @Override
+        public void onComplete(@NonNull Task<Void> task) {
+            if (task.isSuccessful()) {
+                // The re-authentication was successful
+
+                // Check if the new password and the retype password match
+                if (newPassword.equals(retypePassword)) {
+                    // The new password and the retype password match
+
+                    // Update the user's password
+                    user.updatePassword(newPassword)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                // The password update was successful
+                                Toast.makeText(UserSettings.this, "Password updated", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // The password update failed
+                                Toast.makeText(UserSettings.this, "Failed to update password", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                } else {
+                    // The new password and the retype password do not match
+                   editTextRetype.setError("Passwords do not match");
+                    editTextRetype.requestFocus();
+                }
+            } else {
+                // The re-authentication failed
+                Toast.makeText(UserSettings.this, "Please check your current password.", Toast.LENGTH_SHORT).show();
+            }
+        }
+    });
+}
     //for edit password
     private EditText editTextNew;
     private EditText editTextRetype;
@@ -408,6 +461,7 @@ public class UserSettings extends AppCompatActivity {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_edit_password);
 
+        editTextCurrentPasswordChange = dialog.findViewById(R.id.editTextCurrentPasswordChange);
         btnSave = dialog.findViewById(R.id.buttonSave);
         Button btnCancel = dialog.findViewById(R.id.buttonCancel);
         editTextNew = dialog.findViewById(R.id.editTextNewPassword);
@@ -421,27 +475,7 @@ public class UserSettings extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newPassword = editTextNew.getText().toString();
-
-                // Firebase Auth
-                auth = FirebaseAuth.getInstance();
-                user = auth.getCurrentUser();
-
-                // Update the password
-                user.updatePassword(newPassword)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Log.d(TAG, "User password updated.");
-                                Toast.makeText(UserSettings.this, "Password updated", Toast.LENGTH_SHORT).show();
-                                UserSettings.this.recreate();
-                            } else {
-                                Log.d(TAG, "Error password not updated");
-                                Toast.makeText(UserSettings.this, "Error updating password", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+                changePassword();
                 dialog.dismiss();
             }
      });
@@ -697,16 +731,17 @@ public class UserSettings extends AppCompatActivity {
 
     Button btnSave = dialog.findViewById(R.id.buttonSave);
     Button btnCancel = dialog.findViewById(R.id.buttonCancel);
-    EditText editTextEmail = dialog.findViewById(R.id.editTextEmail);
-    EditText editTextCurrentPassword = dialog.findViewById(R.id.editTextCurrentPassword); // Add this line
+    final EditText editTextEmail = dialog.findViewById(R.id.editTextEmail);
+    final EditText currentPassword = dialog.findViewById(R.id.editTextCurrentPassword);
 
-    // Firebase Auth
+
+       // Firebase Auth
     auth = FirebaseAuth.getInstance();
     user = auth.getCurrentUser();
     fStore = FirebaseFirestore.getInstance();
     userID = auth.getCurrentUser().getUid();
 
-    // Get user's Bio
+    // Get user's Email
     DocumentReference documentReference = fStore.collection("users").document(userID);
 
     documentReference.get().addOnCompleteListener(task -> {
@@ -745,120 +780,14 @@ public class UserSettings extends AppCompatActivity {
     });
 
 
+
+
        btnSave.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               String newEmail = editTextEmail.getText().toString();
-               String currentPassword = editTextCurrentPassword.getText().toString();
-
-               // Re-authenticate the user
-               AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), currentPassword);
-               user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-                   @Override
-                   public void onComplete(@NonNull Task<Void> task) {
-                       if (task.isSuccessful()) {
-                           // Update the email in Firebase Auth
-                           user.verifyBeforeUpdateEmail(newEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
-                               @Override
-                               public void onComplete(@NonNull Task<Void> task) {
-                                   if (task.isSuccessful()) {
-                                       Log.d(TAG, "User email address updated.");
-
-                                       // Update the email in Firestore
-                                       Map<String, Object> updates = new HashMap<>();
-                                       updates.put("email", newEmail);
-                                       documentReference.set(updates, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                           @Override
-                                           public void onComplete(@NonNull Task<Void> task) {
-                                               if (task.isSuccessful()) {
-                                                   Toast.makeText(UserSettings.this, "Email updated", Toast.LENGTH_SHORT).show();
-                                                   UserSettings.this.recreate();
-                                               } else {
-                                                   Log.d(TAG, "Error updating email in Firestore");
-                                                   Toast.makeText(UserSettings.this, "Error updating email in Firestore", Toast.LENGTH_SHORT).show();
-                                               }
-                                           }
-                                       });
-                                   } else {
-                                       Log.d(TAG, "Error email not updated");
-                                       Toast.makeText(UserSettings.this, "Error updating email", Toast.LENGTH_SHORT).show();
-                                   }
-                               }
-                           });
-                       } else {
-                           // Handle exceptions
-                           try {
-                               throw task.getException();
-                           } catch(FirebaseAuthInvalidCredentialsException e) {
-                               editTextCurrentPassword.setError("Invalid password");
-                               editTextCurrentPassword.requestFocus();
-                           } catch(Exception e) {
-                               Log.e(TAG, e.getMessage());
-                           }
-                       }
-                   }
-               });
-
-               btnSave.setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View view) {
-                       String newEmail = editTextEmail.getText().toString();
-                       String currentPassword = editTextCurrentPassword.getText().toString();
-
-                       // Re-authenticate the user
-                       AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), currentPassword);
-                       user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-                           @Override
-                           public void onComplete(@NonNull Task<Void> task) {
-                               if (task.isSuccessful()) {
-                                   // Update the email in Firebase Auth
-                                   user.verifyBeforeUpdateEmail(newEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                       @Override
-                                       public void onComplete(@NonNull Task<Void> task) {
-                                           if (task.isSuccessful()) {
-                                               Log.d(TAG, "User email address updated.");
-
-                                               // Update the email in Firestore
-                                               Map<String, Object> updates = new HashMap<>();
-                                               updates.put("email", newEmail);
-                                               documentReference.set(updates, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                   @Override
-                                                   public void onComplete(@NonNull Task<Void> task) {
-                                                       if (task.isSuccessful()) {
-                                                           Toast.makeText(UserSettings.this, "Email updated", Toast.LENGTH_SHORT).show();
-                                                           UserSettings.this.recreate();
-                                                       } else {
-                                                           Log.d(TAG, "Error updating email in Firestore");
-                                                           Toast.makeText(UserSettings.this, "Error updating email in Firestore", Toast.LENGTH_SHORT).show();
-                                                       }
-                                                   }
-                                               });
-                                           } else {
-                                               Log.d(TAG, "Error email not updated");
-                                               Toast.makeText(UserSettings.this, "Error updating email", Toast.LENGTH_SHORT).show();
-                                           }
-                                       }
-                                   });
-                               } else {
-                                   // Handle exceptions
-                                   try {
-                                       throw task.getException();
-                                   } catch(FirebaseAuthInvalidCredentialsException e) {
-                                       editTextCurrentPassword.setError("Invalid password");
-                                       editTextCurrentPassword.requestFocus();
-                                   } catch(Exception e) {
-                                       Log.e(TAG, e.getMessage());
-                                   }
-                               }
-                           }
-                       });
-                       // Do not dismiss the dialog if the password is invalid
-                       if (editTextCurrentPassword.getError() == null) {
-                           dialog.dismiss();
-                       }
-                   }
-               });
-           }
+                changeEmailWithVerification(editTextEmail, currentPassword);
+                dialog.dismiss();
+              }
        });
 
     btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -873,6 +802,69 @@ public class UserSettings extends AppCompatActivity {
     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
     dialog.getWindow().setGravity(Gravity.BOTTOM);
+}
+
+private void changeEmailWithVerification(EditText editTextEmail, EditText currentPassword) {
+    // Get the current user
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+    // Get the new email and current password from the EditText fields
+    String newEmail = editTextEmail.getText().toString();
+    String userCurrentPassword = currentPassword.getText().toString();
+
+    // Check if the new email is valid
+    if (!android.util.Patterns.EMAIL_ADDRESS.matcher(newEmail).matches()) {
+        // The new email is not valid
+        editTextEmail.setError("Invalid email address");
+        editTextEmail.requestFocus();
+    } else {
+        // Re-authenticate the user
+        AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), userCurrentPassword);
+        user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    // Send verification email to the new email address
+                    user.verifyBeforeUpdateEmail(newEmail)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                // Verification email sent successfully
+                                Toast.makeText(UserSettings.this, "Verification email sent to " + newEmail, Toast.LENGTH_SHORT).show();
+
+                                // Update the email in Firestore
+                                DocumentReference documentReference = fStore.collection("users").document(userID);
+                                documentReference.update("email", newEmail)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            Log.d(TAG, "DocumentSnapshot successfully updated!");
+                                            Toast.makeText(UserSettings.this, "Email updated in Firestore", Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Log.w(TAG, "Error updating document", e);
+                                            Toast.makeText(UserSettings.this, "Error updating email in Firestore", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                // Failed to send verification email
+                                Toast.makeText(UserSettings.this, "Failed to send verification email", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                } else {
+                    // Failed to re-authenticate the user
+                    Toast.makeText(UserSettings.this, "Failed to re-authenticate. Please check your current password.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 }
 
     private void showDialogDeleteAccount (View view) {

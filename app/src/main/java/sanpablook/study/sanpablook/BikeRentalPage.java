@@ -54,7 +54,7 @@ public class BikeRentalPage extends AppCompatActivity {
         bikeRentalYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://youtu.be/EtP6wHxBMUU?si=A0otu83qpu2fvspg");
+                gotoUrl("https://youtu.be/GvoyPx8dpCc?si=J7lOunDBDQ3-lQZr");
             }
         });
     }

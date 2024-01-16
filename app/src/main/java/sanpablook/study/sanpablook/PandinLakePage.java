@@ -12,13 +12,13 @@ import android.widget.TextView;
 
 import com.study.sanpablook.R;
 
-public class YamboPandinLakePage extends AppCompatActivity {
+public class PandinLakePage extends AppCompatActivity {
 
-    ImageButton btnShareYamboPandin, btnBackYamboPandin;
+    ImageButton btnSharePandin, btnBackPandin;
 
-    Button YamboPandinYt;
+    Button pandinYt;
 
-    TextView yamboPandinLake;
+    TextView pandinLake;
 
 
     @Override
@@ -27,11 +27,11 @@ public class YamboPandinLakePage extends AppCompatActivity {
         setContentView(R.layout.activity_yambo_pandin_lake_page);
 
         //buttons
-        btnShareYamboPandin = findViewById(R.id.btnShareYamboPandin);
-        btnBackYamboPandin = findViewById(R.id.btnBackYamboPandin);
+        btnSharePandin = findViewById(R.id.btnSharePandin);
+        btnBackPandin = findViewById(R.id.btnBackPandin);
 
         //back button
-        btnBackYamboPandin.setOnClickListener(new View.OnClickListener() {
+        btnBackPandin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
@@ -39,7 +39,7 @@ public class YamboPandinLakePage extends AppCompatActivity {
         });
 
         //share button
-        btnShareYamboPandin.setOnClickListener(new View.OnClickListener() {
+        btnSharePandin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
@@ -52,19 +52,19 @@ public class YamboPandinLakePage extends AppCompatActivity {
             }
         });
 
-        //YamboPandin Lake location redirect maps
-        yamboPandinLake = findViewById(R.id.PostalAddressYamboPandin);
-        yamboPandinLake.setOnClickListener(new View.OnClickListener() {
+        //Pandin Lake location redirect maps
+        pandinLake = findViewById(R.id.PostalAddressYamboPandin);
+        pandinLake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoUrl("https://maps.app.goo.gl/GthStcy52WvcF2HM8");
+                gotoUrl("https://maps.app.goo.gl/vVGGDzFaJ1LWHVtz5");
             }
         });
 
         //YamboPandin Lake Image redirect to youtube
-        YamboPandinYt = findViewById(R.id.buttonYamboYt);
+        pandinYt = findViewById(R.id.buttonPandinYt);
 
-        YamboPandinYt.setOnClickListener(new View.OnClickListener() {
+        pandinYt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoUrl("https://youtu.be/b5-caWYajaI?si=Ez4HgYyalUcsGbwF");

@@ -246,6 +246,8 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
                                         @Override
                                         public void onSuccess(DocumentReference documentReference) {
                                             Toast.makeText(HotelReservationActivity.this, "Booking Successful", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(HotelReservationActivity.this, ConfirmedBookingActivity.class);
+                                            startActivity(intent);
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {

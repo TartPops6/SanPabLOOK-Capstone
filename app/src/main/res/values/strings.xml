@@ -1,17 +1,17 @@
 <resources>
     <string name="app_name">SanPabLOOK</string>
 
-    //Sign In
+    <!-- Test -->
     <string name="logIn">Login</string>
     <string name="signContinue">Sign in to continue</string>
     <string name="enterEmail">Enter your email</string>
     <string name="enterPassword">Enter your password</string>
 
-    //Forgot Password
+    <!-- Test -->
     <string name="forgotPassword">FORGOT PASSWORD</string>
     <string name="provideEmail">Provide your account\'s email for which you want to reset your password</string>
 
-    //Sign Up
+    <!-- Test -->
     <string name="createNewAccount">Create new Account</string>
     <string name="alreadyRegister">Already Registered? Log in here.</string>
     <string name="firstName">FIRST NAME</string>
@@ -25,24 +25,35 @@
     <string name="makeSureValid">Make sure that your first name and last name reflect on your Valid ID.</string>
     <string name="signUp">Sign Up</string>
 
-    //homepage
+    <!-- Test -->
     <string name="taraPhil">Tara, Phil!</string>
     <string name="sampalocLake">Sampaloc Lake</string>
     <string name="taraSantayo">Tara na! San Tayo?</string>
     <string name="nature">Nature</string>
 
-    //Nature
-    <string name="rate">4.8</string>
+    <!-- Test -->
     <string name="sampalokLakeSanPabloLaguna">Sampalok Lake, San Pablo, Laguna</string>
-    <string name="reviews">(12,345 reviews)</string>
     <string name="quickTutorial">Quick Tutorial</string>
     <string name="mohicap">Mohicap</string>
-    <string name="yamboPandinLake">Yambo-Pandin Lake</string>
+    <string name="pandinLake">Pandin Lake</string>
     <string name="sanPabloCityLaguna">San Pablo City, Laguna</string>
     <string name="mohicapLake">Mohicap Lake</string>
     <string name="calibatoLake">Calibato Lake</string>
     <string name="palakpakinLake">Palakpakin Lake</string>
+    <string name="yamboLake">Yambo Lake</string>
+    <string name="bunotLake">Bunot Lake</string>
 
+    <!-- Test -->
+    <string name="bikeDescription">Biking in Sampaloc Lake would definitely give another dimension in burning calories.You could rent a bike for only Php50 per hour.  </string>
+    <string name="bikeQuickTutorial">There’s a small stall where you can rent bikes and ride around Dagatan Boulevard, the four kilometer road around Sampaloc lake.</string>
+
+    <!-- Test -->
+    <string name="bunotDescription">Bunot Lake, located in San Pablo, Laguna, is a charming and tranquil destination surrounded by lush greenery. To reach Bunot Lake, you can start from the town proper and head southwest towards Brgy. Concepcion. Once there, inquire with locals for specific directions to the lake. The journey typically involves navigating both paved and unpaved roads, so a vehicle with good clearance is advisable. Bunot Lake captivates visitors with its serene ambiance, providing an ideal spot for relaxation and appreciation of nature. Whether you\'re interested in leisurely boat rides or simply enjoying the peaceful surroundings, Bunot Lake offers a refreshing escape in the heart of Laguna.</string>
+    <string name="bunotQuickTutorial">To reach Bunot Lake in San Pablo, Laguna, begin your journey from the town proper and head southwest toward Brgy. Concepcion. Follow the signs leading to the lake, and you may need to inquire with locals for precise directions. The route involves a mix of paved and unpaved roads, so it\'s recommended to use a vehicle with good clearance. Once you arrive at Bunot Lake, you\'ll be greeted by its serene atmosphere and lush surroundings. Whether you\'re interested in boating or simply relaxing by the water, Bunot Lake offers a peaceful retreat amidst nature in Laguna.</string>
+
+    <!-- Test -->
+    <string name="yamboDescription">Yambo Lake in San Pablo, Laguna, is a serene retreat surrounded by lush greenery and rolling hills. The pristine waters reflect the natural beauty, creating a tranquil atmosphere for visitors. Boat rides offer picturesque views, making Yambo Lake a hidden gem for relaxation in Laguna.</string>
+    <string name="yamboQuickTutorial">To reach Yambo Lake in San Pablo, Laguna, drive southeast from the town proper on Rizal Avenue Extension, following signs to Brgy. San Buenaventura. Ask locals for directions to the lake, nestled in a picturesque landscape. The route includes both paved and unpaved roads, so a vehicle with good clearance is recommended. Enjoy the serene beauty of Yambo Lake once you arrive, and seek assistance if needed for a hassle-free journey.</string>
 
     <!-- Hotel Selects -->
     <string name="hotelSelects">HOTEL</string>
@@ -423,5 +434,14 @@
     <string name="confirmedBookingMessage">Please wait for the establishment to process your chosen reservation. Thank you for your patience!</string>
     <string name="btnBackHome"><u>Back to Home</u></string>
     <string name="btnBookingPage">Check Your Booking</string>
+
+    <!--7 LAKES LOCATION -->
+    <string name="calibatoLakeLocation"><u>Calibato Lake, San Pablo, Laguna</u></string>
+    <string name="mohicapLakeLocation"><u>Mohicap Lake, San Pablo, Laguna</u></string>
+    <string name="palakpakinLakeLocation"><u>Palakpakin Lake, San Pablo, Laguna</u></string>
+    <string name="pandinLakeLocation"><u>Pandin Lake, San Pablo, Laguna</u></string>
+    <string name="sampalocLakeLocation"><u>Sampaloc Lake, San Pablo, Laguna</u></string>
+    <string name="yamboLakeLocation"><u>Yambo Lake, San Pablo, Laguna</u></string>
+    <string name="bunotLakeLocation"><u>Bunot Lake, San Pablo, Laguna</u></string>
 
 </resources>

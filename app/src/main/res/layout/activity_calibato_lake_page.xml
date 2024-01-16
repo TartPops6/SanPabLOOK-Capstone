@@ -57,7 +57,7 @@
             android:id="@+id/calibatoLakeTitle"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:text= "Calibato Lake"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -68,96 +68,17 @@
             app:layout_constraintTop_toBottomOf="@+id/calibatoView" />
 
         <TextView
-            android:id="@+id/rateCalibato"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="12dp"
-            android:text="4.8"
-            android:textColor="@color/blueText"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calibatoLakeTitle" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutCalibato"
-            android:layout_width="120dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="16dp"
-            android:background="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/rateCalibato"
-            app:layout_constraintTop_toBottomOf="@+id/calibatoLakeTitle"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:id="@+id/starRateCalibato1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateCalibato2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateCalibato3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="80dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateCalibato4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-            <ImageView
-                android:id="@+id/starRateCalibato5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/rate_star_half"
-                tools:layout_editor_absoluteX="164dp"
-                tools:layout_editor_absoluteY="463dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/reviewsCalibato"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/reviews"
-            android:textColor="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/linearLayoutCalibato"
-            app:layout_constraintTop_toBottomOf="@+id/calibatoLakeTitle" />
-
-        <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/location"
-            android:textColor="@color/gray"
+            android:textColor="@color/lighterBlack"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.076"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCalibato" />
+            app:layout_constraintTop_toBottomOf="@+id/calibatoLakeTitle" />
 
         <ImageView
             android:id="@+id/locationIcon"
@@ -175,7 +96,7 @@
             android:layout_width="296dp"
             android:layout_height="21dp"
             android:layout_marginTop="16dp"
-            android:text="Calibato Lake, San Pablo, Laguna"
+            android:text="@string/calibatoLakeLocation"
             android:textColor="@color/darkBlue"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -194,16 +115,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/locationIcon" />
 
         <TextView
             android:id="@+id/descriptionCalibatoLake"
-            android:layout_width="359dp"
-            android:layout_height="95dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="Calibato lake covers an area of 42 hectares and a depth of 135m. Due to this, it has the distinction of being the deepest of the 7 San Pablo lakes. The lake provides the town and surrounding towns with a wealth of aquatic and fish species."
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,16 +145,19 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/descriptionCalibatoLake" />
 
         <TextView
             android:id="@+id/quickTutorialDescriptionCalibatoLake"
-            android:layout_width="360dp"
-            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:justificationMode="inter_word"
+            android:textColor="@color/lighterBlack"
             android:text="The lake is situated in Brgy. Sto. Angel in San Pablo City."
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -240,9 +167,11 @@
 
         <Button
             android:id="@+id/buttonCalibatoYt"
-            android:layout_width="359dp"
-            android:layout_height="53dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:text="Learn More"
             android:backgroundTint="@color/selectedText"
             app:layout_constraintEnd_toEndOf="parent"

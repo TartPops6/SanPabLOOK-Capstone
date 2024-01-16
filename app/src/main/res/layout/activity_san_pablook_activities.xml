@@ -7,17 +7,28 @@
     android:orientation="vertical"
     tools:context="sanpablook.study.sanpablook.SanPablookActivities">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageButton
+            android:id="@+id/btnReturnActivities"
+            android:layout_width="48sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/white"
+            android:padding="0dp"
+            android:src="@drawable/ic_btn_arrow_back" />
+
         <EditText
             android:id="@+id/searchBarActivities"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="52dp"
+            android:layout_width="328dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toRightOf="@id/btnReturnActivities"
             android:background="@drawable/search_bar_bg"
             android:drawableStart="@drawable/ic_search"
             android:ems="10"
@@ -27,35 +38,27 @@
             android:textColor="@color/black"
             android:textColorHint="#BDBDBD"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="12dp"
             android:text="Location"
-            android:textColor="@color/gray"
+            android:textColor="@color/lighterBlack"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.114"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchBarActivities"
+            android:layout_below="@id/searchBarActivities"
             tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/locationIcon"
             android:layout_width="32dp"
             android:layout_height="31dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.096"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location"
+            android:layout_below="@id/location"
             app:srcCompat="@drawable/baseline_location" />
 
         <!--bg corner right rounded-->
@@ -65,65 +68,46 @@
             android:layout_width="301dp"
             android:layout_height="31dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
             android:text="@string/sanPabloCityLaguna"
             android:textColor="@color/darkBlue"
             android:textSize="15sp"
             android:gravity="center_vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toEndOf="@+id/locationIcon"
-            app:layout_constraintTop_toBottomOf="@+id/location"  />
+            android:layout_below="@id/location"
+            android:layout_toRightOf="@id/locationIcon"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="654dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PostalAddressActivities">
-
-            <ImageView
-                android:id="@+id/backgroundRight"
-                android:layout_width="match_parent"
-                android:layout_height="648dp"
-                android:layout_marginTop="95dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PostalAddressActivities"
-                app:srcCompat="@drawable/nature_rightcorner_background"
-                tools:ignore="NotSibling" />
-
+            android:layout_height="match_parent"
+            android:layout_below="@id/PostalAddressActivities"
+            android:background="@drawable/nature_rightcorner_background">
 
             <ImageView
                 android:id="@+id/relativeWavesBackground"
                 android:layout_width="match_parent"
-                android:layout_height="666dp"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="95dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PostalAddressActivities"
-                app:srcCompat="@drawable/wave"
+                app:srcCompat="@drawable/waves_admin"
                 tools:ignore="NotSibling" />
 
             <TextView
                 android:id="@+id/textActivities"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="20dp"
                 android:text="Activities"
                 android:textColor="@color/darkBlue"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.112"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/backgroundRight" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <ScrollView
                 android:id="@+id/scrollViewActivities"
@@ -157,7 +141,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corners_50"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/bike" />
+                            app:srcCompat="@drawable/bike_activities" />
 
                         <TextView
                             android:id="@+id/bikeRentaltxt"
@@ -190,7 +174,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corners_50"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/camping" />
+                            app:srcCompat="@drawable/camping_activities" />
 
                         <TextView
                             android:id="@+id/campingtext"
@@ -223,7 +207,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/rounded_corners_50"
                             android:scaleType="fitXY"
-                            app:srcCompat="@drawable/fishing" />
+                            app:srcCompat="@drawable/fishing_activities" />
 
                         <TextView
                             android:id="@+id/fishingText"
@@ -242,8 +226,6 @@
 
                 </LinearLayout>
             </ScrollView>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 </LinearLayout>
