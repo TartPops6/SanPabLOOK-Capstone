@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintConfirmedBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/establishmentNameConfirmed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_w_fill"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:text="@string/confirmedEstablishment"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearBookingNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/establishmentNameConfirmed">
+
+            <TextView
+                android:id="@+id/labelBookingNumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/labelBookingNumber"
+                android:textAlignment="textStart"
+                android:textColor="@color/blueText"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/valueOfConfirmedBookingNumber"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/confirmedBookingNumber"
+                android:textColor="@color/lighterBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearBookingNumber">
+
+            <TextView
+                android:id="@+id/labelCustomerName"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/labelCustomerName"
+                android:textAlignment="textStart"
+                android:textColor="@color/blueText"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/valueOfConfirmedCustomerName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/confirmedCustomerName"
+                android:textColor="@color/lighterBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearBookingDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearCustomerName">
+
+            <TextView
+                android:id="@+id/labelBookingDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/labelBookingDate"
+                android:textAlignment="textStart"
+                android:textColor="@color/blueText"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/valueOfConfirmedBookingDate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/confirmedBookingDate"
+                android:textColor="@color/lighterBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearBookingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearBookingDate">
+
+            <TextView
+                android:id="@+id/labelBookingTime"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/labelBookingTime"
+                android:textAlignment="textStart"
+                android:textColor="@color/blueText"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/valueOfConfirmedBookingTime"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/confirmedBookingTime"
+                android:textColor="@color/lighterBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearNoOfGuests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearBookingTime">
+
+            <TextView
+                android:id="@+id/labelNoOfGuests"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/labelNoOfGuests"
+                android:textAlignment="textStart"
+                android:textColor="@color/blueText"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/valueOfConfirmedNumberOfGuests"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/confirmedNumberOfGuests"
+                android:textColor="@color/lighterBlack"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearNoOfGuests">
+
+            <Button
+                android:id="@+id/buttonReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:letterSpacing="0"
+                android:padding="5dp"
+                android:text="@string/labelRateYourStay"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                app:cornerRadius="50dp"
+                app:rippleColor="@color/blue"
+                app:strokeColor="@color/blue"
+                app:strokeWidth="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
