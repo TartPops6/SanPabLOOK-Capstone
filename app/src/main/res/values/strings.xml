@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SanPabLOOK</string>
+    <string name="appName">SanPabLOOK</string>
 
     <!-- Test -->
     <string name="logIn">Login</string>
@@ -122,7 +122,6 @@
         \nCheck-out: 12:00 NN
         \n2 guests maximum</string>
     <string name="medingAvailable">Always open</string>
-    <string name="appName">San PabLOOK</string>
 
     <!-- Palmeras Hotel -->
     <string name="palmerasHotel">Casa Palmera Hotel</string>
@@ -214,6 +213,7 @@
     <string name="labelNoOfPets">No. of Pets</string>
     <string name="labelToRate">To Rate</string>
     <string name="labelCancelBookings">Cancel Booking</string>
+    <string name="labelRateYourStay">Rate your stay</string>
     <!--Pending Page-->
     <string name="pendingEstablishment">Casa San Pablo</string>
     <string name="pendingBookingNumber">12-005</string>
