@@ -1,13 +1,23 @@
 package sanpablook.study.sanpablook.Adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.study.sanpablook.R;
 
 import java.util.List;
@@ -15,10 +25,12 @@ import java.util.Map;
 
 public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingViewHolder> {
 
-    private List<Map<String, Object>> bookings;
+    private static List<Map<String, Object>> bookings;
+    static FirebaseFirestore db;
 
     public BookingAdapter(List<Map<String, Object>> bookings) {
         this.bookings = bookings;
+        db = FirebaseFirestore.getInstance();
     }
 
     @NonNull
@@ -44,9 +56,10 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
         return bookings.size();
     }
 
-    static class BookingViewHolder extends RecyclerView.ViewHolder {
+    class BookingViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtPending, txtBookingID, txtCustomerName, txtBookingDate, txtBookingTime, txtGuestCount;
+        Button buttonCancelBooking;
 
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +71,45 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
             txtBookingDate = itemView.findViewById(R.id.valueOfPendingBookingDate);
             txtBookingTime = itemView.findViewById(R.id.valueOfPendingBookingTime);
             txtGuestCount = itemView.findViewById(R.id.valueOfPendingNumberOfGuests);
+
+            //Cancel button
+            buttonCancelBooking = itemView.findViewById(R.id.buttonCancelBooking);
+
+            buttonCancelBooking.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    deleteBooking(getBindingAdapterPosition());
+                }
+            });
+        }
+
+        // Method to delete a booking
+        private void deleteBooking(int position) {
+            String bookingID = bookings.get(position).get("bookingID").toString();
+            String userID = bookings.get(position).get("userID").toString();
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            if (currentUser != null && userID.equals(currentUser.getUid())) {
+                db.collection("BookingPending").document(bookingID).delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                bookings.remove(position);
+                                notifyDataSetChanged();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d("BookingAdapter", "Failed to delete booking with ID: " + bookingID, e);
+                                // Print the exception message
+                                Log.d("BookingAdapter", "Error: " + e.getMessage());
+                            }
+                        });
+            } else {
+                Log.d("BookingAdapter", "Cannot delete booking with ID: " + bookingID + " because it does not belong to the current user");
+            }
         }
     }
 }

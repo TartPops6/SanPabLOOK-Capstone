@@ -26,6 +26,7 @@ import androidx.annotation.NonNull;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -58,8 +59,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
     @Override
     public void onResume() {
         super.onResume();
-
-        checkUserStatus();
 
         // Get user's first name
         FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
@@ -95,14 +94,19 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
         fStore = FirebaseFirestore.getInstance();
         userID = auth.getCurrentUser().getUid();
 
+        checkUserStatus();
+
         // Check if user is signed in (non-null) and update UI accordingly.
         if (user == null) {
             // User is not signed in
+            Toast.makeText(getContext(), "Please sign in to continue", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(requireContext(), SignInActivity.class);
             startActivity(intent);
             requireActivity().finish();
             return myFragment;
         }
+
+
 
         // Get user's first name
        FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
@@ -208,6 +212,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
     }
 
     private void logout() {
+        Toast.makeText(getContext(), "Please sign in to continue", Toast.LENGTH_SHORT).show();
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(requireContext(), SignInActivity.class);
         startActivity(intent);

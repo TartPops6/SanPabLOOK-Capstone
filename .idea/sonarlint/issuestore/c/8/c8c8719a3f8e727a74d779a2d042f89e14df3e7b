@@ -1,4 +1,20 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ù¶Ášüÿÿÿÿ8ªêçÈÏ1
+l
+java:S1192i"ODefine a constant instead of duplicating this literal "BookingAdapter" 3 times.(Ä’İì8×»ª‘Ñ1
+J
+java:S1604N"(Make this anonymous inner class a lambda(Î€ûşÿÿÿÿ8Ø»ª‘Ñ1
+J
+java:S1604_"(Make this anonymous inner class a lambda(Ïë£ùÿÿÿÿ8Ø»ª‘Ñ1
+J
+java:S1604f"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8Ø»ª‘Ñ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ù¶Ášüÿÿÿÿ8Ú»ª‘Ñ1
+B
+java:S3010 "%Remove this assignment of "bookings".(ÆÔ®Ä8©¼ª‘Ñ1
+A
+java:S3010!"Remove this assignment of "db".(£ªµúÿÿÿÿ8©¼ª‘Ñ1
+R
+java:S2209 "5Change this instance-reference to a static reference.(ÆÔ®Ä8ª¼ª‘Ñ1
 f
-java:S16591"IDeclare "txtBookingID" and all following declarations on a separate line.(²›óå8ãêçÈÏ1
+java:S1659="IDeclare "txtBookingID" and all following declarations on a separate line.(²›óå8»¼ª‘Ñ1
+X
+java:S1117Z"6Rename "db" which hides the field declared at line 29.(ôï¼ÿúÿÿÿÿ8Á¼ª‘Ñ1

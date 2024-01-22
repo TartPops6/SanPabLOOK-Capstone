@@ -1,14 +1,14 @@
 
-f	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô
-k	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÜ¼ïşÿÿÿÿ
-=
-java:S1604/"(Make this anonymous inner class a lambda(°æ
-C
-java:S16047"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ
-C
-java:S1604E"(Make this anonymous inner class a lambda(ªò Üıÿÿÿÿ
-;
-java:S1659"%Declare "btnBack" on a separate line.(¼ûáÄ
+m	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8»èÊ×Ò1
+r	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÜ¼ïşÿÿÿÿ8»èÊ×Ò1
+D
+java:S1604/"(Make this anonymous inner class a lambda(°æ8¼èÊ×Ò1
+J
+java:S16047"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8¼èÊ×Ò1
+J
+java:S1604E"(Make this anonymous inner class a lambda(ªò Üıÿÿÿÿ8½èÊ×Ò1
+B
+java:S1659"%Declare "btnBack" on a separate line.(¼ûáÄ8ñèÊ×Ò1
 E
-java:S1172P"(Remove this unused method parameter "v".(÷»¬8¹ı™ÂÏ1
-X	java:S125_"<This block of commented-out lines of code should be removed.(ÀŸ£…8½ı™ÂÏ1
+java:S1172P"(Remove this unused method parameter "v".(÷»¬8’éÊ×Ò1
+X	java:S125_"<This block of commented-out lines of code should be removed.(ÀŸ£…8™éÊ×Ò1

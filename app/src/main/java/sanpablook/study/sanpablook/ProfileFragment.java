@@ -93,6 +93,17 @@ public class ProfileFragment extends Fragment {
                 Log.d(TAG, "get failed with ", task.getException());
             }
         });
+
+
+        // Check the count of pending bookings for this user
+        fStore.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                intBadgePendingCount = task.getResult().size();
+                setupPendingBadge();
+            } else {
+                Log.d(TAG, "Failed to fetch user data");
+            }
+        });
     }
 
     @Override

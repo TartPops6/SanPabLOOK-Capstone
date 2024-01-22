@@ -148,3 +148,9 @@ p
 @app/src/main/java/sanpablook/study/sanpablook/YamboLakePage.java,1\a\1a074920da7bb4013ac7295a7abe400c2d233e66
 p
 @app/src/main/java/sanpablook/study/sanpablook/BunotLakePage.java,0\f\0f30a7aaf03f6657071e1f3299c4351c26e836b5
+o
+?app/src/main/java/sanpablook/study/sanpablook/BookFragment.java,c\c\cc49da58eb734eb2be20afe42441c52a0b5365f1
+~
+Napp/src/main/java/sanpablook/study/sanpablook/Adapter/SectionPagerAdapter.java,1\a\1a704339f9968d52e7dc5e1550933c13bf7ba985
+|
+Lapp/src/main/java/sanpablook/study/sanpablook/BookingsCompletedActivity.java,2\4\24f1ae3842453acdff2d614518e2662bcc07c477

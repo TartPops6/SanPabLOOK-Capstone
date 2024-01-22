@@ -18,7 +18,6 @@ public class BookingsConfirmedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bookings_confirmed);
 
         btnBackConfirmed = findViewById(R.id.buttonBackConfirmed);
-
         btnBackConfirmed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -839,7 +839,7 @@ private void changeEmailWithVerification(EditText editTextEmail, EditText curren
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             Log.d(TAG, "DocumentSnapshot successfully updated!");
-                                            Toast.makeText(UserSettings.this, "Email updated in Firestore", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(UserSettings.this, "Email updated", Toast.LENGTH_SHORT).show();
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {

@@ -4,27 +4,27 @@ java:S1192K"QDefine a constant instead of duplicating this literal "No such doc
 n
 java:S1192N"QDefine a constant instead of duplicating this literal "get failed with " 4 times.(Ö‹›§8ŒñØçĞ1
 F
-java:S1604¿"(Make this anonymous inner class a lambda(‘øâ¨8ñØçĞ1
+java:S1604Ê"(Make this anonymous inner class a lambda(‘øâ¨8ñØçĞ1
 K
-java:S1604È"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8ñØçĞ1
+java:S1604Ó"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8ñØçĞ1
 F
-java:S1604Ñ"(Make this anonymous inner class a lambda(Ø¯Ã®8ñØçĞ1
+java:S1604Ü"(Make this anonymous inner class a lambda(Ø¯Ã®8ñØçĞ1
 K
-java:S1604Ù"(Make this anonymous inner class a lambda(°«ƒøÿÿÿÿ8ñØçĞ1
+java:S1604ä"(Make this anonymous inner class a lambda(°«ƒøÿÿÿÿ8ñØçĞ1
 K
-java:S1604á"(Make this anonymous inner class a lambda(õ‹Ÿùÿÿÿÿ8‘ñØçĞ1
+java:S1604ì"(Make this anonymous inner class a lambda(õ‹Ÿùÿÿÿÿ8‘ñØçĞ1
 E
-java:S1604ç"(Make this anonymous inner class a lambda(ôŸœ8“ñØçĞ1
+java:S1604ò"(Make this anonymous inner class a lambda(ôŸœ8“ñØçĞ1
 K
-java:S1604í"(Make this anonymous inner class a lambda(²®İ‹ûÿÿÿÿ8•ñØçĞ1
+java:S1604ø"(Make this anonymous inner class a lambda(²®İ‹ûÿÿÿÿ8•ñØçĞ1
 K
-java:S1604õ"(Make this anonymous inner class a lambda(”ôë¡ÿÿÿÿÿ8—ñØçĞ1
+java:S1604€"(Make this anonymous inner class a lambda(”ôë¡ÿÿÿÿÿ8—ñØçĞ1
 F
-java:S1604û"(Make this anonymous inner class a lambda(¾ó‚è8™ñØçĞ1
+java:S1604†"(Make this anonymous inner class a lambda(¾ó‚è8™ñØçĞ1
 K
-java:S1604"(Make this anonymous inner class a lambda(™şÍıÿÿÿÿ8›ñØçĞ1
+java:S1604Œ"(Make this anonymous inner class a lambda(™şÍıÿÿÿÿ8›ñØçĞ1
 E
-java:S1604‡"(Make this anonymous inner class a lambda(Çß°-8›ñØçĞ1
+java:S1604’"(Make this anonymous inner class a lambda(Çß°-8›ñØçĞ1
 c
 java:S1659%"FDeclare "btnImage2" and all following declarations on a separate line.(ÌĞÏ 8¢òØçĞ1
 M
@@ -37,19 +37,21 @@ p
 java:S1659."SDeclare "intBadgeConfirmedCount" and all following declarations on a separate line.(ü¯Íˆ8£òØçĞ1
 D
 java:S11857"(Remove this method to simply inherit it.(¥Ë©8«òØçĞ1
+o
+java:S3776="RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(öÿÕÅ8ô¡½”Ñ1
 t
-java:S3776c"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ËÄ•åûÿÿÿÿ8²òØçĞ1
+java:S3776n"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ËÄ•åûÿÿÿÿ8²òØçĞ1
 X
-java:S1117œ";Rename "storage" which hides the field declared at line 52.(ÌÔ©8ÅòØçĞ1
+java:S1117§";Rename "storage" which hides the field declared at line 52.(ÌÔ©8ÅòØçĞ1
 H
-java:S1172“"+Remove this unused method parameter "view".(¶îŒr8ÚòØçĞ1
+java:S1172"+Remove this unused method parameter "view".(¶îŒr8ÚòØçĞ1
 I
-java:S1172˜"+Remove this unused method parameter "view".(‘ğê8ÜòØçĞ1
+java:S1172£"+Remove this unused method parameter "view".(‘ğê8ÜòØçĞ1
 N
-java:S1172"+Remove this unused method parameter "view".(Üø§íıÿÿÿÿ8ŞòØçĞ1
+java:S1172¨"+Remove this unused method parameter "view".(Üø§íıÿÿÿÿ8ŞòØçĞ1
 N
-java:S1172¢"+Remove this unused method parameter "view".(€æ¿¡úÿÿÿÿ8ßòØçĞ1
+java:S1172­"+Remove this unused method parameter "view".(€æ¿¡úÿÿÿÿ8ßòØçĞ1
 N
-java:S1172§"+Remove this unused method parameter "view".(ùŒ¯ùÿÿÿÿ8áòØçĞ1
+java:S1172²"+Remove this unused method parameter "view".(ùŒ¯ùÿÿÿÿ8áòØçĞ1
 I
-java:S1172¬"+Remove this unused method parameter "view".( ³¥Ğ8ãòØçĞ1
+java:S1172·"+Remove this unused method parameter "view".( ³¥Ğ8ãòØçĞ1

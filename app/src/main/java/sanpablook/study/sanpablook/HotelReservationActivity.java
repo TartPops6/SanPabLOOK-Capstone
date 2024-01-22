@@ -239,12 +239,13 @@ public class HotelReservationActivity extends AppCompatActivity implements Adapt
                             booking.put("establishmentID", establishmentID);
                             booking.put("phoneNumber", phoneNumber);
 
-                            //Save to Firestore
+                            // Save to Firestore
                             db.collection("BookingPending")
-                                    .add(booking)
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    .document(bookingID[0]) // Use bookingID[0] as the document ID
+                                    .set(booking) // Set the contents of the document to the booking
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
-                                        public void onSuccess(DocumentReference documentReference) {
+                                        public void onSuccess(Void aVoid) {
                                             Toast.makeText(HotelReservationActivity.this, "Booking Successful", Toast.LENGTH_SHORT).show();
                                             Intent intent = new Intent(HotelReservationActivity.this, ConfirmedBookingActivity.class);
                                             startActivity(intent);
