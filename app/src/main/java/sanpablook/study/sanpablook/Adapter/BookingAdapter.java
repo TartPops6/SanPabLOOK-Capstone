@@ -1,13 +1,24 @@
 package sanpablook.study.sanpablook.Adapter;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 import com.study.sanpablook.R;
 
 import java.util.List;
@@ -46,6 +57,7 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
 
     static class BookingViewHolder extends RecyclerView.ViewHolder {
 
+        Button buttonCancelBooking;
         TextView txtPending, txtBookingID, txtCustomerName, txtBookingDate, txtBookingTime, txtGuestCount;
 
         public BookingViewHolder(@NonNull View itemView) {
@@ -58,6 +70,45 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
             txtBookingDate = itemView.findViewById(R.id.valueOfPendingBookingDate);
             txtBookingTime = itemView.findViewById(R.id.valueOfPendingBookingTime);
             txtGuestCount = itemView.findViewById(R.id.valueOfPendingNumberOfGuests);
+            //dialog cancel
+            buttonCancelBooking = itemView.findViewById(R.id.buttonCancelBooking);
+
+            buttonCancelBooking.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    showDialogCancelBooking(view);
+                }
+
+                //dialog for decline
+                private void showDialogCancelBooking(View view) {
+                    final Dialog dialog = new Dialog(itemView.getContext());
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.dialog_cancel_booking);
+
+                    Button buttonConfirm = dialog.findViewById(R.id.buttonConfirm);
+                    Button buttonBack = dialog.findViewById(R.id.buttonBack);
+
+                    buttonConfirm.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(view.getContext(), "You cancelled this booking", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    buttonBack.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
+
+                    dialog.show();
+                    dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+                    dialog.getWindow().setGravity(Gravity.BOTTOM);
+                }
+            });
         }
     }
 }
