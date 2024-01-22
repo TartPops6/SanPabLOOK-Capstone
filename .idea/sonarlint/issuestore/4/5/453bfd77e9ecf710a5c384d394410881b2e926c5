@@ -1,57 +1,65 @@
 
 n
-java:S1192K"QDefine a constant instead of duplicating this literal "No such document" 4 times.(Ñ…¨¢8ŒñØçĞ1
+java:S1192K"QDefine a constant instead of duplicating this literal "No such document" 4 times.(Ñ…¨¢8¿šˆÓ1
+l
+java:S1192c"ODefine a constant instead of duplicating this literal "BookingPending" 4 times.(½Ú¯õ8¿šˆÓ1
+|
+java:S1192h"ZDefine a constant instead of duplicating this literal "Failed to fetch user data" 4 times.(ËË’Ôúÿÿÿÿ8ÀšˆÓ1
+d
+java:S1192c"GDefine a constant instead of duplicating this literal "userID" 4 times.(½Ú¯õ8ÀšˆÓ1
+d
+java:S1192c"GDefine a constant instead of duplicating this literal "status" 4 times.(½Ú¯õ8ÅŒÓ1
 n
-java:S1192N"QDefine a constant instead of duplicating this literal "get failed with " 4 times.(Ö‹›§8ŒñØçĞ1
+java:S1192N"QDefine a constant instead of duplicating this literal "get failed with " 4 times.(Ö‹›§8ÁšˆÓ1
 F
-java:S1604Ê"(Make this anonymous inner class a lambda(‘øâ¨8ñØçĞ1
+java:S1604İ"(Make this anonymous inner class a lambda(‘øâ¨8şÓ1
 K
-java:S1604Ó"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8ñØçĞ1
+java:S1604æ"(Make this anonymous inner class a lambda(œÁÈÌşÿÿÿÿ8ÿÓ1
 F
-java:S1604Ü"(Make this anonymous inner class a lambda(Ø¯Ã®8ñØçĞ1
+java:S1604ï"(Make this anonymous inner class a lambda(Ø¯Ã®8ÿÓ1
 K
-java:S1604ä"(Make this anonymous inner class a lambda(°«ƒøÿÿÿÿ8ñØçĞ1
+java:S1604÷"(Make this anonymous inner class a lambda(°«ƒøÿÿÿÿ8€Ó1
 K
-java:S1604ì"(Make this anonymous inner class a lambda(õ‹Ÿùÿÿÿÿ8‘ñØçĞ1
+java:S1604ÿ"(Make this anonymous inner class a lambda(õ‹Ÿùÿÿÿÿ8Ó1
 E
-java:S1604ò"(Make this anonymous inner class a lambda(ôŸœ8“ñØçĞ1
+java:S1604…"(Make this anonymous inner class a lambda(ôŸœ8Ó1
 K
-java:S1604ø"(Make this anonymous inner class a lambda(²®İ‹ûÿÿÿÿ8•ñØçĞ1
+java:S1604‹"(Make this anonymous inner class a lambda(²®İ‹ûÿÿÿÿ8Ó1
 K
-java:S1604€"(Make this anonymous inner class a lambda(”ôë¡ÿÿÿÿÿ8—ñØçĞ1
+java:S1604“"(Make this anonymous inner class a lambda(”ôë¡ÿÿÿÿÿ8‚Ó1
 F
-java:S1604†"(Make this anonymous inner class a lambda(¾ó‚è8™ñØçĞ1
+java:S1604™"(Make this anonymous inner class a lambda(¾ó‚è8‚Ó1
 K
-java:S1604Œ"(Make this anonymous inner class a lambda(™şÍıÿÿÿÿ8›ñØçĞ1
+java:S1604Ÿ"(Make this anonymous inner class a lambda(™şÍıÿÿÿÿ8‚Ó1
 E
-java:S1604’"(Make this anonymous inner class a lambda(Çß°-8›ñØçĞ1
+java:S1604¥"(Make this anonymous inner class a lambda(Çß°-8‚Ó1
 c
-java:S1659%"FDeclare "btnImage2" and all following declarations on a separate line.(ÌĞÏ 8¢òØçĞ1
+java:S1659%"FDeclare "btnImage2" and all following declarations on a separate line.(ÌĞÏ 8±›ˆÓ1
 M
-java:S1659("+Declare "userFirstName" on a separate line.(õâªûÿÿÿÿ8£òØçĞ1
+java:S1659("+Declare "userFirstName" on a separate line.(õâªûÿÿÿÿ8±›ˆÓ1
 k
-java:S1659,"IDeclare "btnConfirmed" and all following declarations on a separate line.(‚·®€ÿÿÿÿÿ8£òØçĞ1
+java:S1659,"IDeclare "btnConfirmed" and all following declarations on a separate line.(‚·®€ÿÿÿÿÿ8²›ˆÓ1
 m
-java:S1659-"PDeclare "badgeConfirmedCount" and all following declarations on a separate line.(’‹Ä‚8£òØçĞ1
+java:S1659-"PDeclare "badgeConfirmedCount" and all following declarations on a separate line.(’‹Ä‚8²›ˆÓ1
 p
-java:S1659."SDeclare "intBadgeConfirmedCount" and all following declarations on a separate line.(ü¯Íˆ8£òØçĞ1
+java:S1659."SDeclare "intBadgeConfirmedCount" and all following declarations on a separate line.(·¥š„8²›ˆÓ1
 D
-java:S11857"(Remove this method to simply inherit it.(¥Ë©8«òØçĞ1
+java:S11857"(Remove this method to simply inherit it.(¥Ë©8»›ˆÓ1
 o
-java:S3776="RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(öÿÕÅ8ô¡½”Ñ1
+java:S3776="RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(öÿÕÅ8½›ˆÓ1
 t
-java:S3776n"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ËÄ•åûÿÿÿÿ8²òØçĞ1
+java:S3776x"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ËÄ•åûÿÿÿÿ8Ç›ˆÓ1
 X
-java:S1117§";Rename "storage" which hides the field declared at line 52.(ÌÔ©8ÅòØçĞ1
+java:S1117º";Rename "storage" which hides the field declared at line 52.(ÌÔ©8¦Ó1
 H
-java:S1172"+Remove this unused method parameter "view".(¶îŒr8ÚòØçĞ1
+java:S1172±"+Remove this unused method parameter "view".(¶îŒr8¾Ó1
 I
-java:S1172£"+Remove this unused method parameter "view".(‘ğê8ÜòØçĞ1
+java:S1172¶"+Remove this unused method parameter "view".(‘ğê8ÀÓ1
 N
-java:S1172¨"+Remove this unused method parameter "view".(Üø§íıÿÿÿÿ8ŞòØçĞ1
+java:S1172»"+Remove this unused method parameter "view".(Üø§íıÿÿÿÿ8ÁÓ1
 N
-java:S1172­"+Remove this unused method parameter "view".(€æ¿¡úÿÿÿÿ8ßòØçĞ1
+java:S1172À"+Remove this unused method parameter "view".(€æ¿¡úÿÿÿÿ8ÃÓ1
 N
-java:S1172²"+Remove this unused method parameter "view".(ùŒ¯ùÿÿÿÿ8áòØçĞ1
+java:S1172Å"+Remove this unused method parameter "view".(ùŒ¯ùÿÿÿÿ8ÅÓ1
 I
-java:S1172·"+Remove this unused method parameter "view".( ³¥Ğ8ãòØçĞ1
+java:S1172Ê"+Remove this unused method parameter "view".( ³¥Ğ8ÇÓ1

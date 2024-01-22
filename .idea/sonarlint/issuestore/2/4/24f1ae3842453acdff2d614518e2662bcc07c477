@@ -1,13 +1,11 @@
 
-C
-java:S16043"(Make this anonymous inner class a lambda(éÆ×©úÿÿÿÿ
-C
-java:S1604:"(Make this anonymous inner class a lambda(™†İ±ÿÿÿÿÿ
+J
+java:S16045"(Make this anonymous inner class a lambda(éÆ×©úÿÿÿÿ8ò¶õÿÒ1
+>
+java:S1604<"(Make this anonymous inner class a lambda(Î£ÕÙ
 ]
-java:S2259K"BA "NullPointerException" could be thrown; "data" is nullable here.(Íƒ“Íüÿÿÿÿ
-Q	java:S125"<This block of commented-out lines of code should be removed.(è²ú
-V	java:S125)"<This block of commented-out lines of code should be removed.(¶ Šşÿÿÿÿ
-B
-java:S1602+",Remove useless curly braces around statement(ë¸Á÷
+java:S2259M"BA "NullPointerException" could be thrown; "data" is nullable here.(Íƒ“Íüÿÿÿÿ
+I
+java:S1602-",Remove useless curly braces around statement(ë¸Á÷8Î·õÿÒ1
 _
-java:S1874F"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
+java:S1874H"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾

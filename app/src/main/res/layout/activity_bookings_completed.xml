@@ -63,10 +63,10 @@
                 android:textSize="16sp" />
 
             <RelativeLayout
-                android:id="@+id/userReview1"
+                android:id="@+id/userReview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp">
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/establishmentNameToRate"
@@ -142,7 +142,7 @@
                     android:textSize="15sp" />
 
                 <Button
-                    android:id="@+id/buttonSave"
+                    android:id="@+id/buttonShare"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/editTextRatings"

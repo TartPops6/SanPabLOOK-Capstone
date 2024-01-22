@@ -32,10 +32,13 @@ public class BookingsPendingActivity extends AppCompatActivity {
     TextView txtPending, txtBookingID, txtCustomerName, txtBookingDate, txtBookingTime, txtGuestCount, txtPetCount;
     RecyclerView recyclerView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookings_pending);
+
+        refreshData();
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -70,4 +73,34 @@ db.collection("BookingPending").whereEqualTo("userID", userID).get().addOnComple
             }
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshData();
+    }
+
+    public void refreshData() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        String userID = currentUser.getUid();
+
+        db.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    List<Map<String, Object>> bookings = new ArrayList<>();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        bookings.add(document.getData());
+                    }
+                    BookingAdapter adapter = new BookingAdapter(bookings);
+                    recyclerView.setAdapter(adapter);
+                } else {
+                    Toast.makeText(BookingsPendingActivity.this, "Failed to fetch user data", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
 }
+

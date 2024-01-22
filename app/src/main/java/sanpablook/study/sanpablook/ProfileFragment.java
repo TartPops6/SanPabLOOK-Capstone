@@ -43,7 +43,7 @@ public class ProfileFragment extends Fragment {
     //Bookings badge count
     ImageButton btnPending, btnConfirmed, btnCancelled, btnRatings;
     TextView badgePendingCount, badgeConfirmedCount, badgeCancelledCount, badgeRatingCount;
-    int intBadgePendingCount = 2, intBadgeConfirmedCount = 1, intBadgeCancelledCount = 1, intBadgeRatingsCount = 7;
+    int intBadgePendingCount = 0, intBadgeConfirmedCount = 0, intBadgeCancelledCount = 0, intBadgeRatingsCount = 0;
 
     //Firebase
     FirebaseUser user;
@@ -96,10 +96,20 @@ public class ProfileFragment extends Fragment {
 
 
         // Check the count of pending bookings for this user
-        fStore.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(task -> {
+        fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Pending").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 intBadgePendingCount = task.getResult().size();
                 setupPendingBadge();
+            } else {
+                Log.d(TAG, "Failed to fetch user data");
+            }
+        });
+
+        // Check the count of cancelled bookings for this user
+        fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Cancelled").get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                intBadgeCancelledCount = task.getResult().size();
+                setupCancelledBadge();
             } else {
                 Log.d(TAG, "Failed to fetch user data");
             }
@@ -145,10 +155,19 @@ public class ProfileFragment extends Fragment {
         //Check if user is not signed in
         if (user != null) {
             //Check the count of pending bookings for this user
-            fStore.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(task -> {
+            fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Pending").get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     intBadgePendingCount = task.getResult().size();
                     setupPendingBadge();
+                } else {
+                    Log.d(TAG, "Failed to fetch user data");
+                }
+            });
+            //Check count for cancelled bookings for this user
+            fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Cancelled").get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    intBadgeCancelledCount = task.getResult().size();
+                    setupCancelledBadge();
                 } else {
                     Log.d(TAG, "Failed to fetch user data");
                 }

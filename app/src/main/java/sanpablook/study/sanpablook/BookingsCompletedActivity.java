@@ -3,14 +3,16 @@ package sanpablook.study.sanpablook;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatRatingBar;
-import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
@@ -21,12 +23,12 @@ import com.study.sanpablook.R;
 public class BookingsCompletedActivity extends AppCompatActivity {
 
     ImageButton btnBackCompleted;
-    AppCompatRatingBar ratingBar;
+    AppCompatRatingBar ratingStars;
+    Button buttonShare;
+    EditText editTextRatings;
 
     //for add image
     ShapeableImageView addImageRatings;
-//    ImageView btnAddImageRatings;
-//    CardView addImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +36,11 @@ public class BookingsCompletedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bookings_completed);
 
         btnBackCompleted = findViewById(R.id.buttonBackCompleted);
-        ratingBar = findViewById(R.id.ratingStars);
-
+        ratingStars = findViewById(R.id.ratingStars);
+        buttonShare = findViewById(R.id.buttonShare);
+        editTextRatings = findViewById(R.id.editTextRatings);
         //image
         addImageRatings = findViewById(R.id.addImageRatings);
-//        addImage = findViewById(R.id.cardviewAddImage);
 
         addImageRatings.setOnClickListener(view1 -> {
             ImagePicker.Companion.with(this)
@@ -55,7 +57,7 @@ public class BookingsCompletedActivity extends AppCompatActivity {
             }
         });
 
-        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        ratingStars.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 // Handle the rating change here

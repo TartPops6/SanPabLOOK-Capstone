@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_box">
+
+    <TextView
+        android:id="@+id/textConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/cancelBooking"
+        android:textAlignment="center"
+        android:textColor="@color/lighterBlack"
+        android:textSize="15sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/linearConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonBack"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/light"
+                    android:fontFamily="@font/poppins_medium"
+                    android:letterSpacing="0"
+                    android:padding="10dp"
+                    android:text="@string/backButton"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    app:cornerRadius="50dp"
+                    app:rippleColor="@color/blue"
+                    app:strokeColor="@color/blue"
+                    app:strokeWidth="1dp"/>
+
+                <Button
+                    android:id="@+id/buttonConfirmTwice"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:fontFamily="@font/poppins_medium"
+                    android:letterSpacing="0"
+                    android:padding="10dp"
+                    android:text="@string/labelConfirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light"
+                    android:textSize="15sp"
+                    app:cornerRadius="50dp"
+                    app:rippleColor="@color/light"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
