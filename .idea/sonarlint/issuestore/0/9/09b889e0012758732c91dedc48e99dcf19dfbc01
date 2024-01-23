@@ -1,11 +1,12 @@
 
-m	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8Ğ†ƒĞ1
-m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ë8Ò†ƒĞ1
+m	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8Ğ†ƒĞ1
+m	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ë8Ò†ƒĞ1
 E
-java:S1604 "(Make this anonymous inner class a lambda(ã‘Àò8Ò†ƒĞ1
+java:S16043"(Make this anonymous inner class a lambda(ã‘Àò8Ò†ƒĞ1
 J
-java:S1604("(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8Ó†ƒĞ1
+java:S1604;"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8Ó†ƒĞ1
 E
-java:S16046"(Make this anonymous inner class a lambda(Øõ­Ç8Ó†ƒĞ1
+java:S1604I"(Make this anonymous inner class a lambda(Øõ­Ç8Ó†ƒĞ1
 B
-java:S1659"%Declare "backBtn" on a separate line.(ƒˆöÛ8†ƒĞ1
+java:S1659"%Declare "backBtn" on a separate line.(ƒˆöÛ8†ƒĞ1
+X	java:S125b"<This block of commented-out lines of code should be removed.(ÀŸ£…8æ€İƒÓ1

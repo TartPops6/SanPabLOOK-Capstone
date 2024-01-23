@@ -94,12 +94,21 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-
         // Check the count of pending bookings for this user
         fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Pending").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 intBadgePendingCount = task.getResult().size();
                 setupPendingBadge();
+            } else {
+                Log.d(TAG, "Failed to fetch user data");
+            }
+        });
+
+        // Check the count of confirmed bookings for this user
+        fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Confirmed").get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                intBadgeConfirmedCount = task.getResult().size();
+                setupConfirmedBadge();
             } else {
                 Log.d(TAG, "Failed to fetch user data");
             }
@@ -168,6 +177,15 @@ public class ProfileFragment extends Fragment {
                 if (task.isSuccessful()) {
                     intBadgeCancelledCount = task.getResult().size();
                     setupCancelledBadge();
+                } else {
+                    Log.d(TAG, "Failed to fetch user data");
+                }
+            });
+            // Check the count of confirmed bookings for this user
+            fStore.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Confirmed").get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    intBadgeConfirmedCount = task.getResult().size();
+                    setupConfirmedBadge();
                 } else {
                     Log.d(TAG, "Failed to fetch user data");
                 }

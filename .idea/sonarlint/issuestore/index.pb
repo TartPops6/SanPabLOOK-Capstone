@@ -158,3 +158,5 @@ Lapp/src/main/java/sanpablook/study/sanpablook/BookingsCompletedActivity.java,2
 Tapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerBookingsConfirmed.java,c\b\cbfcf6679ac29cdefd1f05e961eeeccc7cd36849
 „
 Tapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerBookingsCancelled.java,6\d\6d3da016fc655084833169b9e7d7eb0f85f3edd1
+s
+Capp/src/main/java/sanpablook/study/sanpablook/HotelAllFragment.java,6\3\63329fc6a600e4dd128a7d1c0c6b901dfa88664f
