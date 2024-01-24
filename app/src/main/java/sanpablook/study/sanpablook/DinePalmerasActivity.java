@@ -2,6 +2,8 @@ package sanpablook.study.sanpablook;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -26,10 +28,20 @@ public class DinePalmerasActivity extends AppCompatActivity implements OnMapRead
 
     GoogleMap map;
 
+    //recycler view horizontal
+    RecyclerView recyclerViewDineReviewsPalmeras;
+    LinearLayoutManager linearLayoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dine_palmeras);
+
+        //recycler view horizontal
+        recyclerViewDineReviewsPalmeras = findViewById(R.id.recyclerViewDineReviewsPalmeras);
+        recyclerViewDineReviewsPalmeras.setLayoutManager(new LinearLayoutManager(this));
+        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewDineReviewsPalmeras.setLayoutManager(linearLayoutManager);
 
         //Maps
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapsPalmerasDine);

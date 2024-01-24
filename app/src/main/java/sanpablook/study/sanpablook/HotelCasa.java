@@ -2,6 +2,8 @@ package sanpablook.study.sanpablook;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -28,10 +30,20 @@ public class HotelCasa extends AppCompatActivity implements OnMapReadyCallback {
 
     GoogleMap hotelCasaMap;
 
+    //recycler view horizontal
+    RecyclerView recyclerViewHotelReviewsCasa;
+    LinearLayoutManager linearLayoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_casa);
+
+        //recycler view horizontal
+        recyclerViewHotelReviewsCasa = findViewById(R.id.recyclerViewHotelReviewsCasa);
+        recyclerViewHotelReviewsCasa.setLayoutManager(new LinearLayoutManager(this));
+        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewHotelReviewsCasa.setLayoutManager(linearLayoutManager);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
