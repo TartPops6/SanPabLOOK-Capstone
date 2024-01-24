@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/waveBackground"
-        android:layout_width="410dp"
-        android:layout_height="595dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
@@ -22,9 +22,9 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="136dp"
-        android:layout_height="111dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/log_background"
             android:ems="10"

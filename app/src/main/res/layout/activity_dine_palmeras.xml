@@ -615,90 +615,20 @@
                     app:layout_constraintVertical_bias="1.0">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:id="@+id/linearReviews"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15sp">
+                        android:layout_marginTop="15sp"
+                        android:orientation="horizontal">
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="235sp"
-                            android:layout_height="155sp"
-                            android:layout_marginLeft="20sp"
-                            android:layout_marginTop="18sp"
-                            android:layout_marginRight="10sp"
-                            android:layout_marginBottom="10sp"
-                            app:cardCornerRadius="15sp"
-                            android:background="@color/white">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewDineReviewsPalmeras"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                            <TextView
-                                android:id="@+id/review1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_margin="10sp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:padding="10sp"
-                                android:text="@string/palmerasReview1"
-                                android:justificationMode="inter_word"
-                                android:textColor="@color/lighterBlack"
-                                android:textSize="12sp" />
-
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="235sp"
-                            android:layout_height="155sp"
-                            android:layout_marginLeft="20sp"
-                            android:layout_marginTop="18sp"
-                            android:layout_marginRight="10sp"
-                            android:layout_marginBottom="10sp"
-                            app:cardCornerRadius="15sp"
-                            android:background="@color/white">
-
-                            <TextView
-                                android:id="@+id/review2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_margin="10sp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:padding="10sp"
-                                android:text="@string/palmerasReview2"
-                                android:justificationMode="inter_word"
-                                android:textColor="@color/lighterBlack"
-                                android:textSize="12sp" />
-
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="235sp"
-                            android:layout_height="155sp"
-                            android:layout_marginLeft="20sp"
-                            android:layout_marginTop="18sp"
-                            android:layout_marginRight="20sp"
-                            android:layout_marginBottom="10sp"
-                            app:cardCornerRadius="15sp"
-                            android:background="@color/white">
-
-                            <TextView
-                                android:id="@+id/review3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_margin="10sp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:padding="10sp"
-                                android:text="@string/palmerasReview3"
-                                android:justificationMode="inter_word"
-                                android:textColor="@color/lighterBlack"
-                                android:textSize="12sp" />
-
-
-                        </androidx.cardview.widget.CardView>
-
+                        </androidx.recyclerview.widget.RecyclerView>
                     </LinearLayout>
-
                 </HorizontalScrollView>
                 <!--spacer-->
                 <TextView

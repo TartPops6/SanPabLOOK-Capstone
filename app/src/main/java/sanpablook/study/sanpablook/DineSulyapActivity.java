@@ -2,6 +2,8 @@ package sanpablook.study.sanpablook;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -25,10 +27,21 @@ public class DineSulyapActivity extends AppCompatActivity implements OnMapReadyC
     Button reserveNowBtn;
 
     GoogleMap map;
+
+    //recycler view horizontal
+    RecyclerView recyclerViewDineReviewsSulyap;
+    LinearLayoutManager linearLayoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dine_sulyap);
+
+        //recycler view horizontal
+        recyclerViewDineReviewsSulyap = findViewById(R.id.recyclerViewDineReviewsSulyap);
+        recyclerViewDineReviewsSulyap.setLayoutManager(new LinearLayoutManager(this));
+        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewDineReviewsSulyap.setLayoutManager(linearLayoutManager);
 
         //Maps
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapsSulyapDine);

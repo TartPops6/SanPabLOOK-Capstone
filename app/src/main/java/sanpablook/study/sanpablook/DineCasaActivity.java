@@ -2,6 +2,8 @@ package sanpablook.study.sanpablook;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -26,10 +28,20 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
 
     GoogleMap map;
 
+    //recycler view horizontal
+    RecyclerView recyclerViewDineReviewsCasa;
+    LinearLayoutManager linearLayoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dine_casa);
+
+        //recycler view horizontal
+        recyclerViewDineReviewsCasa = findViewById(R.id.recyclerViewDineReviewsCasa);
+        recyclerViewDineReviewsCasa.setLayoutManager(new LinearLayoutManager(this));
+        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewDineReviewsCasa.setLayoutManager(linearLayoutManager);
 
         //Maps
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapsCasaDine);
