@@ -2,23 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
     <androidx.cardview.widget.CardView
-        android:layout_width="235sp"
+        android:layout_width="200sp"
         android:layout_height="110sp"
         android:layout_marginLeft="20sp"
         android:layout_marginTop="18sp"
         android:layout_marginRight="10sp"
         android:layout_marginBottom="10sp"
         android:background="@color/white"
-        app:cardCornerRadius="15sp">
+        app:cardCornerRadius="15sp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/reviewContent"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:layout_margin="10sp"
@@ -29,17 +35,6 @@
             android:textColor="#141414"
             android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/showMore"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:fontFamily="@font/poppins_bold"
-            android:paddingLeft="10sp"
-            android:text="@string/showmore"
-            android:textColor="#141414"
-            android:textSize="12sp" />
     </androidx.cardview.widget.CardView>
+    </HorizontalScrollView>
 </LinearLayout>

@@ -579,7 +579,7 @@
                 <!--horizontal scroll-->
                 <HorizontalScrollView
                     android:id="@+id/horizontalReviews"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scrollbarThumbHorizontal="@null"
                     android:layout_marginTop="0sp"
@@ -591,13 +591,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0">
 
-                    <LinearLayout
-                        android:id="@+id/linearReviews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15sp"
-                        android:orientation="horizontal">
-
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/recyclerViewDineReviewsCasa"
                             android:layout_width="match_parent"
@@ -605,7 +598,6 @@
                             android:orientation="horizontal">
 
                         </androidx.recyclerview.widget.RecyclerView>
-                    </LinearLayout>
                 </HorizontalScrollView>
                 <!--spacer-->
                 <TextView

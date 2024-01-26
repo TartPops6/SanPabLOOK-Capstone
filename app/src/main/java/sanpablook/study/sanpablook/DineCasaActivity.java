@@ -1,5 +1,7 @@
 package sanpablook.study.sanpablook;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -20,7 +23,18 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.study.sanpablook.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import sanpablook.study.sanpablook.Adapter.RecyclerDineReviews;
 
 public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCallback {
     ImageButton btnShare, btnBack;
@@ -30,7 +44,6 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
 
     //recycler view horizontal
     RecyclerView recyclerViewDineReviewsCasa;
-    LinearLayoutManager linearLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +52,30 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
 
         //recycler view horizontal
         recyclerViewDineReviewsCasa = findViewById(R.id.recyclerViewDineReviewsCasa);
-        recyclerViewDineReviewsCasa.setLayoutManager(new LinearLayoutManager(this));
-        linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewDineReviewsCasa.setLayoutManager(linearLayoutManager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewDineReviewsCasa.setLayoutManager(layoutManager);
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("UserReview")
+                .whereEqualTo("establishmentID", "casaDine")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            List<Map<String, Object>> reviews = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                reviews.add(document.getData());
+                            }
+                            Log.d(TAG, "Number of reviews fetched: " + reviews.size());
+                            RecyclerDineReviews adapter = new RecyclerDineReviews(reviews);
+                            recyclerViewDineReviewsCasa.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
 
         //Maps
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapsCasaDine);

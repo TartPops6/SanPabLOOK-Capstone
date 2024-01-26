@@ -123,8 +123,29 @@ public class SignUpActivity extends AppCompatActivity {
                 }
                 else {
                     dateOfBirth = datePickerButton.getText().toString();
+                    disableInput();
                     registerUser(firstName, lastName, dateOfBirth, email, password, phoneNumber);
                 }
+            }
+
+            private void disableInput() {
+                editTextFirstName.setEnabled(false);
+                editTextLastName.setEnabled(false);
+                editTextEmail.setEnabled(false);
+                editText_SignUpPassword.setEnabled(false);
+                editTextPhoneNumber.setEnabled(false);
+                datePickerButton.setEnabled(false);
+                signBtn.setEnabled(false);
+            }
+
+            private void enableInput() {
+                editTextFirstName.setEnabled(true);
+                editTextLastName.setEnabled(true);
+                editTextEmail.setEnabled(true);
+                editText_SignUpPassword.setEnabled(true);
+                editTextPhoneNumber.setEnabled(true);
+                datePickerButton.setEnabled(true);
+                signBtn.setEnabled(true);
             }
 
             private void registerUser(String firstName, String lastName, String dateOfBirth, String email, String password, String phoneNumber) {
@@ -170,9 +191,11 @@ public class SignUpActivity extends AppCompatActivity {
                                 intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK | intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                                 finish();  //Close registration
+                                enableInput();
                             } else {
                                 Exception exception = task.getException();
                                 Toast.makeText(SignUpActivity.this, "Registration Failed: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                                enableInput();
                             }
                         });
             }

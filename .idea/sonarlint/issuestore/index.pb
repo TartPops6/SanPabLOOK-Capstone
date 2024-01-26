@@ -160,3 +160,9 @@ Tapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerBookingsConfirmed
 Tapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerBookingsCancelled.java,6\d\6d3da016fc655084833169b9e7d7eb0f85f3edd1
 s
 Capp/src/main/java/sanpablook/study/sanpablook/HotelAllFragment.java,6\3\63329fc6a600e4dd128a7d1c0c6b901dfa88664f
+
+Oapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerHotelReviews.java,0\9\09a54d6be65c31259ed1c1efe2d50f3645daf298
+~
+Napp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerDineReviews.java,8\6\86f75aceb08223ca3f3f21532ff7932a7661a85b
+m
+=app/src/main/java/sanpablook/study/sanpablook/UserReview.java,6\a\6a54702f3e49e1ad21c51260db715a0b561dd161
