@@ -191,6 +191,8 @@
     <string name="labelTypeNewPassword">Type your New Password</string>
     <string name="labelRetypePassword">Re-type New Password</string>
     <string name="labelRetypeYourPassword">Re-type your New Password</string>
+    <string name="labelViewAllReviews">View all reviews >></string>
+    <string name="labelReviews">Reviews</string>
     <!--SETTINGS / TOURIST INFO-->
     <string name="typeDeleteAccount">Re-type \"Delete account\" to confirm.</string>
     <string name="hintDeleteAccount">Type here</string>

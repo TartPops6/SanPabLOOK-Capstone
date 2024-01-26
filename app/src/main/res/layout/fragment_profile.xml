@@ -159,7 +159,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="end|top"
                     android:layout_marginTop="3dp"
-                    android:layout_marginEnd="-5dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/badge_background"
                     android:clickable="false"
                     android:gravity="center"
@@ -169,7 +169,7 @@
                     android:textSize="10sp"
                     android:translationX="-25dp"
                     android:translationY="0dp"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/labelPending"
@@ -208,7 +208,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="end|top"
                     android:layout_marginTop="3dp"
-                    android:layout_marginEnd="-4dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/badge_background"
                     android:clickable="false"
                     android:gravity="center"
@@ -257,7 +257,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="end|top"
                     android:layout_marginTop="3dp"
-                    android:layout_marginEnd="-5dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/badge_background"
                     android:clickable="false"
                     android:gravity="center"
@@ -267,7 +267,7 @@
                     android:textSize="10sp"
                     android:translationX="-25dp"
                     android:translationY="0dp"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/labelCancelled"
@@ -277,55 +277,6 @@
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/poppins_regular"
                     android:text="@string/labelBookingsCancelled"
-                    android:textAlignment="center"
-                    android:textColor="@color/darkBlue"
-                    android:textSize="13sp" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/layoutForRatings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <ImageButton
-                    android:id="@+id/buttonRatings"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/labelBookingsCompleted"
-                    android:padding="10dp"
-                    android:src="@drawable/rate_icon" />
-
-                <TextView
-                    android:id="@+id/badgeRatings"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="end|top"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="-7dp"
-                    android:background="@drawable/badge_background"
-                    android:clickable="false"
-                    android:gravity="center"
-                    android:padding="3dp"
-                    android:text="@string/badgeCounterRatings"
-                    android:textColor="@android:color/white"
-                    android:textSize="10sp"
-                    android:translationX="-25dp"
-                    android:translationY="0dp"
-                    android:visibility="gone"/>
-
-                <TextView
-                    android:id="@+id/labelRatings"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/labelBookingsCompleted"
                     android:textAlignment="center"
                     android:textColor="@color/darkBlue"
                     android:textSize="13sp" />
@@ -386,73 +337,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="60dp"
-                android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="20dp">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
-                    android:layout_width="wrap_content"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewCardRatings"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/transparent"
-                    app:cardElevation="0dp">
+                    android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/image1"
-                        android:layout_width="130dp"
-                        android:layout_height="200dp"
-                        android:background="@drawable/rounded_corners_20"
-                        android:contentDescription="@string/destinationName1"
-                        android:padding="5dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/sampaloc_lake" />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/transparent"
-                    app:cardElevation="0dp">
-
-                    <ImageButton
-                        android:id="@+id/image2"
-                        android:layout_width="130dp"
-                        android:layout_height="200dp"
-                        android:background="@drawable/rounded_corners_20"
-                        android:contentDescription="@string/destinationName2"
-                        android:padding="5dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/st_ambrose_chapel" />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/transparent"
-                    app:cardElevation="0dp">
-
-                    <ImageButton
-                        android:id="@+id/image3"
-                        android:layout_width="130dp"
-                        android:layout_height="200dp"
-                        android:background="@drawable/rounded_corners_20"
-                        android:contentDescription="@string/destinationName3"
-                        android:padding="5dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/paraiso_de_avedad" />
-
-                </androidx.cardview.widget.CardView>
-
+                </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
         </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

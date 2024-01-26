@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="sanpablook.study.sanpablook.ActivityRatings">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/historyGreenBackground"
@@ -27,10 +26,9 @@
             android:id="@+id/labelRatings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/labelRatings"
             android:fontFamily="@font/poppins_semi_bold"
             android:padding="10dp"
-            android:text="@string/labelRatings"
+            android:text="@string/labelReviews"
             android:textAlignment="textStart"
             android:textColor="@color/light"
             android:textSize="24sp"
@@ -58,7 +56,7 @@
             app:layout_constraintTop_toBottomOf="@id/historyGreenBackground">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewRatingsUser"
+                android:id="@+id/recyclerViewAllRatingsDine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

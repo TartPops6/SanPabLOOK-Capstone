@@ -47,7 +47,6 @@ public class RecyclerBookingsCancelled extends RecyclerView.Adapter<RecyclerBook
 
     static class BookingViewHolder extends RecyclerView.ViewHolder {
 
-        Button buttonReview;
         TextView establishmentNameCancelled, valueOfCancelledBookingNumber, valueOfCancelledCustomerName, valueOfCancelledBookingDate, valueOfCancelledBookingTime, valueOfCancelledNumberOfGuests;
 
         public BookingViewHolder(@NonNull View itemView) {
@@ -60,7 +59,6 @@ public class RecyclerBookingsCancelled extends RecyclerView.Adapter<RecyclerBook
             valueOfCancelledBookingDate = itemView.findViewById(R.id.valueOfCancelledBookingDate);
             valueOfCancelledBookingTime = itemView.findViewById(R.id.valueOfCancelledBookingTime);
             valueOfCancelledNumberOfGuests = itemView.findViewById(R.id.valueOfCancelledNumberOfGuests);
-            buttonReview = itemView.findViewById(R.id.buttonReview);
         }
     }
 }

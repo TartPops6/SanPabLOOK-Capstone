@@ -81,6 +81,8 @@
         <activity android:name="sanpablook.study.sanpablook.UserSettings" />
         <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
         <activity android:name="sanpablook.study.sanpablook.HomeActivity" />
+        <activity android:name="sanpablook.study.sanpablook.ViewAllRatingsDine" />
+        <activity android:name="sanpablook.study.sanpablook.ViewAllRatingsHotel" />
         <activity android:name="sanpablook.study.sanpablook.testMain" />
         <activity
             android:name="sanpablook.study.sanpablook.SignInActivity"

@@ -1,5 +1,7 @@
 package sanpablook.study.sanpablook.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +16,17 @@ import com.study.sanpablook.R;
 import java.util.List;
 import java.util.Map;
 
+import sanpablook.study.sanpablook.ActivityRatings;
+import sanpablook.study.sanpablook.BookingsCompletedActivity;
+
 public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBookingsConfirmed.BookingViewHolder> {
 
     private List<Map<String, Object>> bookings;
+    private Context context;
 
     public RecyclerBookingsConfirmed(List<Map<String, Object>> bookings) {
         this.bookings = bookings;
+        this.context = context;
     }
 
     @NonNull
@@ -45,7 +52,7 @@ public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBook
         return bookings.size();
     }
 
-    static class BookingViewHolder extends RecyclerView.ViewHolder {
+    class BookingViewHolder extends RecyclerView.ViewHolder {
 
         Button buttonReview;
         TextView establishmentNameConfirmed, valueOfConfirmedBookingNumber, valueOfConfirmedCustomerName, valueOfConfirmedBookingDate, valueOfConfirmedBookingTime, valueOfConfirmedNumberOfGuests;
@@ -61,6 +68,18 @@ public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBook
             valueOfConfirmedBookingTime = itemView.findViewById(R.id.valueOfConfirmedBookingTime);
             valueOfConfirmedNumberOfGuests = itemView.findViewById(R.id.valueOfConfirmedNumberOfGuests);
             buttonReview = itemView.findViewById(R.id.buttonReview);
+
+            buttonReview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    goToBookingsCompleted(view);
+                }
+            });
+        }
+
+        private void goToBookingsCompleted(View view) {
+            Intent intent = new Intent(context, BookingsCompletedActivity.class);
+            context.startActivity(intent);
         }
     }
 }

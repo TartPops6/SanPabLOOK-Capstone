@@ -24,7 +24,7 @@ import com.study.sanpablook.R;
 
 public class DinePalmerasActivity extends AppCompatActivity implements OnMapReadyCallback {
     ImageButton btnShare, btnBack;
-    Button reserveNowBtn;
+    Button reserveNowBtn, buttonViewAll;
 
     GoogleMap map;
 
@@ -54,12 +54,20 @@ public class DinePalmerasActivity extends AppCompatActivity implements OnMapRead
         btnBack = findViewById(R.id.btnBack);
         btnShare = findViewById(R.id.btnShare);
         reserveNowBtn = findViewById(R.id.reserveNowBtn1);
+        buttonViewAll = findViewById(R.id.buttonViewAll);
 
         //back button
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        buttonViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToViewAllReviews(view);
             }
         });
 
@@ -92,6 +100,11 @@ public class DinePalmerasActivity extends AppCompatActivity implements OnMapRead
     public void btnMessage(View v) {
         String number = "09283395502";
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+    }
+
+    private void goToViewAllReviews(View view) {
+        Intent intent = new Intent(this, ViewAllRatingsDine.class);
+        startActivity(intent);
     }
 
     //google Maps location
