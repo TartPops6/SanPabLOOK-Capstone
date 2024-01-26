@@ -1,27 +1,27 @@
 package sanpablook.study.sanpablook;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.study.sanpablook.R;
 
-public class ActivityRatings extends AppCompatActivity {
+public class ViewAllRatingsDine extends AppCompatActivity {
 
     ImageButton btnBackAH;
-    RecyclerView recyclerViewRatingsUser;
+    RecyclerView recyclerViewAllRatingsDine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ratings);
+        setContentView(R.layout.activity_view_all_ratings_dine);
 
-        recyclerViewRatingsUser = findViewById(R.id.recyclerViewRatingsUser);
-        recyclerViewRatingsUser.setLayoutManager(new LinearLayoutManager(this));
+        recyclerViewAllRatingsDine = findViewById(R.id.recyclerViewAllRatingsDine);
+        recyclerViewAllRatingsDine.setLayoutManager(new LinearLayoutManager(this));
 
         btnBackAH = findViewById(R.id.buttonBackAH);
 

@@ -27,6 +27,7 @@ import com.study.sanpablook.R;
 public class HotelMeding extends AppCompatActivity implements OnMapReadyCallback {
 
     ImageButton btnShare, backBtn;
+    Button buttonViewAll;
 
     GoogleMap hotelMedingMap;
 
@@ -57,12 +58,20 @@ public class HotelMeding extends AppCompatActivity implements OnMapReadyCallback
         //buttons
         backBtn= findViewById(R.id.backBtn);
         btnShare = findViewById(R.id.btnShare);
+        buttonViewAll = findViewById(R.id.buttonViewAll);
 
         //back button
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        buttonViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToViewAllReviews(view);
             }
         });
 
@@ -93,6 +102,11 @@ public class HotelMeding extends AppCompatActivity implements OnMapReadyCallback
         TextView stayPrice = (TextView) findViewById(R.id.stayPrice);
         String text = "<font color=#1A9AB7>₱ 3, 864</font> <font color=#000000>/ night</font>";
         stayPrice.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_COMPACT));
+    }
+
+    private void goToViewAllReviews(View view) {
+        Intent intent = new Intent(this, ViewAllRatingsHotel.class);
+        startActivity(intent);
     }
 
     //google Maps location

@@ -24,7 +24,7 @@ import com.study.sanpablook.R;
 
 public class DineSulyapActivity extends AppCompatActivity implements OnMapReadyCallback {
     ImageButton btnShare, btnBack;
-    Button reserveNowBtn;
+    Button reserveNowBtn, buttonViewAll;
 
     GoogleMap map;
 
@@ -55,6 +55,7 @@ public class DineSulyapActivity extends AppCompatActivity implements OnMapReadyC
         btnBack = findViewById(R.id.btnBack);
         btnShare = findViewById(R.id.btnShare);
         reserveNowBtn = findViewById(R.id.reserveNowBtn1);
+        buttonViewAll = findViewById(R.id.buttonViewAll);
 
         //back button
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +79,13 @@ public class DineSulyapActivity extends AppCompatActivity implements OnMapReadyC
             }
         });
 
+        buttonViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToViewAllReviews(view);
+            }
+        });
+
 
         //reserve now button
         reserveNowBtn.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +102,11 @@ public class DineSulyapActivity extends AppCompatActivity implements OnMapReadyC
     public void btnMessageSulyap(View v) {
         String number = "09171821483";
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+    }
+
+    private void goToViewAllReviews(View view) {
+        Intent intent = new Intent(this, ViewAllRatingsDine.class);
+        startActivity(intent);
     }
 
     //google Maps location

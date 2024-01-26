@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/imageRatings"
+            android:layout_width="130dp"
+            android:layout_height="200dp"
+            android:background="@drawable/rounded_corners_20"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sampaloc_lake" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/reviewDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/cardview"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/destinationName1"
+        android:textColor="@color/darkBlue"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/reviewContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reviewDestination"
+        android:layout_toEndOf="@id/cardview"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_regular"
+        android:justificationMode="inter_word"
+        android:maxLines="9"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/review1"
+        android:textSize="12sp" />
+</RelativeLayout>

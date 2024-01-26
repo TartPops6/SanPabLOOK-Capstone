@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,16 +34,20 @@ import com.study.sanpablook.R;
 
 public class ProfileFragment extends Fragment {
 
+    //recycler view horizontal
+    RecyclerView recyclerViewCardRatings;
+    LinearLayoutManager linearLayoutManager;
+
     //Activity History
     Button btnViewAll;
-    ImageButton btnImage1, btnImage2, btnImage3, btnSettings;
+    ImageButton btnSettings;
 
     //Profile
     TextView userBio, userFirstName;
     ImageView profilePicture;
 
     //Bookings badge count
-    ImageButton btnPending, btnConfirmed, btnCancelled, btnRatings;
+    ImageButton btnPending, btnConfirmed, btnCancelled;
     TextView badgePendingCount, badgeConfirmedCount, badgeCancelledCount, badgeRatingCount;
     int intBadgePendingCount = 0, intBadgeConfirmedCount = 0, intBadgeCancelledCount = 0, intBadgeRatingsCount = 0;
 
@@ -131,6 +137,12 @@ public class ProfileFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        //recycler view horizontal
+        recyclerViewCardRatings = view.findViewById(R.id.recyclerViewCardRatings);
+        recyclerViewCardRatings.setLayoutManager(new LinearLayoutManager(requireContext()));
+        linearLayoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewCardRatings.setLayoutManager(linearLayoutManager);
+
         //Objects
         userFirstName = view.findViewById(R.id.userFirstName);
         userBio = view.findViewById(R.id.userBio);
@@ -145,21 +157,16 @@ public class ProfileFragment extends Fragment {
         //buttons
         btnSettings = view.findViewById(R.id.buttonSettings);
         btnViewAll = view.findViewById(R.id.buttonViewAll);
-        btnImage1 = view.findViewById(R.id.image1);
-        btnImage2 = view.findViewById(R.id.image2);
-        btnImage3 = view.findViewById(R.id.image3);
 
         //bookings
         btnPending = view.findViewById(R.id.buttonPending);
         btnConfirmed = view.findViewById(R.id.buttonConfirmed);
         btnCancelled = view.findViewById(R.id.buttonCancelled);
-        btnRatings = view.findViewById(R.id.buttonRatings);
 
         //bookings notification badge
         badgePendingCount = view.findViewById(R.id.badgePending);
         badgeConfirmedCount = view.findViewById(R.id.badgeConfirmed);
         badgeCancelledCount = view.findViewById(R.id.badgeCancelled);
-        badgeRatingCount = view.findViewById(R.id.badgeRatings);
 
         //Check if user is not signed in
         if (user != null) {
@@ -192,7 +199,6 @@ public class ProfileFragment extends Fragment {
             });
             setupConfirmedBadge();
             setupCancelledBadge();
-            setupRatingsBadge();
         } else {
             //User is not signed in
             Intent intent = new Intent(requireContext(), SignInActivity.class);
@@ -269,25 +275,6 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        //for card view in profile fragment
-        btnImage1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToActivityRatings(view);
-            }
-        });
-        btnImage2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToActivityRatings(view);
-            }
-        });
-        btnImage3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToActivityRatings(view);
-            }
-        });
 
         //bookings pages
         btnPending.setOnClickListener(new View.OnClickListener() {
@@ -308,25 +295,18 @@ public class ProfileFragment extends Fragment {
                 goToCancelled(view);
             }
         });
-        btnRatings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToRatings(view);
-            }
-        });
 
         return view;
     }
 
 
-    //onclick of activity history cards
-    private void goToActivityRatings(View view) {
-        Intent intent = new Intent(getActivity(), ActivityRatings.class);
+    private void goToSettings(View view) {
+        Intent intent = new Intent(getActivity(), UserSettings.class);
         startActivity(intent);
     }
 
-    private void goToSettings(View view) {
-        Intent intent = new Intent(getActivity(), UserSettings.class);
+    private void goToActivityRatings(View view) {
+        Intent intent = new Intent(getActivity(), ActivityRatings.class);
         startActivity(intent);
     }
 
@@ -342,11 +322,6 @@ public class ProfileFragment extends Fragment {
 
     private void goToCancelled(View view) {
         Intent intent = new Intent(getActivity(), BookingsCancelledActivity.class);
-        startActivity(intent);
-    }
-
-    private void goToRatings(View view) {
-        Intent intent = new Intent(getActivity(), BookingsCompletedActivity.class);
         startActivity(intent);
     }
 
@@ -389,20 +364,6 @@ public class ProfileFragment extends Fragment {
                 badgeCancelledCount.setText(String.valueOf(Math.min(intBadgeCancelledCount, 99)));
                 if (badgeCancelledCount.getVisibility() != View.VISIBLE) {
                     badgeCancelledCount.setVisibility(View.VISIBLE);
-                }
-            }
-        }
-    }
-    private void setupRatingsBadge() {
-        if (badgeRatingCount != null) {
-            if (intBadgeRatingsCount == 0) {
-                if (badgeRatingCount.getVisibility() != View.GONE) {
-                    badgeRatingCount.setVisibility(View.GONE);
-                }
-            } else {
-                badgeRatingCount.setText(String.valueOf(Math.min(intBadgeRatingsCount, 99)));
-                if (badgeRatingCount.getVisibility() != View.VISIBLE) {
-                    badgeRatingCount.setVisibility(View.VISIBLE);
                 }
             }
         }
