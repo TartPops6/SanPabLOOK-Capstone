@@ -1,11 +1,11 @@
 
-`
-java:S1874!"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ö‰ü¼
-O
-java:S1874""9Remove this use of "onActivityCreated"; it is deprecated.(€…É’
-—
-java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ú®ä
-œ
-java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½Ä³ïşÿÿÿÿ
-—
-java:S11862"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦›Í
+g
+java:S1874P"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ö‰ü¼8êÖ‰·Ô1
+V
+java:S1874Q"9Remove this use of "onActivityCreated"; it is deprecated.(€…É’8ëÖ‰·Ô1
+
+java:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ú®ä8ìÖ‰·Ô1
+£
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½Ä³ïşÿÿÿÿ8íÖ‰·Ô1
+
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦›Í8íÖ‰·Ô1

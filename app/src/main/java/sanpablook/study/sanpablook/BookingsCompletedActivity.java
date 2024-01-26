@@ -72,8 +72,9 @@ public class BookingsCompletedActivity extends AppCompatActivity {
                 Map<String, Object> userReview = new HashMap<>();
                 userReview.put("userRating", userRating);
                 userReview.put("reviews", reviews);
+                userReview.put("establishmentID", "casaDine");
 
-                db.collection("UserReviews")
+                db.collection("UserReview")
                         .add(userReview)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override

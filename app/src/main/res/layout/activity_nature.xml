@@ -23,7 +23,7 @@
             android:padding="0dp"
             android:src="@drawable/ic_btn_arrow_back" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/searchBar"
             android:layout_width="328dp"
             android:layout_height="49dp"

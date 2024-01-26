@@ -58,17 +58,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/containerUserName" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/searchBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
             android:background="@drawable/search_bar_bg"
             android:drawableStart="@drawable/ic_search"
             android:ems="10"
-            android:hint="Tara, Saan tayo?"
+            android:hint="Tara na! San Tayo?"
             android:inputType="text"
             android:padding="14sp"
             android:textColor="@color/black"

@@ -66,20 +66,22 @@
                     app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
 
                 <!--search bar-->
-                <androidx.appcompat.widget.SearchView
+                <AutoCompleteTextView
                     android:id="@+id/searchBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="328dp"
+                    android:layout_height="49dp"
                     android:layout_marginStart="24sp"
                     android:layout_marginTop="16sp"
                     android:layout_marginEnd="24sp"
-                    app:iconifiedByDefault="false"
                     android:background="@drawable/search_bar_bg"
                     android:drawableStart="@drawable/ic_search"
                     android:ems="10"
+                    android:hint="Tara na! San Tayo?"
                     android:inputType="text"
+                    android:padding="14sp"
                     android:textColor="@color/black"
                     android:textColorHint="#BDBDBD"
+                    android:textSize="16sp"
                     app:defaultQueryHint="@string/hint"
                     app:layout_constraintEnd_toEndOf="@+id/txtPinLocation"
                     app:layout_constraintHorizontal_bias="0.117"

@@ -1,21 +1,21 @@
 
 J
-java:S1604N"(Make this anonymous inner class a lambda(°˜Ğÿÿÿÿÿ8‘ƒö±Ô1
+java:S1604O"(Make this anonymous inner class a lambda(°˜Ğÿÿÿÿÿ8ËÍ°´Ô1
 J
-java:S1604T"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8’ƒö±Ô1
+java:S1604U"(Make this anonymous inner class a lambda(Ÿ ¹ÿÿÿÿÿ8ÌÍ°´Ô1
 E
-java:S1604a"(Make this anonymous inner class a lambda(ÎŸÜÜ8’ƒö±Ô1
+java:S1604b"(Make this anonymous inner class a lambda(ÎŸÜÜ8ÌÍ°´Ô1
 D
-java:S1604f"(Make this anonymous inner class a lambda(‹Ô”H8’ƒö±Ô1
+java:S1604g"(Make this anonymous inner class a lambda(‹Ô”H8ÌÍ°´Ô1
 J
-java:S1604B"(Make this anonymous inner class a lambda(àŞÏûÿÿÿÿ8“ƒö±Ô1
+java:S1604B"(Make this anonymous inner class a lambda(àŞÏûÿÿÿÿ8ÌÍ°´Ô1
 J
-java:S1604p"(Make this anonymous inner class a lambda(éÆ×©úÿÿÿÿ8“ƒö±Ô1
+java:S1604q"(Make this anonymous inner class a lambda(éÆ×©úÿÿÿÿ8ÌÍ°´Ô1
 E
-java:S1604w"(Make this anonymous inner class a lambda(Î£ÕÙ8”ƒö±Ô1
+java:S1604x"(Make this anonymous inner class a lambda(Î£ÕÙ8ÌÍ°´Ô1
 e
-java:S2259„"BA "NullPointerException" could be thrown; "data" is nullable here.(ìÎÆ”ûÿÿÿÿ8Ÿ„ö±Ô1
+java:S2259…"BA "NullPointerException" could be thrown; "data" is nullable here.(ìÎÆ”ûÿÿÿÿ8ôÎ°´Ô1
 I
-java:S1602:",Remove useless curly braces around statement(ë¸Á÷8¾„ö±Ô1
+java:S1602:",Remove useless curly braces around statement(ë¸Á÷8ÄÏ°´Ô1
 g
-java:S1874€"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8Ù„ö±Ô1
+java:S1874"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8ãÏ°´Ô1

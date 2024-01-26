@@ -5,6 +5,7 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -25,6 +26,8 @@ import androidx.annotation.NonNull;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +45,7 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -106,6 +110,45 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback{
             return myFragment;
         }
 
+        AutoCompleteTextView autoCompleteTextView = myFragment.findViewById(R.id.searchBar);
+
+        List<String> items = Arrays.asList("Tahanan ni Aling Meding", "Casa San Pablo (Hotel)", "Casa Palmera", "Sulyap Gallery Cafe", "Casa San Pablo (Dine)", "Palmeras Garden Restaurant");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, items);
+
+        autoCompleteTextView.setAdapter(adapter);
+
+        autoCompleteTextView.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedItem = (String) parent.getItemAtPosition(position);
+            if (selectedItem.isEmpty()) {
+                Toast.makeText(getContext(), "No results", Toast.LENGTH_SHORT).show();
+            } else {
+                switch (selectedItem) {
+                    case "Casa San Pablo (Hotel)":
+                        startActivity(new Intent(getContext(), HotelCasa.class));
+                        break;
+                    case "Tahanan ni Aling Meding":
+                        startActivity(new Intent(getContext(), HotelMeding.class));
+                        break;
+                    case "Casa Palmera":
+                        startActivity(new Intent(getContext(), HotelPalmeras.class));
+                        break;
+                    case "Sulyap Gallery Cafe":
+                        startActivity(new Intent(getContext(), DineSulyapActivity.class));
+                        break;
+                    case "Casa San Pablo (Dine)":
+                        startActivity(new Intent(getContext(), DineCasaActivity.class));
+                        break;
+                    case "Palmeras Garden Restaurant":
+                        startActivity(new Intent(getContext(), DinePalmerasActivity.class));
+                        break;
+                    default:
+                        Toast.makeText(getContext(), "No results found", Toast.LENGTH_SHORT).show();
+                        break;
+                    // Add more cases as needed
+                }
+            }
+        });
 
 
         // Get user's first name
