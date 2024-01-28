@@ -1,4 +1,10 @@
 
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ù¶Ášüÿÿÿÿ
-o
-java:S16593"ZDeclare "valueOfConfirmedBookingNumber" and all following declarations on a separate line.(µÄ‘]
+h
+java:S1192+"FDefine a constant instead of duplicating this literal "place" 3 times.(Ò´² øÿÿÿÿ8ôÄŞÔ1
+l
+java:S1192,"JDefine a constant instead of duplicating this literal "bookingID" 3 times.(’ñÇçûÿÿÿÿ8õÄŞÔ1
+J
+java:S16042"(Make this anonymous inner class a lambda(â¸ºÓúÿÿÿÿ8õÄŞÔ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ù¶Ášüÿÿÿÿ8üÄŞÔ1
+v
+java:S1659D"ZDeclare "valueOfConfirmedBookingNumber" and all following declarations on a separate line.(µÄ‘]8ìÄŞÔ1

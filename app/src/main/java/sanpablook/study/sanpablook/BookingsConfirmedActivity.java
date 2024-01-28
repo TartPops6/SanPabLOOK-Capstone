@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 import sanpablook.study.sanpablook.Adapter.BookingAdapter;
+import sanpablook.study.sanpablook.Adapter.RecyclerBookingsConfirmed;
 
 public class BookingsConfirmedActivity extends AppCompatActivity {
 
@@ -63,7 +64,7 @@ public class BookingsConfirmedActivity extends AppCompatActivity {
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         bookings.add(document.getData());
                     }
-                    BookingAdapter adapter = new BookingAdapter(bookings);
+                    RecyclerBookingsConfirmed adapter = new RecyclerBookingsConfirmed(BookingsConfirmedActivity.this, bookings);
                     recyclerViewConfirmed.setAdapter(adapter);
                 } else {
                     Toast.makeText(BookingsConfirmedActivity.this, "Failed to fetch user data", Toast.LENGTH_SHORT).show();

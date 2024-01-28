@@ -76,7 +76,6 @@
                     android:fontFamily="@font/poppins_bold"
                     android:padding="5dp"
                     android:paddingStart="10dp"
-                    android:text="@string/confirmedEstablishment"
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"

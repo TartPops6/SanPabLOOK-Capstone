@@ -32,6 +32,13 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.study.sanpablook.R;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import sanpablook.study.sanpablook.Adapter.RecyclerCardRatings;
+
 public class ProfileFragment extends Fragment {
 
     //recycler view horizontal
@@ -51,12 +58,16 @@ public class ProfileFragment extends Fragment {
     TextView badgePendingCount, badgeConfirmedCount, badgeCancelledCount, badgeRatingCount;
     int intBadgePendingCount = 0, intBadgeConfirmedCount = 0, intBadgeCancelledCount = 0, intBadgeRatingsCount = 0;
 
+    private List<String> items = new ArrayList<>();
+
     //Firebase
     FirebaseUser user;
     FirebaseAuth auth;
     FirebaseFirestore fStore;
     StorageReference storage;
     String userID;
+
+    private RecyclerCardRatings adapter;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -258,6 +269,24 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        fStore.collection("UserReview").whereEqualTo("userID", userID).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                for (DocumentSnapshot document : task.getResult()) {
+                    String imageUrl = document.getString("imageUrl");
+
+                    // Add the imageUrl to the items list
+                    items.add(imageUrl);
+                }
+                // Initialize the adapter
+                adapter = new RecyclerCardRatings(getActivity(), items);
+                recyclerViewCardRatings.setAdapter(adapter);
+
+                // Notify the adapter that the data set has changed
+                adapter.notifyDataSetChanged();
+            } else {
+                Log.d(TAG, "Failed to fetch user data");
+            }
+        });
 
         //for settings button
         btnSettings.setOnClickListener(new View.OnClickListener() {

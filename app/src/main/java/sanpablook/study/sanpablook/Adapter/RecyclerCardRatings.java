@@ -10,13 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.study.sanpablook.R;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -24,14 +27,15 @@ import sanpablook.study.sanpablook.ActivityRatings;
 
 public class RecyclerCardRatings extends RecyclerView.Adapter<RecyclerCardRatings.BookingViewHolder> {
 
-    private List<Map<String, Object>> bookings;
+    private List<String> items;
     private Context context;
 
-    public RecyclerCardRatings(Context context, List<Map<String, Object>> bookings) {
-        this.context = context;
-        this.bookings = bookings;
-    }
+    private String imageUrl;
 
+    public RecyclerCardRatings(Context context, List<String> items) {
+        this.context = context;
+        this.items = items;
+    }
     @NonNull
     @Override
     public BookingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -41,12 +45,16 @@ public class RecyclerCardRatings extends RecyclerView.Adapter<RecyclerCardRating
 
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
-        Map<String, Object> booking = bookings.get(position);
+        String imageUrl = items.get(position);
+
+        Glide.with(holder.itemView.getContext())
+                .load(imageUrl)
+                .into(holder.imageRatings);
     }
 
     @Override
     public int getItemCount() {
-        return bookings.size();
+        return items.size();
     }
 
     class BookingViewHolder extends RecyclerView.ViewHolder {
@@ -55,7 +63,7 @@ public class RecyclerCardRatings extends RecyclerView.Adapter<RecyclerCardRating
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            // image button
+            // image view
             imageRatings = itemView.findViewById(R.id.imageRatings);
 
             imageRatings.setOnClickListener(new View.OnClickListener() {

@@ -50,7 +50,7 @@ public class BookingsPendingActivity extends AppCompatActivity {
         FirebaseUser currentUser = auth.getCurrentUser();
         String userID = currentUser.getUid();
 
-db.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+db.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Pending").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
     @Override
     public void onComplete(@NonNull Task<QuerySnapshot> task) {
         if (task.isSuccessful()) {
@@ -86,7 +86,7 @@ db.collection("BookingPending").whereEqualTo("userID", userID).get().addOnComple
         FirebaseUser currentUser = auth.getCurrentUser();
         String userID = currentUser.getUid();
 
-        db.collection("BookingPending").whereEqualTo("userID", userID).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("BookingPending").whereEqualTo("userID", userID).whereEqualTo("status", "Pending").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {

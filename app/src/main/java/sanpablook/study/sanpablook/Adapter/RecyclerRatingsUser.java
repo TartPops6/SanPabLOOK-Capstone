@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.study.sanpablook.R;
 
 import java.util.List;
@@ -31,9 +32,14 @@ public class RecyclerRatingsUser extends RecyclerView.Adapter<RecyclerRatingsUse
 
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
-        Map<String, Object> booking = bookings.get(position);
-        holder.reviewDestination.setText(booking.get("place").toString());
-        holder.reviewContent.setText(booking.get("bookingID").toString());
+        Map<String, Object> review = bookings.get(position);
+        holder.reviewDestination.setText(review.get("place").toString());
+        holder.reviewContent.setText(review.get("reviews").toString());
+
+        String imageUrl = review.get("imageUrl").toString();
+        Glide.with(holder.imageRatings.getContext())
+                .load(imageUrl)
+                .into(holder.imageRatings);
     }
 
     @Override

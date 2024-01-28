@@ -164,5 +164,11 @@ Capp/src/main/java/sanpablook/study/sanpablook/HotelAllFragment.java,6\3\63329f
 Oapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerHotelReviews.java,0\9\09a54d6be65c31259ed1c1efe2d50f3645daf298
 ~
 Napp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerDineReviews.java,8\6\86f75aceb08223ca3f3f21532ff7932a7661a85b
-m
-=app/src/main/java/sanpablook/study/sanpablook/UserReview.java,6\a\6a54702f3e49e1ad21c51260db715a0b561dd161
+u
+Eapp/src/main/java/sanpablook/study/sanpablook/ViewAllRatingsDine.java,a\6\a613b5c6a185fffa62f28c2e86e5185812a9312f
+~
+Napp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerRatingsUser.java,1\1\119c61a454d4cfb655f941a020eb6fbaed1d59a3
+~
+Napp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerCardRatings.java,2\2\22b2a48af17cbe5b4116dc37559b88f4a144d457
+†
+Vapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerViewAllRatingsHotel.java,3\1\31855f4f985041cb8c6754e07f187871fbe2a7f2

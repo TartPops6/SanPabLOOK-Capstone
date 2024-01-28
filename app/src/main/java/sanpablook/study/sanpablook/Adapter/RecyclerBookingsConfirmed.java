@@ -11,12 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.study.sanpablook.R;
 
 import java.util.List;
 import java.util.Map;
 
-import sanpablook.study.sanpablook.ActivityRatings;
 import sanpablook.study.sanpablook.BookingsCompletedActivity;
 
 public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBookingsConfirmed.BookingViewHolder> {
@@ -24,9 +25,9 @@ public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBook
     private List<Map<String, Object>> bookings;
     private Context context;
 
-    public RecyclerBookingsConfirmed(List<Map<String, Object>> bookings) {
-        this.bookings = bookings;
+    public RecyclerBookingsConfirmed(Context context, List<Map<String, Object>> bookings) {
         this.context = context;
+        this.bookings = bookings;
     }
 
     @NonNull
@@ -45,6 +46,15 @@ public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBook
         holder.valueOfConfirmedBookingDate.setText(booking.get("date").toString());
         holder.valueOfConfirmedBookingTime.setText(booking.get("time").toString());
         holder.valueOfConfirmedNumberOfGuests.setText(booking.get("guest").toString());
+
+        holder.buttonReview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String status = booking.get("status").toString();
+                String establishmentID = booking.get("establishmentID").toString();
+                holder.goToBookingsCompleted(view, booking.get("place").toString(), booking.get("bookingID").toString(), establishmentID, status);
+            }
+        });
     }
 
     @Override
@@ -68,17 +78,14 @@ public class RecyclerBookingsConfirmed extends RecyclerView.Adapter<RecyclerBook
             valueOfConfirmedBookingTime = itemView.findViewById(R.id.valueOfConfirmedBookingTime);
             valueOfConfirmedNumberOfGuests = itemView.findViewById(R.id.valueOfConfirmedNumberOfGuests);
             buttonReview = itemView.findViewById(R.id.buttonReview);
-
-            buttonReview.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    goToBookingsCompleted(view);
-                }
-            });
         }
 
-        private void goToBookingsCompleted(View view) {
-            Intent intent = new Intent(context, BookingsCompletedActivity.class);
+        private void goToBookingsCompleted(View view, String place, String bookingID, String establishmentID, String status) {
+            Intent intent = new Intent(view.getContext(), BookingsCompletedActivity.class);
+            intent.putExtra("place", place);
+            intent.putExtra("bookingID", bookingID);
+            intent.putExtra("establishmentID", establishmentID);
+            intent.putExtra("status", status);
             context.startActivity(intent);
         }
     }

@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 import sanpablook.study.sanpablook.Adapter.BookingAdapter;
+import sanpablook.study.sanpablook.Adapter.RecyclerBookingsCancelled;
 
 public class BookingsCancelledActivity extends AppCompatActivity {
 
@@ -69,7 +70,7 @@ public class BookingsCancelledActivity extends AppCompatActivity {
                             }
 
                             // Use the bookings to populate the RecyclerView
-                            BookingAdapter adapter = new BookingAdapter(bookings);
+                            RecyclerBookingsCancelled adapter = new RecyclerBookingsCancelled(bookings);
                             recyclerViewCancelled.setAdapter(adapter);
                         }
                     })
