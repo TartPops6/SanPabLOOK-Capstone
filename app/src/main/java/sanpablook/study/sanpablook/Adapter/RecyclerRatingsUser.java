@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.study.sanpablook.R;
 
 import java.util.List;
@@ -50,7 +51,7 @@ public class RecyclerRatingsUser extends RecyclerView.Adapter<RecyclerRatingsUse
     static class BookingViewHolder extends RecyclerView.ViewHolder {
 
         TextView reviewDestination, reviewContent;
-        ImageView imageRatings;
+        ShapeableImageView imageRatings;
 
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);

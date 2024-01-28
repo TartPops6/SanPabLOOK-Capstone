@@ -112,6 +112,7 @@
                     android:id="@+id/addImageRatings"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
+                    android:padding="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@color/transparent"

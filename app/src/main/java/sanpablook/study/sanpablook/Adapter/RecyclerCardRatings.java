@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.study.sanpablook.R;
 
 import java.util.ArrayList;
@@ -58,7 +59,7 @@ public class RecyclerCardRatings extends RecyclerView.Adapter<RecyclerCardRating
     }
 
     class BookingViewHolder extends RecyclerView.ViewHolder {
-        ImageButton imageRatings;
+        ShapeableImageView imageRatings;
 
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);
