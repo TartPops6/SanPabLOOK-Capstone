@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -42,6 +43,10 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
 
     GoogleMap map;
 
+    String establishmentID = "casaDine";
+
+    TextView reviewsHotel, stayReviews, txtReview2, ratingsHotel, stayProfileRate, txtRate2;
+
     //recycler view horizontal
     RecyclerView recyclerViewDineReviewsCasa;
 
@@ -50,6 +55,12 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dine_casa);
 
+        //Strings
+        reviewsHotel = findViewById(R.id.txtReview);
+        txtReview2 = findViewById(R.id.txtReview2);
+        ratingsHotel = findViewById(R.id.txtRate);
+        txtRate2 = findViewById(R.id.txtRate2);
+
         //recycler view horizontal
         recyclerViewDineReviewsCasa = findViewById(R.id.recyclerViewDineReviewsCasa);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -57,7 +68,7 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("UserReview")
-                .whereEqualTo("establishmentID", "casaDine")
+                .whereEqualTo("establishmentID", establishmentID)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -71,6 +82,58 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
                             RecyclerDineReviews adapter = new RecyclerDineReviews(reviews);
                             recyclerViewDineReviewsCasa.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+
+                            // Set the review count text
+                            String reviewCountText = reviews.size() > 0 ? reviews.size() + " Reviews" : "No reviews";
+                            reviewsHotel.setText(reviewCountText);
+                            txtReview2.setText(reviewCountText);
+
+                            // Disable the button if there are no reviews
+                            if (reviews.size() == 0) {
+                                buttonViewAll.setEnabled(false);
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+
+        db.collection("UserReview")
+                .whereEqualTo("establishmentID", establishmentID)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            List<Map<String, Object>> reviews = new ArrayList<>();
+                            int totalRatings = 0;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Map<String, Object> review = document.getData();
+                                reviews.add(review);
+                                Object ratingObj = review.get("userRating");
+                                if (ratingObj != null) {
+                                    float rating = Float.parseFloat(ratingObj.toString());
+                                    if (rating >= 1 && rating <= 5) {
+                                        totalRatings += rating;
+                                    }
+                                }
+                            }
+                            Log.d(TAG, "Number of reviews fetched: " + reviews.size());
+                            Log.d(TAG, "Total ratings: " + totalRatings);
+
+                            if (reviews.size() > 0) {
+                                // Calculate the actual rating score
+                                float actualRatingScore = (float) totalRatings / reviews.size();
+                                Log.d(TAG, "Actual rating score: " + actualRatingScore);
+
+                                // Display the total ratings and the actual rating score
+                                ratingsHotel.setText(String.format("%.1f", actualRatingScore));
+                                txtRate2.setText(String.format("%.1f", actualRatingScore));
+                            } else {
+                                // If there are no reviews, set the text to "No rating"
+                                ratingsHotel.setText("No rating");
+                                txtRate2.setText("No rating");
+                            }
                         } else {
                             Log.d(TAG, "Error getting documents: ", task.getException());
                         }
@@ -148,7 +211,8 @@ public class DineCasaActivity extends AppCompatActivity implements OnMapReadyCal
     }
 
     private void goToViewAllReviews(View view) {
-        Intent intent = new Intent(this, ViewAllRatingsDine.class);
+        Intent intent = new Intent(DineCasaActivity.this, ViewAllRatingsDine.class);
+        intent.putExtra("establishmentID", establishmentID);
         startActivity(intent);
     }
 

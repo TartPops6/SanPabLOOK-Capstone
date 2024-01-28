@@ -1,12 +1,34 @@
 
-m	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8Ğ†ƒĞ1
-m	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ë8Ò†ƒĞ1
-E
-java:S16043"(Make this anonymous inner class a lambda(ã‘Àò8Ò†ƒĞ1
+h
+java:S1192"JDefine a constant instead of duplicating this literal "No rating" 3 times.(Ñ‚ğé8ÍïÿÔ1
+m
+java:S1192L"PDefine a constant instead of duplicating this literal "establishmentID" 3 times.(Ô×Ñ…8ÍïÿÔ1
+n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8Ğ†ƒĞ1
+n	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ë8Ò†ƒĞ1
 J
-java:S1604;"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8Ó†ƒĞ1
-E
-java:S1604I"(Make this anonymous inner class a lambda(Øõ­Ç8Ó†ƒĞ1
+java:S1604N"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8úİøüÔ1
+J
+java:S1604n"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8ÎïÿÔ1
+F
+java:S1604§"(Make this anonymous inner class a lambda(ã‘Àò8Ò†ƒĞ1
+K
+java:S1604®"(Make this anonymous inner class a lambda(ĞùğËşÿÿÿÿ8ıÄõüÔ1
+K
+java:S1604¶"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8Ó†ƒĞ1
+F
+java:S1604Ä"(Make this anonymous inner class a lambda(Øõ­Ç8Ó†ƒĞ1
 B
-java:S1659"%Declare "backBtn" on a separate line.(ƒˆöÛ8†ƒĞ1
-X	java:S125b"<This block of commented-out lines of code should be removed.(ÀŸ£…8æ€İƒÓ1
+java:S1659+"%Declare "backBtn" on a separate line.(ƒˆöÛ8†ƒĞ1
+j
+java:S16593"HDeclare "stayReviews" and all following declarations on a separate line.(Ó·ä±úÿÿÿÿ8ğ›œÿÔ1
+t
+java:S37769"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(¨Œşÿÿÿÿ8¿ñÿÔ1
+[
+java:S1155\">Use isEmpty() to check whether the collection is empty or not.(ƒÒ¦8ĞñÿÔ1
+`
+java:S1155b">Use isEmpty() to check whether the collection is empty or not.(ÛÏ¹¦øÿÿÿÿ8šıŠ†Õ1
+a
+java:S1155‚">Use isEmpty() to check whether the collection is empty or not.(ªóÏ˜úÿÿÿÿ8³Õå…Õ1
+I
+java:S1172Ó"+Remove this unused method parameter "view".(»Ã—8®ÆõüÔ1
+Y	java:S125ã"<This block of commented-out lines of code should be removed.(ÀŸ£…8æ€İƒÓ1

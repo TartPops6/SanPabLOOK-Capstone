@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.study.sanpablook.R;
 
 import java.util.List;
@@ -16,10 +17,10 @@ import java.util.Map;
 
 public class RecyclerViewAllRatingsDine extends RecyclerView.Adapter<RecyclerViewAllRatingsDine.BookingViewHolder> {
 
-    private List<Map<String, Object>> bookings;
+    private List<Map<String, Object>> ratings;
 
-    public RecyclerViewAllRatingsDine(List<Map<String, Object>> bookings) {
-        this.bookings = bookings;
+    public RecyclerViewAllRatingsDine(List<Map<String, Object>> ratings) {
+        this.ratings = ratings;
     }
 
     @NonNull
@@ -31,14 +32,19 @@ public class RecyclerViewAllRatingsDine extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
-        Map<String, Object> booking = bookings.get(position);
-        holder.reviewDestination.setText(booking.get("place").toString());
-        holder.reviewContent.setText(booking.get("bookingID").toString());
+        Map<String, Object> reviews = ratings.get(position);
+        holder.reviewDestination.setText(reviews.get("place").toString());
+        holder.reviewContent.setText(reviews.get("reviews").toString());
+
+        String imageUrl = reviews.get("imageUrl").toString();
+        Glide.with(holder.imageRatings.getContext())
+                .load(imageUrl)
+                .into(holder.imageRatings);
     }
 
     @Override
     public int getItemCount() {
-        return bookings.size();
+        return ratings.size();
     }
 
     static class BookingViewHolder extends RecyclerView.ViewHolder {

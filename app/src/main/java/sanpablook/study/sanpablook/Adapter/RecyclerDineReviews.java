@@ -54,8 +54,6 @@ public class RecyclerDineReviews extends RecyclerView.Adapter<RecyclerDineReview
 
             // Find other TextViews
             reviewContent = itemView.findViewById(R.id.reviewContent);
-            //clickable text
-            showMore = itemView.findViewById(R.id.showMore);
         }
     }
 }

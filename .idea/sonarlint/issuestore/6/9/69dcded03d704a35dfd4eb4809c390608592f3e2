@@ -1,12 +1,34 @@
 
-f	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô
-f	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ë
->
-java:S16042"(Make this anonymous inner class a lambda(ã‘Àò
-C
-java:S1604:"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ
-E
-java:S1604H"(Make this anonymous inner class a lambda(Øõ­Ç8¨Â·ïÏ1
-;
-java:S1659"%Declare "backBtn" on a separate line.(ƒˆöÛ
-X	java:S125`"<This block of commented-out lines of code should be removed.(ÀŸ£…8ûŠé†Ó1
+h
+java:S1192‹"JDefine a constant instead of duplicating this literal "No rating" 3 times.(Ñ‚ğé8½¡†ÿÔ1
+m
+java:S1192J"PDefine a constant instead of duplicating this literal "establishmentID" 3 times.(ı™±„8‰“õşÔ1
+n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8‹“õşÔ1
+n	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Ë8‹“õşÔ1
+J
+java:S1604L"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8´øôşÔ1
+J
+java:S1604l"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8À¡†ÿÔ1
+F
+java:S1604¤"(Make this anonymous inner class a lambda(ã‘Àò8Œ“õşÔ1
+K
+java:S1604«"(Make this anonymous inner class a lambda(ĞùğËşÿÿÿÿ8“õşÔ1
+K
+java:S1604³"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8“õşÔ1
+F
+java:S1604Á"(Make this anonymous inner class a lambda(Øõ­Ç8“õşÔ1
+B
+java:S1659+"%Declare "backBtn" on a separate line.(ƒˆöÛ8¶ÒøıÔ1
+j
+java:S1659."HDeclare "stayReviews" and all following declarations on a separate line.(Ó·ä±úÿÿÿÿ8·ÒøıÔ1
+t
+java:S37767"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(¨Œşÿÿÿÿ8¡”õşÔ1
+[
+java:S1155Z">Use isEmpty() to check whether the collection is empty or not.(ƒÒ¦8©úôşÔ1
+`
+java:S1155`">Use isEmpty() to check whether the collection is empty or not.(ÛÏ¹¦øÿÿÿÿ8ÍêŠ†Õ1
+a
+java:S1155€">Use isEmpty() to check whether the collection is empty or not.(ªóÏ˜úÿÿÿÿ8¥†ÿÔ1
+I
+java:S1172Ï"+Remove this unused method parameter "view".(»Ã—8Ï”õşÔ1
+Y	java:S125ß"<This block of commented-out lines of code should be removed.(ÀŸ£…8Ô”õşÔ1

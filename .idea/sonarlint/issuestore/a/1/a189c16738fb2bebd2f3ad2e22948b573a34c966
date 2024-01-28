@@ -1,23 +1,37 @@
 
-m	java:S117r"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8À»Å¯Ô1
-r	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¬³Àùÿÿÿÿ8ü¸£±Ô1
+m
+java:S1192G"PDefine a constant instead of duplicating this literal "establishmentID" 3 times.(ı™±„8ï©¬ÿÔ1
+n	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³´¬ô8À»Å¯Ô1
+s	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¬³Àùÿÿÿÿ8ü¸£±Ô1
 J
-java:S1604>"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8ü¸£±Ô1
-D
-java:S1604^"(Make this anonymous inner class a lambda(°æ8ı¸£±Ô1
+java:S1604I"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8ü¸£±Ô1
 J
-java:S1604e"(Make this anonymous inner class a lambda(ĞùğËşÿÿÿÿ8ı¸£±Ô1
-J
-java:S1604m"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8ßóÏÏÔ1
+java:S1604h"(Make this anonymous inner class a lambda(¯‘àçúÿÿÿÿ8ñ©¬ÿÔ1
 E
-java:S1604{"(Make this anonymous inner class a lambda(Øõ­Ç8ş¸£±Ô1
-B
-java:S1659("%Declare "btnBack" on a separate line.(¼ûáÄ8àáÅ¯Ô1
-M
-java:S1659)"+Declare "buttonViewAll" on a separate line.(¬ÿÂàûÿÿÿÿ8íõÏÏÔ1
-X	java:S125‡"<This block of commented-out lines of code should be removed.(Í¹ö8î¹£±Ô1
+java:S1604"(Make this anonymous inner class a lambda(°æ8ı¸£±Ô1
+K
+java:S1604¤"(Make this anonymous inner class a lambda(ĞùğËşÿÿÿÿ8ı¸£±Ô1
+K
+java:S1604¬"(Make this anonymous inner class a lambda(†¿˜ˆøÿÿÿÿ8ßóÏÏÔ1
 F
-java:S1172‘"(Remove this unused method parameter "v".(“ôıä8ï¹£±Ô1
+java:S1604º"(Make this anonymous inner class a lambda(Øõ­Ç8ş¸£±Ô1
+B
+java:S1659)"%Declare "btnBack" on a separate line.(¼ûáÄ8àáÅ¯Ô1
+M
+java:S1659*"+Declare "buttonViewAll" on a separate line.(¬ÿÂàûÿÿÿÿ8íõÏÏÔ1
+j
+java:S16590"HDeclare "stayReviews" and all following declarations on a separate line.(Ó·ä±úÿÿÿÿ8á ŸÿÔ1
+t
+java:S37766"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(¨Œşÿÿÿÿ8ı«¬ÿÔ1
+[
+java:S1155W">Use isEmpty() to check whether the collection is empty or not.(ƒÒ¦8•¬¬ÿÔ1
+`
+java:S1155\">Use isEmpty() to check whether the collection is empty or not.(ÛÏ¹¦øÿÿÿÿ8è†Š†Õ1
+`
+java:S1155|">Use isEmpty() to check whether the collection is empty or not.(ªóÏ˜úÿÿÿÿ8Ğç°ÿÔ1
+X	java:S125Æ"<This block of commented-out lines of code should be removed.(Í¹ö8éç°ÿÔ1
+F
+java:S1172Ğ"(Remove this unused method parameter "v".(“ôıä8êç°ÿÔ1
 I
-java:S1172–"+Remove this unused method parameter "view".(»Ã—8—÷ÏÏÔ1
-Y	java:S125¥"<This block of commented-out lines of code should be removed.(ÀŸ£…8ó¹£±Ô1
+java:S1172Õ"+Remove this unused method parameter "view".(»Ã—8ëç°ÿÔ1
+Y	java:S125å"<This block of commented-out lines of code should be removed.(ÀŸ£…8ïç°ÿÔ1

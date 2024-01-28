@@ -31,7 +31,7 @@ public class RecyclerHotelReviews extends RecyclerView.Adapter<RecyclerHotelRevi
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
         Map<String, Object> booking = bookings.get(position);
-        holder.reviewContent.setText(booking.get("place").toString());
+        holder.reviewContent.setText(booking.get("reviews").toString());
     }
 
     @Override
@@ -40,15 +40,13 @@ public class RecyclerHotelReviews extends RecyclerView.Adapter<RecyclerHotelRevi
     }
 
     static class BookingViewHolder extends RecyclerView.ViewHolder {
-        TextView reviewContent, showMore;
+        TextView reviewContent;
 
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);
 
             // Find other TextViews
             reviewContent = itemView.findViewById(R.id.reviewContent);
-            //clickable text
-            showMore = itemView.findViewById(R.id.showMore);
         }
     }
 }

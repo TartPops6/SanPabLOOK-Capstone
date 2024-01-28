@@ -172,3 +172,7 @@ Napp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerRatingsUser.java
 Napp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerCardRatings.java,2\2\22b2a48af17cbe5b4116dc37559b88f4a144d457
 †
 Vapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerViewAllRatingsHotel.java,3\1\31855f4f985041cb8c6754e07f187871fbe2a7f2
+…
+Uapp/src/main/java/sanpablook/study/sanpablook/Adapter/RecyclerViewAllRatingsDine.java,1\7\17bee0ad417cded9334055b9f9d55a96db9fd785
+v
+Fapp/src/main/java/sanpablook/study/sanpablook/ViewAllRatingsHotel.java,a\7\a7868893f5d4ee81f87fe12b0b36b08e57fd23d6
