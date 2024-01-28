@@ -6,23 +6,17 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/transparent"
-            app:cardElevation="0dp">
-
-                <ImageButton
-                    android:id="@+id/imageRatings"
-                    android:layout_width="130dp"
-                    android:layout_height="200dp"
-                    android:background="@drawable/rounded_corners_20"
-                    android:contentDescription="@string/destinationName1"
-                    android:padding="5dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sampaloc_lake" />
-
-        </androidx.cardview.widget.CardView>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageRatings"
+            android:layout_width="130dp"
+            android:layout_height="200dp"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ratings_rounded"
+            app:srcCompat="@drawable/sampaloc_lake"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="5dp"/>
 </LinearLayout>
