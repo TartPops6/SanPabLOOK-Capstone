@@ -18,6 +18,9 @@
     <style name = "review">
         <item name = "cornerSize">10%</item>
     </style>
+    <style name = "ratings_rounded">
+        <item name = "cornerSize">20%</item>
+    </style>
 
 <!--TAB LAYOUT TEXT SIZE-->
     <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
