@@ -15,9 +15,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_logo_sanpablook_foreground"
+        android:icon="@mipmap/sanpablook_logo"
         android:label="@string/appName"
-        android:roundIcon="@mipmap/ic_logo_sanpablook"
+        android:roundIcon="@mipmap/sanpablook_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
@@ -26,67 +26,163 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi4Y0iwY7WoSsDXb8BMfioHIjzZSqtPy8" />
 
-        <activity android:name="sanpablook.study.sanpablook.BunotLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.YamboLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.ConfirmedBookingActivity" />
-        <activity android:name="sanpablook.study.sanpablook.SanPablookActivities" />
-        <activity android:name="sanpablook.study.sanpablook.MohicapLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.FishingPage" />
-        <activity android:name="sanpablook.study.sanpablook.SampalocLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.CampingPage" /> <!-- BOOKING RELATED ACTIVITIES -->
-        <activity android:name="sanpablook.study.sanpablook.BookingsCompletedActivity" />
-        <activity android:name="sanpablook.study.sanpablook.BookingsCancelledActivity" />
-        <activity android:name="sanpablook.study.sanpablook.BookingsConfirmedActivity" />
-        <activity android:name="sanpablook.study.sanpablook.BookingsPendingActivity" />
-        <activity android:name="sanpablook.study.sanpablook.DineMessageActivity" />
-        <activity android:name="sanpablook.study.sanpablook.HotelReservationActivity" /> <!-- PRODUCTS -->
-        <activity android:name="sanpablook.study.sanpablook.AdaFarm" />
-        <activity android:name="sanpablook.study.sanpablook.CarlzenFarm" />
-        <activity android:name="sanpablook.study.sanpablook.CocoVinegar" />
-        <activity android:name="sanpablook.study.sanpablook.ColettesBukoPie" />
-        <activity android:name="sanpablook.study.sanpablook.EscabaSweets" />
-        <activity android:name="sanpablook.study.sanpablook.GreenLake" />
-        <activity android:name="sanpablook.study.sanpablook.HandicraftsAbrego" />
-        <activity android:name="sanpablook.study.sanpablook.HandicraftsArtiaga" />
-        <activity android:name="sanpablook.study.sanpablook.KuyaKevBY" />
-        <activity android:name="sanpablook.study.sanpablook.LauraFarm" />
-        <activity android:name="sanpablook.study.sanpablook.MamengKape" />
-        <activity android:name="sanpablook.study.sanpablook.PandinFIsherFolk" />
-        <activity android:name="sanpablook.study.sanpablook.Pinayte" />
-        <activity android:name="sanpablook.study.sanpablook.ProductMenu" /> <!-- ETO YUNG SA MAIN MENU NG PRODUCT LEONA -->
-        <activity android:name="sanpablook.study.sanpablook.RomalynUbe" />
-        <activity android:name="sanpablook.study.sanpablook.SampalocLakeSouvenir" />
-        <activity android:name="sanpablook.study.sanpablook.SPCCacaoGrowers" />
-        <activity android:name="sanpablook.study.sanpablook.TanimAgriCacao" />
-        <activity android:name="sanpablook.study.sanpablook.UbeMariaAna" />
-        <activity android:name="sanpablook.study.sanpablook.BikeRentalPage" />
-        <activity android:name="sanpablook.study.sanpablook.ForgotPassword" />
-        <activity android:name="sanpablook.study.sanpablook.HotelPalmeras" />
-        <activity android:name="sanpablook.study.sanpablook.PandinLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.HotelCasa" />
-        <activity android:name="sanpablook.study.sanpablook.CalibatoLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.PalakpakinLakePage" />
-        <activity android:name="sanpablook.study.sanpablook.HotelMeding" />
-        <activity android:name="sanpablook.study.sanpablook.ViewNotification" />
-        <activity android:name="sanpablook.study.sanpablook.AdminBookingDetails" />
-        <activity android:name="sanpablook.study.sanpablook.AdminMenu" />
-        <activity android:name="sanpablook.study.sanpablook.AdminDashboard" />
-        <activity android:name="sanpablook.study.sanpablook.DineCasaActivity" />
-        <activity android:name="sanpablook.study.sanpablook.DineSulyapActivity" />
-        <activity android:name="sanpablook.study.sanpablook.DineReservationActivity" />
-        <activity android:name="sanpablook.study.sanpablook.DinePalmerasActivity" />
-        <activity android:name="sanpablook.study.sanpablook.UserNotifications" />
-        <activity android:name="sanpablook.study.sanpablook.ActivityRatings" />
-        <activity android:name="sanpablook.study.sanpablook.NatureActivity" />
-        <activity android:name="sanpablook.study.sanpablook.UserSettings" />
-        <activity android:name="sanpablook.study.sanpablook.SignUpActivity" />
-        <activity android:name="sanpablook.study.sanpablook.HomeActivity" />
-        <activity android:name="sanpablook.study.sanpablook.ViewAllRatingsDine" />
-        <activity android:name="sanpablook.study.sanpablook.ViewAllRatingsHotel" />
-        <activity android:name="sanpablook.study.sanpablook.testMain" />
+        <activity
+            android:name="sanpablook.study.sanpablook.BunotLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.YamboLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ConfirmedBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.SanPablookActivities"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.MohicapLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.FishingPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.SampalocLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.CampingPage"
+            android:screenOrientation="portrait" /> <!-- BOOKING RELATED ACTIVITIES -->
+        <activity
+            android:name="sanpablook.study.sanpablook.BookingsCompletedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.BookingsCancelledActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.BookingsConfirmedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.BookingsPendingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.DineMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.HotelReservationActivity"
+            android:screenOrientation="portrait" /> <!-- PRODUCTS -->
+        <activity
+            android:name="sanpablook.study.sanpablook.AdaFarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.CarlzenFarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.CocoVinegar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ColettesBukoPie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.EscabaSweets"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.GreenLake"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.HandicraftsAbrego"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.HandicraftsArtiaga"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.KuyaKevBY"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.LauraFarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.MamengKape"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.PandinFIsherFolk"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.Pinayte"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.RomalynUbe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.SampalocLakeSouvenir"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.SPCCacaoGrowers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.TanimAgriCacao"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.UbeMariaAna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.BikeRentalPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.HotelPalmeras"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.PandinLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.HotelCasa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.CalibatoLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.PalakpakinLakePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.HotelMeding"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ViewNotification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.DineCasaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.DineSulyapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.DineReservationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.DinePalmerasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ActivityRatings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.NatureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.UserSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ViewAllRatingsDine"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="sanpablook.study.sanpablook.ViewAllRatingsHotel"
+            android:screenOrientation="portrait" />
         <activity
             android:name="sanpablook.study.sanpablook.SignInActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
