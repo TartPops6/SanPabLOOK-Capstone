@@ -62,7 +62,7 @@ public class DineReservationActivity extends AppCompatActivity implements Adapte
     ImageButton btnReturn;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
-    Button timeButton, phoneNumber, btnConfirm, btnMessagePlace;
+    Button timeButton, btnConfirm, btnMessagePlace;
     int hour, minute;
 
     private String establishmentName, establishmentID;
@@ -171,14 +171,6 @@ public class DineReservationActivity extends AppCompatActivity implements Adapte
         guestSpinner.setSelection(0);
         guestSpinner.setOnItemSelectedListener(this);
 
-        //add phone number button
-        phoneNumber = findViewById(R.id.btnPhoneNumber);
-        phoneNumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDialog();
-            }
-        });
 
         //back button
         btnReturn = findViewById(R.id.btnReturn);
@@ -279,57 +271,6 @@ public class DineReservationActivity extends AppCompatActivity implements Adapte
         });
     }
 
-    private void showDialog() {
-        final Dialog dialog = new Dialog(this);
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_dine_reserve_phone_number);
-        LinearLayout btnSetPhoneNumber = dialog.findViewById(R.id.buttonsSetPhoneNumber);
-        final EditText editTextPhone = dialog.findViewById(R.id.editTextPhone);
-        Button cancelButton = dialog.findViewById(R.id.cancelButton);
-        final Button saveButton = dialog.findViewById(R.id.saveButton);
-
-        editTextPhone.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (validateMobile(editTextPhone.getText().toString())) {
-                    saveButton.setEnabled(true);
-                }
-                else {
-                    saveButton.setEnabled(false);
-                    editTextPhone.setError("Invalid phone number");
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(DineReservationActivity.this, "Save is clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        dialog.show();
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-        dialog.getWindow().setGravity(Gravity.BOTTOM);
-    }
-
     public void popTimePicker (View view){
          TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
              @Override
@@ -426,10 +367,5 @@ public class DineReservationActivity extends AppCompatActivity implements Adapte
 //        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
 //    }
 
-    boolean validateMobile(String input) {
-        Pattern p = Pattern.compile("[0][9][0-9]{9}");
-        Matcher m = p.matcher(input);
-        return m.matches();
-    }
 }
 

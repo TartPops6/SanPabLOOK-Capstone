@@ -371,51 +371,6 @@
                             app:strokeColor="@color/skyBlue"
                             app:strokeWidth="1dp"
                             app:rippleColor="@color/blue"/>
-                        <!--phoneNumber-->
-                        <TextView
-                            android:id="@+id/txtPhoneNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/reservePhoneNumber"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-                        <TextView
-                            android:id="@+id/txtPhoneNumberDetails"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/poppins_light"
-                            android:justificationMode="inter_word"
-                            android:text="@string/phoneNumberDetails"
-                            android:textColor="@color/black"
-                            android:textSize="14sp"
-                            app:layout_constraintEnd_toStartOf="@+id/btnPhoneNumber"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber" />
-
-                        <Button
-                            android:id="@+id/btnPhoneNumber"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginEnd="24dp"
-                            android:backgroundTint="@color/white"
-                            android:text="@string/add"
-                            android:textColor="@color/darkBlue"
-                            app:cornerRadius="50dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/txtPhoneNumberDetails"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber"
-                            app:strokeColor="@color/skyBlue"
-                            app:strokeWidth="1dp"
-                            app:rippleColor="@color/blue"/>
 
                         <Button
                             android:id="@+id/btnConfirm"
@@ -434,7 +389,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumberDetails"
+                            app:layout_constraintTop_toBottomOf="@+id/textView7"
                             app:layout_constraintVertical_bias="0.0"
                             app:rippleColor="@color/light" />
 
