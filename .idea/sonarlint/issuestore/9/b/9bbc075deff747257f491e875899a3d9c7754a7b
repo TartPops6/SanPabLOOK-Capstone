@@ -1,20 +1,21 @@
 
 E
-java:S1604!"(Make this anonymous inner class a lambda(Ì÷ùÊ8¾ì¡·Ô1
+java:S1604""(Make this anonymous inner class a lambda(Ì÷ùÊ8öœ‘ÎÕ1
 E
-java:S1604*"(Make this anonymous inner class a lambda(ùÑÎÑ8¿ì¡·Ô1
+java:S1604+"(Make this anonymous inner class a lambda(ùÑÎÑ8÷œ‘ÎÕ1
 E
-java:S16043"(Make this anonymous inner class a lambda(œãİ™8¿ì¡·Ô1
+java:S16044"(Make this anonymous inner class a lambda(œãİ™8÷œ‘ÎÕ1
 J
-java:S1604<"(Make this anonymous inner class a lambda(»àâşûÿÿÿÿ8¿ì¡·Ô1
+java:S1604="(Make this anonymous inner class a lambda(»àâşûÿÿÿÿ8÷œ‘ÎÕ1
 E
-java:S1604E"(Make this anonymous inner class a lambda(æ½Ÿ¡8Àì¡·Ô1
+java:S1604F"(Make this anonymous inner class a lambda(æ½Ÿ¡8÷œ‘ÎÕ1
 J
-java:S1604N"(Make this anonymous inner class a lambda(ñ¥ËÇşÿÿÿÿ8Áì¡·Ô1
+java:S1604O"(Make this anonymous inner class a lambda(ñ¥ËÇşÿÿÿÿ8÷œ‘ÎÕ1
 D
-java:S1604W"(Make this anonymous inner class a lambda(ƒ–Â 8Áì¡·Ô1
+java:S1604X"(Make this anonymous inner class a lambda(ƒ–Â 8÷œ‘ÎÕ1
 E
-java:S1604`"(Make this anonymous inner class a lambda(ÇÚàæ8Áì¡·Ô1
-]	java:S125"<This block of commented-out lines of code should be removed.(Öõ€°şÿÿÿÿ8Œ¾Ï¶Ô1
+java:S1604a"(Make this anonymous inner class a lambda(ÇÚàæ8øœ‘ÎÕ1
 9
-java:S3626"Remove this redundant jump.(ûÁİ…8ùì¡·Ô1
+java:S3626"Remove this redundant jump.(ûÁİ…8Ì‘ÎÕ1
+K
+java:S1068"/Remove this unused "imagebutton" private field.(±ª¹78ü‘ÎÕ1

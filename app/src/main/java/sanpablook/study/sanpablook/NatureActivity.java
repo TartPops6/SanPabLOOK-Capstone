@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class NatureActivity extends AppCompatActivity {
 
-//    private Button imagebutton;
+    private Button imagebutton;
 
     ImageButton btnReturnNature;
 
@@ -32,8 +33,8 @@ public class NatureActivity extends AppCompatActivity {
 
         btnReturnNature.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(NatureActivity.this, BottomNavBar.class);
+            public void onClick(View v) {
+                Intent intent= new Intent(NatureActivity.this, BottomNavBar.class);
                 startActivity(intent);
             }
         });

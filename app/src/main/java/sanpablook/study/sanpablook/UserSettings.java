@@ -88,18 +88,17 @@ public class UserSettings extends AppCompatActivity {
         txtEditPhoneNumber = findViewById(R.id.editThePhoneNumber);
         txtEditEmail = findViewById(R.id.editTheEmail);
         btnLogout = findViewById(R.id.buttonLogout);
-        btnDeleteAccount = findViewById(R.id.buttonDeleteAccount);
         valueOfUsername = findViewById(R.id.valueOfUsername);
         valueOfBio = findViewById(R.id.valueOfBio);
         valueOfEmail = findViewById(R.id.valueOfEmail);
         valueofPhoneNumber = findViewById(R.id.valueOfPhoneNumber);
 
 
-        //Firebase Auth
-        auth = FirebaseAuth.getInstance();
-        user = auth.getCurrentUser();
-        fStore = FirebaseFirestore.getInstance();
-        userID = auth.getCurrentUser().getUid();
+            //Firebase Auth
+            auth = FirebaseAuth.getInstance();
+            user = auth.getCurrentUser();
+            fStore = FirebaseFirestore.getInstance();
+            userID = auth.getCurrentUser().getUid();
 
         FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
         FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -229,12 +228,6 @@ public class UserSettings extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showDialogEditEmail(view);
-            }
-        });
-        btnDeleteAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialogDeleteAccount(view);
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {

@@ -24,16 +24,10 @@ o
 ?app/src/main/java/sanpablook/study/sanpablook/BottomNavBar.java,9\1\9131f5645d8073539985a05e9458e4e9f69e10ea
 o
 ?app/src/main/java/sanpablook/study/sanpablook/UserSettings.java,9\6\96067f1895429beb8dc3a9e7b5f02273a149bafa
-o
-?app/src/main/java/sanpablook/study/sanpablook/HomeActivity.java,2\8\289f0e822ade999efc9d968c24c2320c88956aa8
-k
-;app/src/main/java/sanpablook/study/sanpablook/testMain.java,4\e\4e0494933d91f8db93a002008b5c76ebdceb662c
 r
 Bapp/src/main/java/sanpablook/study/sanpablook/ProfileFragment.java,4\5\453bfd77e9ecf710a5c384d394410881b2e926c5
 s
 Capp/src/main/java/sanpablook/study/sanpablook/ViewNotification.java,6\f\6f17248f2c60fc2d4eb79a3e39a5b49b0d44ce0c
-t
-Dapp/src/main/java/sanpablook/study/sanpablook/UserNotifications.java,9\1\91a23888f688b9821ab64659aad9dcb511fcd1f9
 q
 Aapp/src/main/java/sanpablook/study/sanpablook/ForgotPassword.java,2\8\28299b25c1c7a6e965d42650e48149921d40f354
 w
@@ -42,8 +36,6 @@ q
 Aapp/src/main/java/sanpablook/study/sanpablook/TanimAgriCacao.java,e\7\e7d6b5dfffebd7d6a5a260f1f9f03c8967aef09b
 r
 Bapp/src/main/java/sanpablook/study/sanpablook/SPCCacaoGrowers.java,a\7\a7c383e22ef76e1e99ffddf3403581d1996b6f18
-n
->app/src/main/java/sanpablook/study/sanpablook/ProductMenu.java,c\1\c1a7abefc343f0e71dae0a597de053e88076d3ed
 s
 Capp/src/main/java/sanpablook/study/sanpablook/ProductsFragment.java,7\c\7ca426ea94f37ddad7ef0b1f892b496d074cb447
 j
@@ -148,8 +140,6 @@ p
 @app/src/main/java/sanpablook/study/sanpablook/YamboLakePage.java,1\a\1a074920da7bb4013ac7295a7abe400c2d233e66
 p
 @app/src/main/java/sanpablook/study/sanpablook/BunotLakePage.java,0\f\0f30a7aaf03f6657071e1f3299c4351c26e836b5
-o
-?app/src/main/java/sanpablook/study/sanpablook/BookFragment.java,c\c\cc49da58eb734eb2be20afe42441c52a0b5365f1
 ~
 Napp/src/main/java/sanpablook/study/sanpablook/Adapter/SectionPagerAdapter.java,1\a\1a704339f9968d52e7dc5e1550933c13bf7ba985
 |
